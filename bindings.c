@@ -16,11 +16,12 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include <time.h>
 
 #include <malloc.h>
+#include <emscripten.h>
 
 #ifdef __EMSCRIPTEN_PTHREADS__
-#include <emscripten.h>
 #include <pthread.h>
 #endif
 
@@ -658,8 +659,15 @@ void cleanup(AVFormatContext *in_fmt, AVFormatContext *out_fmt) {
 }
 
 int ff_extract_audio(const char *in_filename, const char *out_filename) {
+    fprintf(stderr, "입력 파일: %s\n", in_filename);
     AVFormatContext *in_fmt = NULL, *out_fmt = NULL;
     AVPacket pkt;
+
+    struct timespec *ts;
+    long start_time = 0, end_time = 0;
+    long read_time_total = 0, write_time_total = 0;
+    long read_count = 0, write_count = 0;
+
     int audio_stream_index = -1;
     int ret = 0;
 
@@ -711,15 +719,43 @@ int ff_extract_audio(const char *in_filename, const char *out_filename) {
         goto fail;
     }
 
-    while (av_read_frame(in_fmt, &pkt) >= 0) {
+    while (1) {
+        double start = emscripten_get_now();
+        start_time = (long) (start * 1000);
+        ret = av_read_frame(in_fmt, &pkt);
+        double end = emscripten_get_now();
+        end_time = (long) (end * 1000);
+
+        if (ret >= 0) {
+            read_count++;
+            read_time_total += (end_time - start_time);
+        } else {
+            break;
+        }
         if (pkt.stream_index == audio_stream_index) {
+            double start = emscripten_get_now();
+            start_time = (long) (start * 1000);
             pkt.stream_index = out_stream->index;
             av_interleaved_write_frame(out_fmt, &pkt);
+            double end = emscripten_get_now();
+            end_time = (long) (end * 1000);
+            write_count++;
+            write_time_total += (end_time - start_time);
         }
         av_packet_unref(&pkt);
     }
 
     av_write_trailer(out_fmt);
+    fprintf(stderr, "--------------------------------\n");
+    fprintf(stderr, "read_count: %ld\n", read_count);
+    fprintf(stderr, "write_count: %ld\n", write_count);
+    if (read_count > 0) {
+        fprintf(stderr, "read_time_total: %ld, read_count: %ld, read_time_avg: %ld\n", read_time_total, read_count, (read_time_total / read_count));
+    }
+    if (write_count > 0) {
+        fprintf(stderr, "write_time_total: %ld, write_count: %ld, write_time_avg: %ld\n", write_time_total, write_count, (write_time_total / write_count));
+    }
+    fflush(stderr);
     cleanup(in_fmt, out_fmt);
     return ret;
 
