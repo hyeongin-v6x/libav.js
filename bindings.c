@@ -651,6 +651,60 @@ int ffmpeg_main() { return 0; }
 int ffprobe_main() { return 0; }
 #endif
 
+static int read_callback(void *opaque, uint8_t *buf, int buf_size) {
+    FILE *file = (FILE *)opaque;
+
+    // --- 디버깅 로그 추가 ---
+    long current_pos = ftell(file);
+    fprintf(stderr, "read_callback called: requested_bytes=%d, current_pos=%ld\n", buf_size, current_pos);
+
+    size_t ret = fread(buf, 1, buf_size, file);
+    
+    // --- 결과 로그 추가 ---
+    fprintf(stderr, "--> fread returned %zu bytes\n", ret);
+
+    if (ret == 0 && ferror(file)) {
+        fprintf(stderr, "--> fread error occurred!\n");
+        return AVERROR_EXTERNAL;
+    }
+    if (feof(file)) {
+        fprintf(stderr, "--> EOF reached\n");
+        return AVERROR_EOF;
+    }
+    return ret;
+}
+
+static int64_t seek_callback(void *opaque, int64_t offset, int whence) {
+    // --- 디버깅 로그 추가 ---
+    fprintf(stderr, "seek_callback called: offset=%lld, whence=%d\n", offset, whence);
+
+    FILE *file = (FILE *)opaque;
+
+    if (whence == AVSEEK_SIZE) {
+        fprintf(stderr, "--> Seeking for file size\n");
+        long current_pos = ftell(file);
+        if (current_pos < 0) {
+            fprintf(stderr, "--> ftell failed before seek\n");
+            return -1;
+        }
+        fseek(file, 0, SEEK_END);
+        long size = ftell(file);
+        fseek(file, current_pos, SEEK_SET);
+        fprintf(stderr, "--> File size is %ld\n", size);
+        return size;
+    }
+    
+    int ret = fseek(file, offset, whence);
+    if (ret != 0) {
+        fprintf(stderr, "--> fseek failed!\n");
+        return -1;
+    }
+    
+    long current_pos = ftell(file);
+    fprintf(stderr, "--> Seek success, new position: %ld\n", current_pos);
+    return current_pos;
+}
+
 void cleanup(AVFormatContext *in_fmt, AVFormatContext *out_fmt) {
     if (out_fmt && !(out_fmt->oformat->flags & AVFMT_NOFILE)) 
         avio_closep(&out_fmt->pb);
@@ -668,11 +722,42 @@ int ff_extract_audio(const char *in_filename, const char *out_filename) {
     double read_time_total = 0, write_time_total = 0;
     long read_count = 0, write_count = 0;
     double max_read_time = 0, max_write_time = 0;
+    int CUSTOM_BUFFER_SIZE = 1024 * 1024 * 4;
 
     int audio_stream_index = -1;
     int ret = 0;
 
-    if ((ret = avformat_open_input(&in_fmt, in_filename, NULL, NULL)) < 0) goto fail;
+    FILE *file = NULL;
+    AVIOContext *io_ctx = NULL;
+    uint8_t *buffer = NULL;
+
+    file = fopen(in_filename, "rb");
+    if (!file) {
+        fprintf(stderr, "ff_extract_audio: failed to open file: %s\n", in_filename);
+        ret = AVERROR_EXTERNAL;
+        goto fail;
+    }
+
+    buffer = av_malloc(CUSTOM_BUFFER_SIZE);
+    if (!buffer) {
+        ret = AVERROR(ENOMEM);
+        goto fail;
+    }
+
+    io_ctx = avio_alloc_context(buffer, CUSTOM_BUFFER_SIZE, 0, file, read_callback, NULL, seek_callback);
+    if (!io_ctx) {
+        ret = AVERROR(ENOMEM);
+        goto fail;
+    }
+    in_fmt = avformat_alloc_context();
+    if (!in_fmt) {
+        ret = AVERROR(ENOMEM);
+        goto fail;
+    }
+    in_fmt->pb = io_ctx;
+
+
+    if ((ret = avformat_open_input(&in_fmt, NULL, NULL, NULL)) < 0) goto fail;
     if ((ret = avformat_find_stream_info(in_fmt, NULL)) < 0) goto fail;
 
     for (unsigned i = 0; i < in_fmt->nb_streams; i++) {
@@ -757,10 +842,10 @@ int ff_extract_audio(const char *in_filename, const char *out_filename) {
     fprintf(stderr, "read_count: %ld\n", read_count);
     fprintf(stderr, "write_count: %ld\n", write_count);
     if (read_count > 0) {
-        fprintf(stderr, "read_time_total: %f, read_count: %ld, read_time_avg: %f\n", read_time_total, read_count, (read_time_total / read_count));
+        fprintf(stderr, "read_time_total: %f, read_count: %ld, read_time_avg: %f, max_read_time: %f\n", read_time_total, read_count, (read_time_total / read_count), max_read_time);
     }
     if (write_count > 0) {
-        fprintf(stderr, "write_time_total: %f, write_count: %ld, write_time_avg: %f\n", write_time_total, write_count, (write_time_total / write_count));
+        fprintf(stderr, "write_time_total: %f, write_count: %ld, write_time_avg: %f, max_write_time: %f\n", write_time_total, write_count, (write_time_total / write_count), max_write_time);
     }
     fflush(stderr);
     cleanup(in_fmt, out_fmt);

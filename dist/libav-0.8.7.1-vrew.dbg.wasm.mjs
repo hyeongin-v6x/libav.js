@@ -1555,7 +1555,7 @@ function dbg(...args) {
 // === Body ===
 
 var ASM_CONSTS = {
-  767422: () => { Fibers.trampolineRunning = false; }
+  767774: () => { Fibers.trampolineRunning = false; }
 };
 function writeoutEmscriptenOOM() { throw new Error("Out of memory"); }
 function libavjs_wait_reader(fd) { return Asyncify.handleAsync(function() { return new Promise(function(res) { var name = Module.fdName(fd); var waiters = Module.ff_reader_dev_waiters[name]; if (!waiters) waiters = Module.ff_reader_dev_waiters[name] = []; waiters.push(res); }); }); }
@@ -6472,6 +6472,7 @@ var _libavjs_with_swscale = Module['_libavjs_with_swscale'] = createExportWrappe
 var _avformat_free_context = Module['_avformat_free_context'] = createExportWrapper('avformat_free_context', 1);
 var _avformat_close_input = Module['_avformat_close_input'] = createExportWrapper('avformat_close_input', 1);
 var _ff_extract_audio = Module['_ff_extract_audio'] = createExportWrapper('ff_extract_audio', 2);
+var _avformat_alloc_context = Module['_avformat_alloc_context'] = createExportWrapper('avformat_alloc_context', 0);
 var _avformat_open_input = Module['_avformat_open_input'] = createExportWrapper('avformat_open_input', 4);
 var _avformat_find_stream_info = Module['_avformat_find_stream_info'] = createExportWrapper('avformat_find_stream_info', 2);
 var _avformat_new_stream = Module['_avformat_new_stream'] = createExportWrapper('avformat_new_stream', 2);
@@ -6485,7 +6486,6 @@ var _avformat_flush = Module['_avformat_flush'] = createExportWrapper('avformat_
 var _libavjs_create_main_thread = Module['_libavjs_create_main_thread'] = createExportWrapper('libavjs_create_main_thread', 0);
 var _avformat_alloc_output_context2_js = Module['_avformat_alloc_output_context2_js'] = createExportWrapper('avformat_alloc_output_context2_js', 3);
 var _avformat_open_input_js = Module['_avformat_open_input_js'] = createExportWrapper('avformat_open_input_js', 3);
-var _avformat_alloc_context = Module['_avformat_alloc_context'] = createExportWrapper('avformat_alloc_context', 0);
 var _avio_open2_js = Module['_avio_open2_js'] = createExportWrapper('avio_open2_js', 4);
 var _avfilter_graph_create_filter_js = Module['_avfilter_graph_create_filter_js'] = createExportWrapper('avfilter_graph_create_filter_js', 5);
 var _av_dict_copy_js = Module['_av_dict_copy_js'] = createExportWrapper('av_dict_copy_js', 3);
@@ -6572,6 +6572,7 @@ var __emscripten_stack_restore = (a0) => (__emscripten_stack_restore = wasmExpor
 var __emscripten_stack_alloc = (a0) => (__emscripten_stack_alloc = wasmExports['_emscripten_stack_alloc'])(a0);
 var _emscripten_stack_get_current = () => (_emscripten_stack_get_current = wasmExports['emscripten_stack_get_current'])();
 var dynCall_iiii = Module['dynCall_iiii'] = createExportWrapper('dynCall_iiii', 4);
+var dynCall_jiji = Module['dynCall_jiji'] = createExportWrapper('dynCall_jiji', 5);
 var dynCall_vi = Module['dynCall_vi'] = createExportWrapper('dynCall_vi', 2);
 var dynCall_vii = Module['dynCall_vii'] = createExportWrapper('dynCall_vii', 3);
 var dynCall_ii = Module['dynCall_ii'] = createExportWrapper('dynCall_ii', 2);
@@ -6584,7 +6585,6 @@ var dynCall_viiii = Module['dynCall_viiii'] = createExportWrapper('dynCall_viiii
 var dynCall_dd = Module['dynCall_dd'] = createExportWrapper('dynCall_dd', 2);
 var dynCall_viiiiii = Module['dynCall_viiiiii'] = createExportWrapper('dynCall_viiiiii', 7);
 var dynCall_iiiiii = Module['dynCall_iiiiii'] = createExportWrapper('dynCall_iiiiii', 6);
-var dynCall_jiji = Module['dynCall_jiji'] = createExportWrapper('dynCall_jiji', 5);
 var dynCall_iiiji = Module['dynCall_iiiji'] = createExportWrapper('dynCall_iiiji', 6);
 var dynCall_ijii = Module['dynCall_ijii'] = createExportWrapper('dynCall_ijii', 5);
 var dynCall_iiiiiii = Module['dynCall_iiiiiii'] = createExportWrapper('dynCall_iiiiiii', 7);
@@ -6631,7 +6631,7 @@ var _asyncify_start_unwind = createExportWrapper('asyncify_start_unwind', 1);
 var _asyncify_stop_unwind = createExportWrapper('asyncify_stop_unwind', 0);
 var _asyncify_start_rewind = createExportWrapper('asyncify_start_rewind', 1);
 var _asyncify_stop_rewind = createExportWrapper('asyncify_stop_rewind', 0);
-var _ff_h264_cabac_tables = Module['_ff_h264_cabac_tables'] = 543036;
+var _ff_h264_cabac_tables = Module['_ff_h264_cabac_tables'] = 543388;
 
 
 // === Auto-generated postamble setup entry stuff ===

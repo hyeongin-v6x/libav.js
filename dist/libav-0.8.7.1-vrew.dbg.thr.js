@@ -1764,7 +1764,7 @@ function dbg(...args) {
 
 // === Body ===
 var ASM_CONSTS = {
-  772857: () => {
+  773209: () => {
     Fibers.trampolineRunning = false;
   }
 };
@@ -7669,6 +7669,8 @@ var _avformat_close_input = Module["_avformat_close_input"] = createExportWrappe
 
 var _ff_extract_audio = Module["_ff_extract_audio"] = createExportWrapper("ff_extract_audio", 2);
 
+var _avformat_alloc_context = Module["_avformat_alloc_context"] = createExportWrapper("avformat_alloc_context", 0);
+
 var _avformat_open_input = Module["_avformat_open_input"] = createExportWrapper("avformat_open_input", 4);
 
 var _avformat_find_stream_info = Module["_avformat_find_stream_info"] = createExportWrapper("avformat_find_stream_info", 2);
@@ -7694,8 +7696,6 @@ var _libavjs_create_main_thread = Module["_libavjs_create_main_thread"] = create
 var _avformat_alloc_output_context2_js = Module["_avformat_alloc_output_context2_js"] = createExportWrapper("avformat_alloc_output_context2_js", 3);
 
 var _avformat_open_input_js = Module["_avformat_open_input_js"] = createExportWrapper("avformat_open_input_js", 3);
-
-var _avformat_alloc_context = Module["_avformat_alloc_context"] = createExportWrapper("avformat_alloc_context", 0);
 
 var _avio_open2_js = Module["_avio_open2_js"] = createExportWrapper("avio_open2_js", 4);
 
@@ -7883,9 +7883,11 @@ var __emscripten_stack_alloc = a0 => (__emscripten_stack_alloc = wasmExports["_e
 
 var _emscripten_stack_get_current = () => (_emscripten_stack_get_current = wasmExports["emscripten_stack_get_current"])();
 
-var dynCall_ii = Module["dynCall_ii"] = createExportWrapper("dynCall_ii", 2);
-
 var dynCall_iiii = Module["dynCall_iiii"] = createExportWrapper("dynCall_iiii", 4);
+
+var dynCall_jiji = Module["dynCall_jiji"] = createExportWrapper("dynCall_jiji", 5);
+
+var dynCall_ii = Module["dynCall_ii"] = createExportWrapper("dynCall_ii", 2);
 
 var dynCall_vi = Module["dynCall_vi"] = createExportWrapper("dynCall_vi", 2);
 
@@ -7910,8 +7912,6 @@ var dynCall_v = Module["dynCall_v"] = createExportWrapper("dynCall_v", 1);
 var dynCall_viiiiii = Module["dynCall_viiiiii"] = createExportWrapper("dynCall_viiiiii", 7);
 
 var dynCall_iiiiii = Module["dynCall_iiiiii"] = createExportWrapper("dynCall_iiiiii", 6);
-
-var dynCall_jiji = Module["dynCall_jiji"] = createExportWrapper("dynCall_jiji", 5);
 
 var dynCall_iiiji = Module["dynCall_iiiji"] = createExportWrapper("dynCall_iiiji", 6);
 
@@ -8003,7 +8003,7 @@ var _asyncify_start_rewind = createExportWrapper("asyncify_start_rewind", 1);
 
 var _asyncify_stop_rewind = createExportWrapper("asyncify_stop_rewind", 0);
 
-var _ff_h264_cabac_tables = Module["_ff_h264_cabac_tables"] = 546652;
+var _ff_h264_cabac_tables = Module["_ff_h264_cabac_tables"] = 547004;
 
 
 // === Auto-generated postamble setup entry stuff ===
