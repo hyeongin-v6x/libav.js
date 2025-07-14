@@ -625,14 +625,6 @@ var readyPromise = new Promise((resolve, reject) => {
   readyPromiseResolve = resolve;
   readyPromiseReject = reject;
 });
-["_emfiberthreads_timeout_expiry","_av_get_bytes_per_sample","_av_compare_ts_js","_av_opt_set","_av_opt_set_int_list_js","_av_frame_alloc","_av_frame_clone","_av_frame_free","_av_frame_get_buffer","_av_frame_make_writable","_av_frame_ref","_av_frame_unref","_ff_frame_rescale_ts_js","_av_log_get_level","_av_log_set_level","_av_packet_alloc","_av_packet_clone","_av_packet_free","_av_packet_new_side_data","_av_packet_ref","_av_packet_rescale_ts_js","_av_packet_unref","_av_strdup","_av_buffersink_get_frame","_av_buffersink_get_time_base_num","_av_buffersink_get_time_base_den","_av_buffersink_set_frame_size","_ff_buffersink_set_ch_layout","_av_buffersrc_add_frame_flags","_avfilter_free","_avfilter_get_by_name","_avfilter_graph_alloc","_avfilter_graph_config","_avfilter_graph_create_filter_js","_avfilter_graph_free","_avfilter_graph_parse","_avfilter_inout_alloc","_avfilter_inout_free","_avfilter_link","_avcodec_alloc_context3","_avcodec_close","_avcodec_descriptor_get","_avcodec_descriptor_get_by_name","_avcodec_descriptor_next","_avcodec_find_decoder","_avcodec_find_decoder_by_name","_avcodec_find_encoder","_avcodec_find_encoder_by_name","_avcodec_free_context","_avcodec_get_name","_avcodec_open2","_avcodec_open2_js","_avcodec_parameters_alloc","_avcodec_parameters_copy","_avcodec_parameters_free","_avcodec_parameters_from_context","_avcodec_parameters_to_context","_avcodec_receive_frame","_avcodec_receive_packet","_avcodec_send_frame","_avcodec_send_packet","_av_find_input_format","_avformat_alloc_context","_avformat_alloc_output_context2_js","_avformat_close_input","_avformat_find_stream_info","_avformat_flush","_avformat_free_context","_avformat_new_stream","_avformat_open_input","_avformat_open_input_js","_av_seek_frame","_avformat_seek_file","_avformat_seek_file_min","_avformat_seek_file_max","_avformat_seek_file_approx","_avformat_write_header","_avformat_get_rotation","_avio_open2_js","_avio_close","_avio_flush","_av_find_best_stream","_av_get_sample_fmt_name","_av_grow_packet","_av_interleaved_write_frame","_av_packet_make_writable","_av_pix_fmt_desc_get","_avstream_get_frame_rate","_av_read_frame","_av_shrink_packet","_av_write_frame","_av_write_trailer","_av_dict_copy_js","_av_dict_free","_av_dict_set_js","_av_channel_layout_default_mask","_sws_getContext","_sws_freeContext","_sws_scale_frame","_AVPacketSideData_data","_AVPacketSideData_size","_AVPacketSideData_type","_AVPixFmtDescriptor_comp_depth","_ff_error","_ff_nothing","_ff_get_colorspace_name","_ff_get_pix_fmt_name","_ff_get_color_range_name","_ff_get_media_duration","_ff_get_timecode","_ff_get_input_format_name","_ff_get_major_brand","_calloc","_close","_dup2","_free","_malloc","_mallinfo_uordblks","_open","_strerror","_libavjs_with_swscale","_libavjs_create_main_thread","_ffmpeg_main","_ffprobe_main","_ff_slice_audio","_ff_extract_audio","_AVFrame_channel_layout","_AVFrame_channel_layout_s","_AVFrame_channel_layouthi","_AVFrame_channel_layouthi_s","_AVFrame_channels","_AVFrame_channels_s","_AVFrame_channel_layoutmask","_AVFrame_channel_layoutmask_s","_AVFrame_ch_layout_nb_channels","_AVFrame_ch_layout_nb_channels_s","_AVFrame_crop_bottom","_AVFrame_crop_bottom_s","_AVFrame_crop_left","_AVFrame_crop_left_s","_AVFrame_crop_right","_AVFrame_crop_right_s","_AVFrame_crop_top","_AVFrame_crop_top_s","_AVFrame_data_a","_AVFrame_data_a_s","_AVFrame_format","_AVFrame_format_s","_AVFrame_height","_AVFrame_height_s","_AVFrame_key_frame","_AVFrame_key_frame_s","_AVFrame_linesize_a","_AVFrame_linesize_a_s","_AVFrame_nb_samples","_AVFrame_nb_samples_s","_AVFrame_pict_type","_AVFrame_pict_type_s","_AVFrame_pts","_AVFrame_pts_s","_AVFrame_ptshi","_AVFrame_ptshi_s","_AVFrame_duration","_AVFrame_duration_s","_AVFrame_durationhi","_AVFrame_durationhi_s","_AVFrame_sample_aspect_ratio_num","_AVFrame_sample_aspect_ratio_num_s","_AVFrame_sample_aspect_ratio_den","_AVFrame_sample_aspect_ratio_den_s","_AVFrame_sample_aspect_ratio_s","_AVFrame_sample_rate","_AVFrame_sample_rate_s","_AVFrame_time_base_num","_AVFrame_time_base_num_s","_AVFrame_time_base_den","_AVFrame_time_base_den_s","_AVFrame_time_base_s","_AVFrame_width","_AVFrame_width_s","_AVPixFmtDescriptor_flags","_AVPixFmtDescriptor_flags_s","_AVPixFmtDescriptor_log2_chroma_h","_AVPixFmtDescriptor_log2_chroma_h_s","_AVPixFmtDescriptor_log2_chroma_w","_AVPixFmtDescriptor_log2_chroma_w_s","_AVPixFmtDescriptor_nb_components","_AVPixFmtDescriptor_nb_components_s","_AVCodec_name","_AVCodec_sample_fmts","_AVCodec_sample_fmts_s","_AVCodec_sample_fmts_a","_AVCodec_sample_fmts_a_s","_AVCodec_supported_samplerates","_AVCodec_supported_samplerates_s","_AVCodec_supported_samplerates_a","_AVCodec_supported_samplerates_a_s","_AVCodec_type","_AVCodec_type_s","_AVCodecContext_codec_id","_AVCodecContext_codec_id_s","_AVCodecContext_codec_type","_AVCodecContext_codec_type_s","_AVCodecContext_bit_rate","_AVCodecContext_bit_rate_s","_AVCodecContext_bit_ratehi","_AVCodecContext_bit_ratehi_s","_AVCodecContext_channel_layout","_AVCodecContext_channel_layout_s","_AVCodecContext_channel_layouthi","_AVCodecContext_channel_layouthi_s","_AVCodecContext_channels","_AVCodecContext_channels_s","_AVCodecContext_channel_layoutmask","_AVCodecContext_channel_layoutmask_s","_AVCodecContext_ch_layout_nb_channels","_AVCodecContext_ch_layout_nb_channels_s","_AVCodecContext_extradata","_AVCodecContext_extradata_s","_AVCodecContext_extradata_size","_AVCodecContext_extradata_size_s","_AVCodecContext_frame_size","_AVCodecContext_frame_size_s","_AVCodecContext_framerate_num","_AVCodecContext_framerate_num_s","_AVCodecContext_framerate_den","_AVCodecContext_framerate_den_s","_AVCodecContext_framerate_s","_AVCodecContext_gop_size","_AVCodecContext_gop_size_s","_AVCodecContext_height","_AVCodecContext_height_s","_AVCodecContext_keyint_min","_AVCodecContext_keyint_min_s","_AVCodecContext_level","_AVCodecContext_level_s","_AVCodecContext_max_b_frames","_AVCodecContext_max_b_frames_s","_AVCodecContext_pix_fmt","_AVCodecContext_pix_fmt_s","_AVCodecContext_profile","_AVCodecContext_profile_s","_AVCodecContext_rc_max_rate","_AVCodecContext_rc_max_rate_s","_AVCodecContext_rc_max_ratehi","_AVCodecContext_rc_max_ratehi_s","_AVCodecContext_rc_min_rate","_AVCodecContext_rc_min_rate_s","_AVCodecContext_rc_min_ratehi","_AVCodecContext_rc_min_ratehi_s","_AVCodecContext_sample_aspect_ratio_num","_AVCodecContext_sample_aspect_ratio_num_s","_AVCodecContext_sample_aspect_ratio_den","_AVCodecContext_sample_aspect_ratio_den_s","_AVCodecContext_sample_aspect_ratio_s","_AVCodecContext_sample_fmt","_AVCodecContext_sample_fmt_s","_AVCodecContext_sample_rate","_AVCodecContext_sample_rate_s","_AVCodecContext_time_base_num","_AVCodecContext_time_base_num_s","_AVCodecContext_time_base_den","_AVCodecContext_time_base_den_s","_AVCodecContext_time_base_s","_AVCodecContext_qmax","_AVCodecContext_qmax_s","_AVCodecContext_qmin","_AVCodecContext_qmin_s","_AVCodecContext_width","_AVCodecContext_width_s","_AVCodecDescriptor_id","_AVCodecDescriptor_id_s","_AVCodecDescriptor_long_name","_AVCodecDescriptor_long_name_s","_AVCodecDescriptor_mime_types_a","_AVCodecDescriptor_mime_types_a_s","_AVCodecDescriptor_name","_AVCodecDescriptor_name_s","_AVCodecDescriptor_props","_AVCodecDescriptor_props_s","_AVCodecDescriptor_type","_AVCodecDescriptor_type_s","_AVCodecParameters_bit_rate","_AVCodecParameters_bit_rate_s","_AVCodecParameters_channel_layoutmask","_AVCodecParameters_channel_layoutmask_s","_AVCodecParameters_channels","_AVCodecParameters_channels_s","_AVCodecParameters_ch_layout_nb_channels","_AVCodecParameters_ch_layout_nb_channels_s","_AVCodecParameters_chroma_location","_AVCodecParameters_chroma_location_s","_AVCodecParameters_codec_id","_AVCodecParameters_codec_id_s","_AVCodecParameters_codec_tag","_AVCodecParameters_codec_tag_s","_AVCodecParameters_codec_type","_AVCodecParameters_codec_type_s","_AVCodecParameters_color_primaries","_AVCodecParameters_color_primaries_s","_AVCodecParameters_color_range","_AVCodecParameters_color_range_s","_AVCodecParameters_color_space","_AVCodecParameters_color_space_s","_AVCodecParameters_color_trc","_AVCodecParameters_color_trc_s","_AVCodecParameters_extradata","_AVCodecParameters_extradata_s","_AVCodecParameters_extradata_size","_AVCodecParameters_extradata_size_s","_AVCodecParameters_format","_AVCodecParameters_format_s","_AVCodecParameters_framerate_num","_AVCodecParameters_framerate_num_s","_AVCodecParameters_framerate_den","_AVCodecParameters_framerate_den_s","_AVCodecParameters_framerate_s","_AVCodecParameters_height","_AVCodecParameters_height_s","_AVCodecParameters_level","_AVCodecParameters_level_s","_AVCodecParameters_profile","_AVCodecParameters_profile_s","_AVCodecParameters_sample_rate","_AVCodecParameters_sample_rate_s","_AVCodecParameters_width","_AVCodecParameters_width_s","_AVPacket_data","_AVPacket_data_s","_AVPacket_dts","_AVPacket_dts_s","_AVPacket_dtshi","_AVPacket_dtshi_s","_AVPacket_duration","_AVPacket_duration_s","_AVPacket_durationhi","_AVPacket_durationhi_s","_AVPacket_flags","_AVPacket_flags_s","_AVPacket_pos","_AVPacket_pos_s","_AVPacket_poshi","_AVPacket_poshi_s","_AVPacket_pts","_AVPacket_pts_s","_AVPacket_ptshi","_AVPacket_ptshi_s","_AVPacket_side_data","_AVPacket_side_data_s","_AVPacket_side_data_elems","_AVPacket_side_data_elems_s","_AVPacket_size","_AVPacket_size_s","_AVPacket_stream_index","_AVPacket_stream_index_s","_AVPacket_time_base_num","_AVPacket_time_base_num_s","_AVPacket_time_base_den","_AVPacket_time_base_den_s","_AVPacket_time_base_s","_AVFormatContext_duration","_AVFormatContext_duration_s","_AVFormatContext_durationhi","_AVFormatContext_durationhi_s","_AVFormatContext_flags","_AVFormatContext_flags_s","_AVFormatContext_nb_streams","_AVFormatContext_nb_streams_s","_AVFormatContext_oformat","_AVFormatContext_oformat_s","_AVFormatContext_pb","_AVFormatContext_pb_s","_AVFormatContext_start_time","_AVFormatContext_start_time_s","_AVFormatContext_start_timehi","_AVFormatContext_start_timehi_s","_AVFormatContext_streams_a","_AVFormatContext_streams_a_s","_AVStream_codecpar","_AVStream_codecpar_s","_AVStream_discard","_AVStream_discard_s","_AVStream_duration","_AVStream_duration_s","_AVStream_durationhi","_AVStream_durationhi_s","_AVStream_start_time","_AVStream_start_time_s","_AVStream_start_timehi","_AVStream_start_timehi_s","_AVStream_time_base_num","_AVStream_time_base_num_s","_AVStream_time_base_den","_AVStream_time_base_den_s","_AVStream_time_base_s","_AVFilterInOut_filter_ctx","_AVFilterInOut_filter_ctx_s","_AVFilterInOut_name","_AVFilterInOut_name_s","_AVFilterInOut_next","_AVFilterInOut_next_s","_AVFilterInOut_pad_idx","_AVFilterInOut_pad_idx_s","_memory","___indirect_function_table","_writeoutEmscriptenOOM","_libavjs_wait_reader","_jsfetch_open_js","_jsfetch_read_js","_jsfetch_close_js","_ff_h264_cabac_tables","_emfiberthreads_pthread_mutex_timedwait_setTimeout","_emfiberthreads_pthread_mutex_timedwait_clearTimeout","onRuntimeInitialized"].forEach((prop) => {
-  if (!Object.getOwnPropertyDescriptor(readyPromise, prop)) {
-    Object.defineProperty(readyPromise, prop, {
-      get: () => abort('You are getting ' + prop + ' on the Promise object, instead of the instance. Use .then() to get called back with the instance, see the MODULARIZE docs in src/settings.js'),
-      set: () => abort('You are setting ' + prop + ' on the Promise object, instead of the instance. Use .then() to get called back with the instance, see the MODULARIZE docs in src/settings.js'),
-    });
-  }
-});
 
 // Determine the runtime environment we are in. You can customize this by
 // setting the ENVIRONMENT setting at compile time (see settings.js).
@@ -722,15 +714,6 @@ function locateFile(path) {
 var readAsync, readBinary;
 
 if (ENVIRONMENT_IS_NODE) {
-  if (typeof process == 'undefined' || !process.release || process.release.name !== 'node') throw new Error('not compiled for this environment (did you build to HTML and try to run it not on the web, or set ENVIRONMENT to something - like node - and run it someplace else - like on the web?)');
-
-  var nodeVersion = process.versions.node;
-  var numericVersion = nodeVersion.split('.').slice(0, 3);
-  numericVersion = (numericVersion[0] * 10000) + (numericVersion[1] * 100) + (numericVersion[2].split('-')[0] * 1);
-  var minVersion = 160000;
-  if (numericVersion < 160000) {
-    throw new Error('This emscripten-generated code requires node v16.0.0 (detected v' + nodeVersion + ')');
-  }
 
   // These modules will usually be used on Node.js. Load them eagerly to avoid
   // the complexity of lazy-loading.
@@ -744,7 +727,6 @@ readBinary = (filename) => {
   // We need to re-wrap `file://` strings to URLs.
   filename = isFileURI(filename) ? new URL(filename) : filename;
   var ret = fs.readFileSync(filename);
-  assert(Buffer.isBuffer(ret));
   return ret;
 };
 
@@ -752,7 +734,6 @@ readAsync = async (filename, binary = true) => {
   // See the comment in the `readBinary` function.
   filename = isFileURI(filename) ? new URL(filename) : filename;
   var ret = fs.readFileSync(filename, binary ? undefined : 'utf8');
-  assert(binary ? Buffer.isBuffer(ret) : typeof ret == 'string');
   return ret;
 };
 
@@ -768,11 +749,6 @@ readAsync = async (filename, binary = true) => {
     process.exitCode = status;
     throw toThrow;
   };
-
-} else
-if (ENVIRONMENT_IS_SHELL) {
-
-  if ((typeof process == 'object' && typeof require === 'function') || typeof window == 'object' || typeof WorkerGlobalScope != 'undefined') throw new Error('not compiled for this environment (did you build to HTML and try to run it not on the web, or set ENVIRONMENT to something - like node - and run it someplace else - like on the web?)');
 
 } else
 
@@ -801,8 +777,6 @@ if (ENVIRONMENT_IS_WEB || ENVIRONMENT_IS_WORKER) {
   } else {
     scriptDirectory = scriptDirectory.substr(0, scriptDirectory.replace(/[?#].*/, '').lastIndexOf('/')+1);
   }
-
-  if (!(typeof window == 'object' || typeof WorkerGlobalScope != 'undefined')) throw new Error('not compiled for this environment (did you build to HTML and try to run it not on the web, or set ENVIRONMENT to something - like node - and run it someplace else - like on the web?)');
 
   {
 
@@ -847,7 +821,6 @@ if (ENVIRONMENT_IS_WORKER) {
   }
 } else
 {
-  throw new Error('environment detection error');
 }
 
 var out = Module['print'] || console.log.bind(console);
@@ -858,44 +831,17 @@ Object.assign(Module, moduleOverrides);
 // Free the object hierarchy contained in the overrides, this lets the GC
 // reclaim data used.
 moduleOverrides = null;
-checkIncomingModuleAPI();
 
 // Emit code to handle expected values on the Module object. This applies Module.x
 // to the proper local x. This has two benefits: first, we only emit it if it is
 // expected to arrive, and second, by using a local everywhere else that can be
 // minified.
 
-if (Module['arguments']) arguments_ = Module['arguments'];legacyModuleProp('arguments', 'arguments_');
+if (Module['arguments']) arguments_ = Module['arguments'];
 
-if (Module['thisProgram']) thisProgram = Module['thisProgram'];legacyModuleProp('thisProgram', 'thisProgram');
+if (Module['thisProgram']) thisProgram = Module['thisProgram'];
 
 // perform assertions in shell.js after we set up out() and err(), as otherwise if an assertion fails it cannot print the message
-// Assertions on removed incoming Module JS APIs.
-assert(typeof Module['memoryInitializerPrefixURL'] == 'undefined', 'Module.memoryInitializerPrefixURL option was removed, use Module.locateFile instead');
-assert(typeof Module['pthreadMainPrefixURL'] == 'undefined', 'Module.pthreadMainPrefixURL option was removed, use Module.locateFile instead');
-assert(typeof Module['cdInitializerPrefixURL'] == 'undefined', 'Module.cdInitializerPrefixURL option was removed, use Module.locateFile instead');
-assert(typeof Module['filePackagePrefixURL'] == 'undefined', 'Module.filePackagePrefixURL option was removed, use Module.locateFile instead');
-assert(typeof Module['read'] == 'undefined', 'Module.read option was removed');
-assert(typeof Module['readAsync'] == 'undefined', 'Module.readAsync option was removed (modify readAsync in JS)');
-assert(typeof Module['readBinary'] == 'undefined', 'Module.readBinary option was removed (modify readBinary in JS)');
-assert(typeof Module['setWindowTitle'] == 'undefined', 'Module.setWindowTitle option was removed (modify emscripten_set_window_title in JS)');
-assert(typeof Module['TOTAL_MEMORY'] == 'undefined', 'Module.TOTAL_MEMORY has been renamed Module.INITIAL_MEMORY');
-legacyModuleProp('asm', 'wasmExports');
-legacyModuleProp('readAsync', 'readAsync');
-legacyModuleProp('readBinary', 'readBinary');
-legacyModuleProp('setWindowTitle', 'setWindowTitle');
-var IDBFS = 'IDBFS is no longer included by default; build with -lidbfs.js';
-var PROXYFS = 'PROXYFS is no longer included by default; build with -lproxyfs.js';
-
-var FETCHFS = 'FETCHFS is no longer included by default; build with -lfetchfs.js';
-var ICASEFS = 'ICASEFS is no longer included by default; build with -licasefs.js';
-var JSFILEFS = 'JSFILEFS is no longer included by default; build with -ljsfilefs.js';
-var OPFS = 'OPFS is no longer included by default; build with -lopfs.js';
-
-var NODEFS = 'NODEFS is no longer included by default; build with -lnodefs.js';
-
-assert(!ENVIRONMENT_IS_SHELL, 'shell environment detected but not enabled at build time.  Add `shell` to `-sENVIRONMENT` to enable.');
-
 
 
 
@@ -909,11 +855,7 @@ assert(!ENVIRONMENT_IS_SHELL, 'shell environment detected but not enabled at bui
 // An online HTML version (which may be of a different version of Emscripten)
 //    is up at http://kripken.github.io/emscripten-site/docs/api_reference/preamble.js.html
 
-var wasmBinary = Module['wasmBinary'];legacyModuleProp('wasmBinary', 'wasmBinary');
-
-if (typeof WebAssembly != 'object') {
-  err('no native wasm support detected');
-}
+var wasmBinary = Module['wasmBinary'];
 
 // Wasm globals
 
@@ -939,12 +881,12 @@ var EXITSTATUS;
 /** @type {function(*, string=)} */
 function assert(condition, text) {
   if (!condition) {
-    abort('Assertion failed' + (text ? ': ' + text : ''));
+    // This build was created without ASSERTIONS defined.  `assert()` should not
+    // ever be called in this configuration but in case there are callers in
+    // the wild leave this simple abort() implementation here for now.
+    abort(text);
   }
 }
-
-// We used to include malloc/free by default in the past. Show a helpful error in
-// builds with assertions.
 
 // Memory management
 
@@ -980,52 +922,7 @@ function updateMemoryViews() {
 }
 
 
-assert(!Module['STACK_SIZE'], 'STACK_SIZE can no longer be set at runtime.  Use -sSTACK_SIZE at link time')
 
-assert(typeof Int32Array != 'undefined' && typeof Float64Array !== 'undefined' && Int32Array.prototype.subarray != undefined && Int32Array.prototype.set != undefined,
-       'JS engine does not provide full typed array support');
-
-// If memory is defined in wasm, the user can't provide it, or set INITIAL_MEMORY
-assert(!Module['wasmMemory'], 'Use of `wasmMemory` detected.  Use -sIMPORTED_MEMORY to define wasmMemory externally');
-assert(!Module['INITIAL_MEMORY'], 'Detected runtime INITIAL_MEMORY setting.  Use -sIMPORTED_MEMORY to define wasmMemory dynamically');
-
-
-// Initializes the stack cookie. Called at the startup of main and at the startup of each thread in pthreads mode.
-function writeStackCookie() {
-  var max = _emscripten_stack_get_end();
-  assert((max & 3) == 0);
-  // If the stack ends at address zero we write our cookies 4 bytes into the
-  // stack.  This prevents interference with SAFE_HEAP and ASAN which also
-  // monitor writes to address zero.
-  if (max == 0) {
-    max += 4;
-  }
-  // The stack grow downwards towards _emscripten_stack_get_end.
-  // We write cookies to the final two words in the stack and detect if they are
-  // ever overwritten.
-  HEAPU32[((max)>>2)] = 0x02135467;
-  HEAPU32[(((max)+(4))>>2)] = 0x89BACDFE;
-  // Also test the global address 0 for integrity.
-  HEAPU32[((0)>>2)] = 1668509029;
-}
-
-function checkStackCookie() {
-  if (ABORT) return;
-  var max = _emscripten_stack_get_end();
-  // See writeStackCookie().
-  if (max == 0) {
-    max += 4;
-  }
-  var cookie1 = HEAPU32[((max)>>2)];
-  var cookie2 = HEAPU32[(((max)+(4))>>2)];
-  if (cookie1 != 0x02135467 || cookie2 != 0x89BACDFE) {
-    abort(`Stack overflow! Stack cookie has been overwritten at ${ptrToString(max)}, expected hex dwords 0x89BACDFE and 0x2135467, but received ${ptrToString(cookie2)} ${ptrToString(cookie1)}`);
-  }
-  // Also test the global address 0 for integrity.
-  if (HEAPU32[((0)>>2)] != 0x63736d65 /* 'emsc' */) {
-    abort('Runtime error: The application has corrupted its heap memory area (address zero)!');
-  }
-}
 
 var __ATPRERUN__  = []; // functions called before the runtime is initialized
 var __ATINIT__    = []; // functions called during startup
@@ -1045,10 +942,7 @@ function preRun() {
 }
 
 function initRuntime() {
-  assert(!runtimeInitialized);
   runtimeInitialized = true;
-
-  checkStackCookie();
 
   
 if (!Module['noFSInit'] && !FS.initialized)
@@ -1060,7 +954,6 @@ TTY.init();
 }
 
 function postRun() {
-  checkStackCookie();
 
   if (Module['postRun']) {
     if (typeof Module['postRun'] == 'function') Module['postRun'] = [Module['postRun']];
@@ -1096,10 +989,6 @@ function addOnPostRun(cb) {
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/trunc
 
-assert(Math.imul, 'This browser does not support Math.imul(), build with LEGACY_VM_SUPPORT or POLYFILL_OLD_MATH_FUNCTIONS to add in a polyfill');
-assert(Math.fround, 'This browser does not support Math.fround(), build with LEGACY_VM_SUPPORT or POLYFILL_OLD_MATH_FUNCTIONS to add in a polyfill');
-assert(Math.clz32, 'This browser does not support Math.clz32(), build with LEGACY_VM_SUPPORT or POLYFILL_OLD_MATH_FUNCTIONS to add in a polyfill');
-assert(Math.trunc, 'This browser does not support Math.trunc(), build with LEGACY_VM_SUPPORT or POLYFILL_OLD_MATH_FUNCTIONS to add in a polyfill');
 
 // A counter of dependencies for calling run(). If we need to
 // do asynchronous work before running, increment this and
@@ -1110,15 +999,9 @@ assert(Math.trunc, 'This browser does not support Math.trunc(), build with LEGAC
 // the dependencies are met.
 var runDependencies = 0;
 var dependenciesFulfilled = null; // overridden to take different actions when all run dependencies are fulfilled
-var runDependencyTracking = {};
-var runDependencyWatcher = null;
 
 function getUniqueRunDependency(id) {
-  var orig = id;
-  while (1) {
-    if (!runDependencyTracking[id]) return id;
-    id = orig + Math.random();
-  }
+  return id;
 }
 
 function addRunDependency(id) {
@@ -1126,33 +1009,6 @@ function addRunDependency(id) {
 
   Module['monitorRunDependencies']?.(runDependencies);
 
-  if (id) {
-    assert(!runDependencyTracking[id]);
-    runDependencyTracking[id] = 1;
-    if (runDependencyWatcher === null && typeof setInterval != 'undefined') {
-      // Check for missing dependencies every few seconds
-      runDependencyWatcher = setInterval(() => {
-        if (ABORT) {
-          clearInterval(runDependencyWatcher);
-          runDependencyWatcher = null;
-          return;
-        }
-        var shown = false;
-        for (var dep in runDependencyTracking) {
-          if (!shown) {
-            shown = true;
-            err('still waiting on run dependencies:');
-          }
-          err(`dependency: ${dep}`);
-        }
-        if (shown) {
-          err('(end of list)');
-        }
-      }, 10000);
-    }
-  } else {
-    err('warning: run dependency added without ID');
-  }
 }
 
 function removeRunDependency(id) {
@@ -1160,17 +1016,7 @@ function removeRunDependency(id) {
 
   Module['monitorRunDependencies']?.(runDependencies);
 
-  if (id) {
-    assert(runDependencyTracking[id]);
-    delete runDependencyTracking[id];
-  } else {
-    err('warning: run dependency removed without ID');
-  }
   if (runDependencies == 0) {
-    if (runDependencyWatcher !== null) {
-      clearInterval(runDependencyWatcher);
-      runDependencyWatcher = null;
-    }
     if (dependenciesFulfilled) {
       var callback = dependenciesFulfilled;
       dependenciesFulfilled = null;
@@ -1190,9 +1036,7 @@ function abort(what) {
 
   ABORT = true;
 
-  if (what.indexOf('RuntimeError: unreachable') >= 0) {
-    what += '. "unreachable" may be due to ASYNCIFY_STACK_SIZE not being large enough (try increasing it)';
-  }
+  what += '. Build with -sASSERTIONS for more info.';
 
   // Use a wasm runtime error, because a JS error might be seen as a foreign
   // exception, which means we'd run destructors on it. We need the error to
@@ -1234,17 +1078,6 @@ var isDataURI = (filename) => filename.startsWith(dataURIPrefix);
  * @noinline
  */
 var isFileURI = (filename) => filename.startsWith('file://');
-
-function createExportWrapper(name, nargs) {
-  return (...args) => {
-    assert(runtimeInitialized, `native function \`${name}\` called before runtime initialization`);
-    var f = wasmExports[name];
-    assert(f, `exported native function \`${name}\` not found`);
-    // Only assert for too many arguments. Too few can be valid since the missing arguments will be zero filled.
-    assert(args.length <= nargs, `native function \`${name}\` called with ${args.length} args but expects ${nargs}`);
-    return f(...args);
-  };
-}
 
 
 
@@ -1293,10 +1126,6 @@ async function instantiateArrayBuffer(binaryFile, imports) {
   } catch (reason) {
     err(`failed to asynchronously prepare wasm: ${reason}`);
 
-    // Warn on some common problems.
-    if (isFileURI(wasmBinaryFile)) {
-      err(`warning: Loading from a file URI (${wasmBinaryFile}) is not supported in most browsers. See https://emscripten.org/docs/getting_started/FAQ.html#how-do-i-run-a-local-webserver-for-testing-why-does-my-program-stall-in-downloading-or-preparing`);
-    }
     abort(reason);
   }
 }
@@ -1331,10 +1160,6 @@ async function instantiateAsync(binary, binaryFile, imports) {
 }
 
 function getWasmImports() {
-  // instrumenting imports is used in asyncify in two ways: to add assertions
-  // that check for proper import use, and for ASYNCIFY=2 we use them to set up
-  // the Promise API on the import side.
-  Asyncify.instrumentWasmImports(wasmImports);
   // prepare imports
   return {
     'env': wasmImports,
@@ -1358,7 +1183,6 @@ async function createWasm() {
 
     wasmMemory = wasmExports['memory'];
     
-    assert(wasmMemory, 'memory not found in wasm exports');
     updateMemoryViews();
 
     addOnInit(wasmExports['__wasm_call_ctors']);
@@ -1370,15 +1194,9 @@ async function createWasm() {
   addRunDependency('wasm-instantiate');
 
   // Prefer streaming instantiation if available.
-  // Async compilation can be confusing when an error on the page overwrites Module
-  // (for example, if the order of elements is wrong, and the one defining Module is
-  // later), so we save Module and check it later.
-  var trueModule = Module;
   function receiveInstantiationResult(result) {
     // 'result' is a ResultObject object which has both the module and instance.
     // receiveInstance() will swap in the exports (to Module.asm) so they can be called
-    assert(Module === trueModule, 'the Module object should not be replaced during async compilation - perhaps the order of HTML elements is wrong?');
-    trueModule = null;
     // TODO: Due to Closure regression https://github.com/google/closure-compiler/issues/3193, the above line no longer optimizes out down to the following line.
     // When the regression is fixed, can restore the above PTHREADS-enabled path.
     receiveInstance(result['instance']);
@@ -1420,124 +1238,11 @@ var tempDouble;
 var tempI64;
 
 
-// Endianness check
-(() => {
-  var h16 = new Int16Array(1);
-  var h8 = new Int8Array(h16.buffer);
-  h16[0] = 0x6373;
-  if (h8[0] !== 0x73 || h8[1] !== 0x63) throw 'Runtime error: expected the system to be little-endian! (Run with -sSUPPORT_BIG_ENDIAN to bypass)';
-})();
-
-if (Module['ENVIRONMENT']) {
-  throw new Error('Module.ENVIRONMENT has been deprecated. To force the environment, use the ENVIRONMENT compile-time option (for example, -sENVIRONMENT=web or -sENVIRONMENT=node)');
-}
-
-function legacyModuleProp(prop, newName, incoming=true) {
-  if (!Object.getOwnPropertyDescriptor(Module, prop)) {
-    Object.defineProperty(Module, prop, {
-      configurable: true,
-      get() {
-        let extra = incoming ? ' (the initial value can be provided on Module, but after startup the value is only looked for on a local variable of that name)' : '';
-        abort(`\`Module.${prop}\` has been replaced by \`${newName}\`` + extra);
-
-      }
-    });
-  }
-}
-
-function ignoredModuleProp(prop) {
-  if (Object.getOwnPropertyDescriptor(Module, prop)) {
-    abort(`\`Module.${prop}\` was supplied but \`${prop}\` not included in INCOMING_MODULE_JS_API`);
-  }
-}
-
-// forcing the filesystem exports a few things by default
-function isExportedByForceFilesystem(name) {
-  return name === 'FS_createPath' ||
-         name === 'FS_createDataFile' ||
-         name === 'FS_createPreloadedFile' ||
-         name === 'FS_unlink' ||
-         name === 'addRunDependency' ||
-         // The old FS has some functionality that WasmFS lacks.
-         name === 'FS_createLazyFile' ||
-         name === 'FS_createDevice' ||
-         name === 'removeRunDependency';
-}
-
-/**
- * Intercept access to a global symbol.  This enables us to give informative
- * warnings/errors when folks attempt to use symbols they did not include in
- * their build, or no symbols that no longer exist.
- */
-function hookGlobalSymbolAccess(sym, func) {
-  // In MODULARIZE mode the generated code runs inside a function scope and not
-  // the global scope, and JavaScript does not provide access to function scopes
-  // so we cannot dynamically modify the scrope using `defineProperty` in this
-  // case.
-  //
-  // In this mode we simply ignore requests for `hookGlobalSymbolAccess`. Since
-  // this is a debug-only feature, skipping it is not major issue.
-}
-
-function missingGlobal(sym, msg) {
-  hookGlobalSymbolAccess(sym, () => {
-    warnOnce(`\`${sym}\` is not longer defined by emscripten. ${msg}`);
-  });
-}
-
-missingGlobal('buffer', 'Please use HEAP8.buffer or wasmMemory.buffer');
-missingGlobal('asm', 'Please use wasmExports instead');
-
-function missingLibrarySymbol(sym) {
-  hookGlobalSymbolAccess(sym, () => {
-    // Can't `abort()` here because it would break code that does runtime
-    // checks.  e.g. `if (typeof SDL === 'undefined')`.
-    var msg = `\`${sym}\` is a library symbol and not included by default; add it to your library.js __deps or to DEFAULT_LIBRARY_FUNCS_TO_INCLUDE on the command line`;
-    // DEFAULT_LIBRARY_FUNCS_TO_INCLUDE requires the name as it appears in
-    // library.js, which means $name for a JS name with no prefix, or name
-    // for a JS name like _name.
-    var librarySymbol = sym;
-    if (!librarySymbol.startsWith('_')) {
-      librarySymbol = '$' + sym;
-    }
-    msg += ` (e.g. -sDEFAULT_LIBRARY_FUNCS_TO_INCLUDE='${librarySymbol}')`;
-    if (isExportedByForceFilesystem(sym)) {
-      msg += '. Alternatively, forcing filesystem support (-sFORCE_FILESYSTEM) can export this for you';
-    }
-    warnOnce(msg);
-  });
-
-  // Any symbol that is not included from the JS library is also (by definition)
-  // not exported on the Module object.
-  unexportedRuntimeSymbol(sym);
-}
-
-function unexportedRuntimeSymbol(sym) {
-  if (!Object.getOwnPropertyDescriptor(Module, sym)) {
-    Object.defineProperty(Module, sym, {
-      configurable: true,
-      get() {
-        var msg = `'${sym}' was not exported. add it to EXPORTED_RUNTIME_METHODS (see the Emscripten FAQ)`;
-        if (isExportedByForceFilesystem(sym)) {
-          msg += '. Alternatively, forcing filesystem support (-sFORCE_FILESYSTEM) can export this for you';
-        }
-        abort(msg);
-      }
-    });
-  }
-}
-
-// Used by XXXXX_DEBUG settings to output debug messages.
-function dbg(...args) {
-  // TODO(sbc): Make this configurable somehow.  Its not always convenient for
-  // logging to show up as warnings.
-  console.warn(...args);
-}
 
 // === Body ===
 
 var ASM_CONSTS = {
-  767774: () => { Fibers.trampolineRunning = false; }
+  767166: () => { Fibers.trampolineRunning = false; }
 };
 function writeoutEmscriptenOOM() { throw new Error("Out of memory"); }
 function libavjs_wait_reader(fd) { return Asyncify.handleAsync(function() { return new Promise(function(res) { var name = Module.fdName(fd); var waiters = Module.ff_reader_dev_waiters[name]; if (!waiters) waiters = Module.ff_reader_dev_waiters[name] = []; waiters.push(res); }); }); }
@@ -1587,13 +1292,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
 
   var noExitRuntime = Module['noExitRuntime'] || true;
 
-  var ptrToString = (ptr) => {
-      assert(typeof ptr === 'number');
-      // With CAN_ADDRESS_2GB or MEMORY64, pointers are already unsigned.
-      ptr >>>= 0;
-      return '0x' + ptr.toString(16).padStart(8, '0');
-    };
-
   
     /**
      * @param {number} ptr
@@ -1618,15 +1316,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
   var stackRestore = (val) => __emscripten_stack_restore(val);
 
   var stackSave = () => _emscripten_stack_get_current();
-
-  var warnOnce = (text) => {
-      warnOnce.shown ||= {};
-      if (!warnOnce.shown[text]) {
-        warnOnce.shown[text] = 1;
-        if (ENVIRONMENT_IS_NODE) text = 'warning: ' + text;
-        err(text);
-      }
-    };
 
   var UTF8Decoder = typeof TextDecoder != 'undefined' ? new TextDecoder() : undefined;
   
@@ -1668,7 +1357,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         if ((u0 & 0xF0) == 0xE0) {
           u0 = ((u0 & 15) << 12) | (u1 << 6) | u2;
         } else {
-          if ((u0 & 0xF8) != 0xF0) warnOnce('Invalid UTF-8 leading byte ' + ptrToString(u0) + ' encountered when deserializing a UTF-8 string in wasm memory to a JS string!');
           u0 = ((u0 & 7) << 18) | (u1 << 12) | (u2 << 6) | (heapOrArray[idx++] & 63);
         }
   
@@ -1698,7 +1386,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
      * @return {string}
      */
   var UTF8ToString = (ptr, maxBytesToRead) => {
-      assert(typeof ptr == 'number', `UTF8ToString expects a number (got ${typeof ptr})`);
       return ptr ? UTF8ArrayToString(HEAPU8, ptr, maxBytesToRead) : '';
     };
   var ___assert_fail = (condition, filename, line, func) =>
@@ -1799,7 +1486,7 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         }
       }
       // we couldn't find a proper implementation, as Math.random() is not suitable for /dev/random, see emscripten-core/emscripten/pull/7096
-      abort('no cryptographic support found for randomDevice. consider polyfilling it if you want to use something insecure like Math.random(), e.g. put this in a --pre-js: var crypto = { getRandomValues: (array) => { for (var i = 0; i < array.length; i++) array[i] = (Math.random()*256)|0 } };');
+      abort('initRandomDevice');
     };
   var randomFill = (view) => {
       // Lazily init on the first invocation.
@@ -1888,7 +1575,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
     };
   
   var stringToUTF8Array = (str, heap, outIdx, maxBytesToWrite) => {
-      assert(typeof str === 'string', `stringToUTF8Array expects a string (got ${typeof str})`);
       // Parameter maxBytesToWrite is not optional. Negative values, 0, null,
       // undefined and false each don't write out any bytes.
       if (!(maxBytesToWrite > 0))
@@ -1923,7 +1609,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
           heap[outIdx++] = 0x80 | (u & 63);
         } else {
           if (outIdx + 3 >= endIdx) break;
-          if (u > 0x10FFFF) warnOnce('Invalid Unicode code point ' + ptrToString(u) + ' encountered when serializing a JS string to a UTF-8 string in wasm memory! (Valid unicode code points should be in range 0-0x10FFFF).');
           heap[outIdx++] = 0xF0 | (u >> 18);
           heap[outIdx++] = 0x80 | ((u >> 12) & 63);
           heap[outIdx++] = 0x80 | ((u >> 6) & 63);
@@ -2138,11 +1823,10 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
     };
   
   var alignMemory = (size, alignment) => {
-      assert(alignment, "alignment argument is required");
       return Math.ceil(size / alignment) * alignment;
     };
   var mmapAlloc = (size) => {
-      abort('internal error: mmapAlloc called but `emscripten_builtin_memalign` native symbol not exported');
+      abort();
     };
   var MEMFS = {
   ops_table:null,
@@ -2301,7 +1985,7 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
           }
         },
   lookup(parent, name) {
-          throw new FS.ErrnoError(44);
+          throw MEMFS.doesNotExistError;
         },
   mknod(parent, name, mode, dev) {
           return MEMFS.createNode(parent, name, mode, dev);
@@ -2358,7 +2042,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
           var contents = stream.node.contents;
           if (position >= stream.node.usedBytes) return 0;
           var size = Math.min(stream.node.usedBytes - position, length);
-          assert(size >= 0);
           if (size > 8 && contents.subarray) { // non-trivial, and typed array
             buffer.set(contents.subarray(position, position + size), offset);
           } else {
@@ -2367,8 +2050,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
           return size;
         },
   write(stream, buffer, offset, length, position, canOwn) {
-          // The data buffer should be a typed array view
-          assert(!(buffer instanceof ArrayBuffer));
           // If the buffer is located in main memory (HEAP), and if
           // memory can grow, we can't hold on to references of the
           // memory buffer, as they may get invalidated. That means we
@@ -2383,7 +2064,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
   
           if (buffer.subarray && (!node.contents || node.contents.subarray)) { // This write is from a typed array to a typed array?
             if (canOwn) {
-              assert(position === 0, 'canOwn must imply no weird position inside the file');
               node.contents = buffer.subarray(offset, offset + length);
               node.usedBytes = length;
               return length;
@@ -2471,7 +2151,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
   
   var asyncLoad = async (url) => {
       var arrayBuffer = await readAsync(url);
-      assert(arrayBuffer, `Loading data file "${url}" failed (no arrayBuffer).`);
       return new Uint8Array(arrayBuffer);
     };
   asyncLoad.isAsync = true;
@@ -2695,134 +2374,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         },
   },
   };
-  
-  
-  
-  var strError = (errno) => UTF8ToString(_strerror(errno));
-  
-  var ERRNO_CODES = {
-      'EPERM': 63,
-      'ENOENT': 44,
-      'ESRCH': 71,
-      'EINTR': 27,
-      'EIO': 29,
-      'ENXIO': 60,
-      'E2BIG': 1,
-      'ENOEXEC': 45,
-      'EBADF': 8,
-      'ECHILD': 12,
-      'EAGAIN': 6,
-      'EWOULDBLOCK': 6,
-      'ENOMEM': 48,
-      'EACCES': 2,
-      'EFAULT': 21,
-      'ENOTBLK': 105,
-      'EBUSY': 10,
-      'EEXIST': 20,
-      'EXDEV': 75,
-      'ENODEV': 43,
-      'ENOTDIR': 54,
-      'EISDIR': 31,
-      'EINVAL': 28,
-      'ENFILE': 41,
-      'EMFILE': 33,
-      'ENOTTY': 59,
-      'ETXTBSY': 74,
-      'EFBIG': 22,
-      'ENOSPC': 51,
-      'ESPIPE': 70,
-      'EROFS': 69,
-      'EMLINK': 34,
-      'EPIPE': 64,
-      'EDOM': 18,
-      'ERANGE': 68,
-      'ENOMSG': 49,
-      'EIDRM': 24,
-      'ECHRNG': 106,
-      'EL2NSYNC': 156,
-      'EL3HLT': 107,
-      'EL3RST': 108,
-      'ELNRNG': 109,
-      'EUNATCH': 110,
-      'ENOCSI': 111,
-      'EL2HLT': 112,
-      'EDEADLK': 16,
-      'ENOLCK': 46,
-      'EBADE': 113,
-      'EBADR': 114,
-      'EXFULL': 115,
-      'ENOANO': 104,
-      'EBADRQC': 103,
-      'EBADSLT': 102,
-      'EDEADLOCK': 16,
-      'EBFONT': 101,
-      'ENOSTR': 100,
-      'ENODATA': 116,
-      'ETIME': 117,
-      'ENOSR': 118,
-      'ENONET': 119,
-      'ENOPKG': 120,
-      'EREMOTE': 121,
-      'ENOLINK': 47,
-      'EADV': 122,
-      'ESRMNT': 123,
-      'ECOMM': 124,
-      'EPROTO': 65,
-      'EMULTIHOP': 36,
-      'EDOTDOT': 125,
-      'EBADMSG': 9,
-      'ENOTUNIQ': 126,
-      'EBADFD': 127,
-      'EREMCHG': 128,
-      'ELIBACC': 129,
-      'ELIBBAD': 130,
-      'ELIBSCN': 131,
-      'ELIBMAX': 132,
-      'ELIBEXEC': 133,
-      'ENOSYS': 52,
-      'ENOTEMPTY': 55,
-      'ENAMETOOLONG': 37,
-      'ELOOP': 32,
-      'EOPNOTSUPP': 138,
-      'EPFNOSUPPORT': 139,
-      'ECONNRESET': 15,
-      'ENOBUFS': 42,
-      'EAFNOSUPPORT': 5,
-      'EPROTOTYPE': 67,
-      'ENOTSOCK': 57,
-      'ENOPROTOOPT': 50,
-      'ESHUTDOWN': 140,
-      'ECONNREFUSED': 14,
-      'EADDRINUSE': 3,
-      'ECONNABORTED': 13,
-      'ENETUNREACH': 40,
-      'ENETDOWN': 38,
-      'ETIMEDOUT': 73,
-      'EHOSTDOWN': 142,
-      'EHOSTUNREACH': 23,
-      'EINPROGRESS': 26,
-      'EALREADY': 7,
-      'EDESTADDRREQ': 17,
-      'EMSGSIZE': 35,
-      'EPROTONOSUPPORT': 66,
-      'ESOCKTNOSUPPORT': 137,
-      'EADDRNOTAVAIL': 4,
-      'ENETRESET': 39,
-      'EISCONN': 30,
-      'ENOTCONN': 53,
-      'ETOOMANYREFS': 141,
-      'EUSERS': 136,
-      'EDQUOT': 19,
-      'ESTALE': 72,
-      'ENOTSUP': 138,
-      'ENOMEDIUM': 148,
-      'EILSEQ': 25,
-      'EOVERFLOW': 61,
-      'ECANCELED': 11,
-      'ENOTRECOVERABLE': 56,
-      'EOWNERDEAD': 62,
-      'ESTRPIPE': 135,
-    };
   var FS = {
   root:null,
   mounts:[],
@@ -2834,7 +2385,7 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
   currentPath:"/",
   initialized:false,
   ignorePermissions:true,
-  ErrnoError:class extends Error {
+  ErrnoError:class {
         name = 'ErrnoError';
         // We set the `name` property to be able to identify `FS.ErrnoError`
         // - the `name` is a standard ECMA-262 property of error objects. Kind of good to have it anyway.
@@ -2843,14 +2394,7 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         // the test `err instanceof FS.ErrnoError` won't detect an error coming from another filesystem, causing bugs.
         // we'll use the reliable test `err.name == "ErrnoError"` instead
         constructor(errno) {
-          super(runtimeInitialized ? strError(errno) : '');
           this.errno = errno;
-          for (var key in ERRNO_CODES) {
-            if (ERRNO_CODES[key] === errno) {
-              this.code = key;
-              break;
-            }
-          }
         }
       },
   filesystems:null,
@@ -3046,7 +2590,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         return FS.lookup(parent, name);
       },
   createNode(parent, name, mode, rdev) {
-        assert(typeof parent == 'object')
         var node = new FS.FSNode(parent, name, mode, rdev);
   
         FS.hashAddNode(node);
@@ -3179,7 +2722,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
       },
   getStream:(fd) => FS.streams[fd],
   createStream(stream, fd = -1) {
-        assert(fd >= -1);
   
         // clone it, so we can return an instance of FSStream
         stream = Object.assign(new FS.FSStream(), stream);
@@ -3247,7 +2789,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         var completed = 0;
   
         function doCallback(errCode) {
-          assert(FS.syncFSRequests > 0);
           FS.syncFSRequests--;
           return callback(errCode);
         }
@@ -3274,11 +2815,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         });
       },
   mount(type, opts, mountpoint) {
-        if (typeof type == 'string') {
-          // The filesystem was not included, and instead we have an error
-          // message stored in the variable.
-          throw type;
-        }
         var root = mountpoint === '/';
         var pseudo = !mountpoint;
         var node;
@@ -3357,7 +2893,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
   
         // remove this mount from the child mounts
         var idx = node.mount.mounts.indexOf(mount);
-        assert(idx !== -1);
         node.mount.mounts.splice(idx, 1);
       },
   lookup(parent, name) {
@@ -3824,7 +3359,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         return stream.position;
       },
   read(stream, buffer, offset, length, position) {
-        assert(offset >= 0);
         if (length < 0 || position < 0) {
           throw new FS.ErrnoError(28);
         }
@@ -3851,7 +3385,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         return bytesRead;
       },
   write(stream, buffer, offset, length, position, canOwn) {
-        assert(offset >= 0);
         if (length < 0 || position < 0) {
           throw new FS.ErrnoError(28);
         }
@@ -3923,7 +3456,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         return stream.stream_ops.mmap(stream, length, position, prot, flags);
       },
   msync(stream, buffer, offset, length, mmapFlags) {
-        assert(offset >= 0);
         if (!stream.stream_ops.msync) {
           return 0;
         }
@@ -4086,9 +3618,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         var stdin = FS.open('/dev/stdin', 0);
         var stdout = FS.open('/dev/stdout', 1);
         var stderr = FS.open('/dev/stderr', 1);
-        assert(stdin.fd === 0, `invalid handle for stdin (${stdin.fd})`);
-        assert(stdout.fd === 1, `invalid handle for stdout (${stdout.fd})`);
-        assert(stderr.fd === 2, `invalid handle for stderr (${stderr.fd})`);
       },
   staticInit() {
         FS.nameTable = new Array(4096);
@@ -4105,7 +3634,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         };
       },
   init(input, output, error) {
-        assert(!FS.initialized, 'FS.init was previously called. If you want to initialize later with custom parameters, remove any earlier calls (note that one is automatically added to the generated code)');
         FS.initialized = true;
   
         // Allow Module.stdin etc. to provide defaults, if none explicitly passed to us here
@@ -4118,7 +3646,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
   quit() {
         FS.initialized = false;
         // force-flush all streams, so we get musl std streams printed out
-        _fflush(0);
         // close all of our streams
         for (var i = 0; i < FS.streams.length; i++) {
           var stream = FS.streams[i];
@@ -4405,7 +3932,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
           if (position >= contents.length)
             return 0;
           var size = Math.min(contents.length - position, length);
-          assert(size >= 0);
           if (contents.slice) { // normal array
             for (var i = 0; i < size; i++) {
               buffer[offset + i] = contents[position + i];
@@ -4434,24 +3960,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         };
         node.stream_ops = stream_ops;
         return node;
-      },
-  absolutePath() {
-        abort('FS.absolutePath has been removed; use PATH_FS.resolve instead');
-      },
-  createFolder() {
-        abort('FS.createFolder has been removed; use FS.mkdir instead');
-      },
-  createLink() {
-        abort('FS.createLink has been removed; use FS.symlink instead');
-      },
-  joinPath() {
-        abort('FS.joinPath has been removed; use PATH.join instead');
-      },
-  mmapAlloc() {
-        abort('FS.mmapAlloc has been replaced by the top level function mmapAlloc');
-      },
-  standardizePath() {
-        abort('FS.standardizePath has been removed; use PATH.normalize instead');
       },
   };
   
@@ -4529,7 +4037,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
       // exceptfds are supported, although on web, such exceptional conditions never arise in web sockets
       //                          and so the exceptfds list will always return empty.
       // timeout is supported, although on SOCKFS and PIPEFS these are ignored and always treated as 0 - fully async
-      assert(nfds <= 64, 'nfds must be less than or equal to 64');  // fd sets have 64 bits // TODO: this could be 1024 based on current musl headers
   
       var total = 0;
   
@@ -4619,7 +4126,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
   try {
   
       var old = SYSCALLS.getStreamFromFD(fd);
-      assert(!flags);
       if (old.fd === newfd) return -28;
       // Check newfd is within range of valid open file descriptors.
       if (newfd < 0 || newfd >= FS.MAX_OPEN_FDS) return -8;
@@ -4636,7 +4142,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
   try {
   
       path = SYSCALLS.getStr(path);
-      assert(flags === 0 || flags == 512);
       path = SYSCALLS.calculateAt(dirfd, path);
       if (amode & ~7) {
         // need a valid mode
@@ -4663,7 +4168,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
 
   /** @suppress {duplicate } */
   var syscallGetVarargI = () => {
-      assert(SYSCALLS.varargs != undefined);
       // the `+` prepended here is necessary to convince the JSCompiler that varargs is indeed a number.
       var ret = HEAP32[((+SYSCALLS.varargs)>>2)];
       SYSCALLS.varargs += 4;
@@ -4730,7 +4234,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
   }
 
   var stringToUTF8 = (str, outPtr, maxBytesToWrite) => {
-      assert(typeof maxBytesToWrite == 'number', 'stringToUTF8(str, outPtr, maxBytesToWrite) is missing the third parameter that specifies the length of the output buffer!');
       return stringToUTF8Array(str, HEAPU8, outPtr, maxBytesToWrite);
     };
   
@@ -4777,7 +4280,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
                  FS.isLink(child.mode) ? 10 :   // DT_LNK, symbolic link.
                  8;                             // DT_REG, regular file.
         }
-        assert(id);
         (tempI64 = [id>>>0,(tempDouble = id,(+(Math.abs(tempDouble))) >= 1.0 ? (tempDouble > 0.0 ? (+(Math.floor((tempDouble)/4294967296.0)))>>>0 : (~~((+(Math.ceil((tempDouble - +(((~~(tempDouble)))>>>0))/4294967296.0)))))>>>0) : 0)], HEAP32[((dirp + pos)>>2)] = tempI64[0],HEAP32[(((dirp + pos)+(4))>>2)] = tempI64[1]);
         (tempI64 = [(idx + 1) * struct_size>>>0,(tempDouble = (idx + 1) * struct_size,(+(Math.abs(tempDouble))) >= 1.0 ? (tempDouble > 0.0 ? (+(Math.floor((tempDouble)/4294967296.0)))>>>0 : (~~((+(Math.ceil((tempDouble - +(((~~(tempDouble)))>>>0))/4294967296.0)))))>>>0) : 0)], HEAP32[(((dirp + pos)+(8))>>2)] = tempI64[0],HEAP32[(((dirp + pos)+(12))>>2)] = tempI64[1]);
         HEAP16[(((dirp + pos)+(16))>>1)] = 280;
@@ -4907,7 +4409,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
       var nofollow = flags & 256;
       var allowEmpty = flags & 4096;
       flags = flags & (~6400);
-      assert(!flags, `unknown flags in __syscall_newfstatat: ${flags}`);
       path = SYSCALLS.calculateAt(dirfd, path, allowEmpty);
       return SYSCALLS.doStat(nofollow ? FS.lstat : FS.stat, path, buf);
     } catch (e) {
@@ -4989,11 +4490,9 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
   }
 
   var __abort_js = () =>
-      abort('native code called abort()');
+      abort('');
 
   var convertI32PairToI53Checked = (lo, hi) => {
-      assert(lo == (lo >>> 0) || lo == (lo|0)); // lo should either be a i32 or a u32
-      assert(hi === (hi|0));                    // hi should be a i32
       return ((hi + 0x200000) >>> 0 < 0x400001 - !!lo) ? (lo >>> 0) + hi * 4294967296 : NaN;
     };
   function __gmtime_js(time_low, time_high,tmPtr) {
@@ -5109,7 +4608,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
     return (setTempRet0((tempDouble = ret,(+(Math.abs(tempDouble))) >= 1.0 ? (tempDouble > 0.0 ? (+(Math.floor((tempDouble)/4294967296.0)))>>>0 : (~~((+(Math.ceil((tempDouble - +(((~~(tempDouble)))>>>0))/4294967296.0)))))>>>0) : 0)), ret>>>0);
   };
 
-  
   var __tzset_js = (timezone, daylight, std_name, dst_name) => {
       // TODO: Use (malleable) environment variables instead of system settings.
       var currentYear = new Date().getFullYear();
@@ -5149,10 +4647,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
   
       var winterName = extractZone(winterOffset);
       var summerName = extractZone(summerOffset);
-      assert(winterName);
-      assert(summerName);
-      assert(lengthBytesUTF8(winterName) <= 16, `timezone name truncated to fit in TZNAME_MAX (${winterName})`);
-      assert(lengthBytesUTF8(summerName) <= 16, `timezone name truncated to fit in TZNAME_MAX (${summerName})`);
       if (summerOffset < winterOffset) {
         // Northern hemisphere
         stringToUTF8(winterName, std_name, 17);
@@ -5196,18 +4690,11 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
 
   var readEmAsmArgsArray = [];
   var readEmAsmArgs = (sigPtr, buf) => {
-      // Nobody should have mutated _readEmAsmArgsArray underneath us to be something else than an array.
-      assert(Array.isArray(readEmAsmArgsArray));
-      // The input buffer is allocated on the stack, so it must be stack-aligned.
-      assert(buf % 16 == 0);
       readEmAsmArgsArray.length = 0;
       var ch;
       // Most arguments are i32s, so shift the buffer pointer so it is a plain
       // index into HEAP32.
       while (ch = HEAPU8[sigPtr++]) {
-        var chr = String.fromCharCode(ch);
-        var validChars = ['d', 'f', 'i', 'p'];
-        assert(validChars.includes(chr), `Invalid character ${ch}("${chr}") in readEmAsmArgs! Use only [${validChars}], and do not specify "v" for void return argument.`);
         // Floats are always passed as doubles, so all types except for 'i'
         // are 8 bytes and require alignment.
         var wide = (ch != 105);
@@ -5226,15 +4713,12 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
     };
   var runEmAsmFunction = (code, sigPtr, argbuf) => {
       var args = readEmAsmArgs(sigPtr, argbuf);
-      assert(ASM_CONSTS.hasOwnProperty(code), `No EM_ASM constant found at address ${code}.  The loaded WebAssembly file is likely out of sync with the generated JavaScript.`);
       return ASM_CONSTS[code](...args);
     };
   var _emscripten_asm_const_int = (code, sigPtr, argbuf) => {
       return runEmAsmFunction(code, sigPtr, argbuf);
     };
 
-
-  var _emscripten_err = (str) => err(UTF8ToString(str));
 
   var runAndAbortIfError = (func) => {
       try {
@@ -5253,12 +4737,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
       if (e instanceof ExitStatus || e == 'unwind') {
         return EXITSTATUS;
       }
-      checkStackCookie();
-      if (e instanceof WebAssembly.RuntimeError) {
-        if (_emscripten_stack_get_current() <= 0) {
-          err('Stack overflow detected.  You can try increasing -sSTACK_SIZE (currently set to 1048576)');
-        }
-      }
       quit_(1, e);
     };
   
@@ -5273,21 +4751,10 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
       }
       quit_(code, new ExitStatus(code));
     };
-  
-  
   /** @suppress {duplicate } */
   /** @param {boolean|number=} implicit */
   var exitJS = (status, implicit) => {
       EXITSTATUS = status;
-  
-      checkUnflushedContent();
-  
-      // if exit() was called explicitly, warn the user if the runtime isn't actually being shut down
-      if (keepRuntimeAlive() && !implicit) {
-        var msg = `program exited (with status: ${status}), but keepRuntimeAlive() is set (counter=${runtimeKeepaliveCounter}) due to an async operation, so halting execution but not exiting the runtime or preventing further async execution (you can use emscripten_force_exit, if you want to force a true shutdown)`;
-        readyPromiseReject(msg);
-        err(msg);
-      }
   
       _proc_exit(status);
     };
@@ -5305,7 +4772,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
     };
   var callUserCallback = (func) => {
       if (ABORT) {
-        err('user callback triggered after runtime exited or application aborted.  Ignoring.');
         return;
       }
       try {
@@ -5317,7 +4783,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
     };
   
   var sigToWasmTypes = (sig) => {
-      assert(!sig.includes('j'), 'i64 not permitted in function signatures when WASM_BIGINT is disabled');
       var typeNames = {
         'i': 'i32',
         'j': 'i64',
@@ -5331,7 +4796,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         results: sig[0] == 'v' ? [] : [typeNames[sig[0]]]
       };
       for (var i = 1; i < sig.length; ++i) {
-        assert(sig[i] in typeNames, 'invalid signature char: ' + sig[i]);
         type.parameters.push(typeNames[sig[i]]);
       }
       return type;
@@ -5342,7 +4806,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
     };
   
   var runtimeKeepalivePop = () => {
-      assert(runtimeKeepaliveCounter > 0);
       runtimeKeepaliveCounter -= 1;
     };
   
@@ -5354,31 +4817,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         for (let [x, original] of Object.entries(imports)) {
           if (typeof original == 'function') {
             let isAsyncifyImport = original.isAsync || importPattern.test(x);
-            imports[x] = (...args) => {
-              var originalAsyncifyState = Asyncify.state;
-              try {
-                return original(...args);
-              } finally {
-                // Only asyncify-declared imports are allowed to change the
-                // state.
-                // Changing the state from normal to disabled is allowed (in any
-                // function) as that is what shutdown does (and we don't have an
-                // explicit list of shutdown imports).
-                var changedToDisabled =
-                      originalAsyncifyState === Asyncify.State.Normal &&
-                      Asyncify.state        === Asyncify.State.Disabled;
-                // invoke_* functions are allowed to change the state if we do
-                // not ignore indirect calls.
-                var ignoredInvoke = x.startsWith('invoke_') &&
-                                    true;
-                if (Asyncify.state !== originalAsyncifyState &&
-                    !isAsyncifyImport &&
-                    !changedToDisabled &&
-                    !ignoredInvoke) {
-                  throw new Error(`import ${x} was not in ASYNCIFY_IMPORTS, but changed the state`);
-                }
-              }
-            };
           }
         }
       },
@@ -5393,7 +4831,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
               } finally {
                 if (!ABORT) {
                   var y = Asyncify.exportCallStack.pop();
-                  assert(y === x);
                   Asyncify.maybeStopUnwind();
                 }
               }
@@ -5450,8 +4887,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         }
       },
   whenDone() {
-        assert(Asyncify.currData, 'Tried to wait for an async operation when none is in progress.');
-        assert(!Asyncify.asyncPromiseHandlers, 'Cannot have multiple async operations in flight at once');
         return new Promise((resolve, reject) => {
           Asyncify.asyncPromiseHandlers = { resolve, reject };
         });
@@ -5497,7 +4932,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         return func();
       },
   handleSleep(startAsync) {
-        assert(Asyncify.state !== Asyncify.State.Disabled, 'Asyncify cannot be done during or after the runtime exits');
         if (ABORT) return;
         if (Asyncify.state === Asyncify.State.Normal) {
           // Prepare to sleep. Call startAsync, and see what happens:
@@ -5507,7 +4941,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
           var reachedCallback = false;
           var reachedAfterCallback = false;
           startAsync((handleSleepReturnValue = 0) => {
-            assert(!handleSleepReturnValue || typeof handleSleepReturnValue == 'number' || typeof handleSleepReturnValue == 'boolean'); // old emterpretify API supported other stuff
             if (ABORT) return;
             Asyncify.handleSleepReturnValue = handleSleepReturnValue;
             reachedCallback = true;
@@ -5515,12 +4948,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
               // We are happening synchronously, so no need for async.
               return;
             }
-            // This async operation did not happen synchronously, so we did
-            // unwind. In that case there can be no compiled code on the stack,
-            // as it might break later operations (we can rewind ok now, but if
-            // we unwind again, we would unwind through the extra compiled code
-            // too).
-            assert(!Asyncify.exportCallStack.length, 'Waking up (starting to rewind) must be done from JS, without compiled code on the stack.');
             Asyncify.state = Asyncify.State.Rewinding;
             runAndAbortIfError(() => _asyncify_start_rewind(Asyncify.currData));
             if (typeof MainLoop != 'undefined' && MainLoop.func) {
@@ -5620,7 +5047,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         var entryPoint = HEAPU32[(((newFiber)+(12))>>2)];
   
         if (entryPoint !== 0) {
-          writeStackCookie();
           Asyncify.currData = null;
           HEAPU32[(((newFiber)+(12))>>2)] = 0;
   
@@ -5653,7 +5079,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
   
         Fibers.nextFiber = newFiber;
       } else {
-        assert(Asyncify.state === Asyncify.State.Rewinding);
         Asyncify.state = Asyncify.State.Normal;
         _asyncify_stop_rewind();
         Asyncify.currData = null;
@@ -5679,7 +5104,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
         updateMemoryViews();
         return 1 /*success*/;
       } catch(e) {
-        err(`growMemory: Attempted to grow heap from ${b.byteLength} bytes to ${size} bytes, but got error: ${e}`);
       }
       // implicit 0 return to save code size (caller will cast "undefined" into 0
       // anyhow)
@@ -5690,7 +5114,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
       requestedSize >>>= 0;
       // With multithreaded builds, races can happen (another thread might increase the size
       // in between), so return a failure, and let the caller retry.
-      assert(requestedSize > oldSize);
   
       // Memory resize rules:
       // 1.  Always increase heap size to at least the requested size, rounded up
@@ -5713,7 +5136,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
       // (the wasm binary specifies it, so if we tried, we'd fail anyhow).
       var maxHeapSize = getHeapMax();
       if (requestedSize > maxHeapSize) {
-        err(`Cannot enlarge memory, requested ${requestedSize} bytes, but the limit is ${maxHeapSize} bytes!`);
         return false;
       }
   
@@ -5733,7 +5155,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
           return true;
         }
       }
-      err(`Failed to grow the heap from ${oldSize} bytes to ${newSize} bytes, not enough memory!`);
       return false;
     };
 
@@ -5774,7 +5195,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
   
   var stringToAscii = (str, buffer) => {
       for (var i = 0; i < str.length; ++i) {
-        assert(str.charCodeAt(i) === (str.charCodeAt(i) & 0xff));
         HEAP8[buffer++] = str.charCodeAt(i);
       }
       // Null-terminate the string
@@ -5927,12 +5347,10 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
 
   var getCFunc = (ident) => {
       var func = Module['_' + ident]; // closure exported function
-      assert(func, 'Cannot call unknown function ' + ident + ', make sure it is exported');
       return func;
     };
   
   var writeArrayToMemory = (array, buffer) => {
-      assert(array.length >= 0, 'writeArrayToMemory array must have a length (should be an array or typed array)')
       HEAP8.set(array, buffer);
     };
   
@@ -5986,7 +5404,6 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
       var func = getCFunc(ident);
       var cArgs = [];
       var stack = 0;
-      assert(returnType !== 'array', 'Return type should not be "array".');
       if (args) {
         for (var i = 0; i < args.length; i++) {
           var converter = toC[argTypes[i]];
@@ -6012,18 +5429,9 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
       // async, but for simplicity we push and pop in all calls.
       runtimeKeepalivePush();
       if (Asyncify.currData != previousAsync) {
-        // A change in async operation happened. If there was already an async
-        // operation in flight before us, that is an error: we should not start
-        // another async operation while one is active, and we should not stop one
-        // either. The only valid combination is to have no change in the async
-        // data (so we either had one in flight and left it alone, or we didn't have
-        // one), or to have nothing in flight and to start one.
-        assert(!(previousAsync && Asyncify.currData), 'We cannot start an async operation when one is already flight');
-        assert(!(previousAsync && !Asyncify.currData), 'We cannot stop an async operation in flight');
         // This is a new async operation. The wasm is paused and has unwound its stack.
         // We need to return a Promise that resolves the return value
         // once the stack is rewound and execution finishes.
-        assert(asyncMode, 'The call to ' + ident + ' is running asynchronously. If this was intended, add the async option to the ccall/cwrap call.');
         return Asyncify.whenDone().then(onDone);
       }
   
@@ -6041,16 +5449,28 @@ function emfiberthreads_pthread_mutex_timedwait_clearTimeout(timeout) { clearTim
      * @param {Object=} opts
      */
   var cwrap = (ident, returnType, argTypes, opts) => {
+      // When the function takes numbers and returns a number, we can just return
+      // the original function
+      var numericArgs = !argTypes || argTypes.every((type) => type === 'number' || type === 'boolean');
+      var numericRet = returnType !== 'string';
+      if (numericRet && numericArgs && !opts) {
+        return getCFunc(ident);
+      }
       return (...args) => ccall(ident, returnType, argTypes, args, opts);
     };
+
 
   FS.createPreloadedFile = FS_createPreloadedFile;
   FS.staticInit();
   // Set module methods based on EXPORTED_RUNTIME_METHODS
   ;
-function checkIncomingModuleAPI() {
-  ignoredModuleProp('fetchSettings');
-}
+
+      // This error may happen quite a bit. To avoid overhead we reuse it (and
+      // suffer a lack of stack info).
+      MEMFS.doesNotExistError = new FS.ErrnoError(44);
+      /** @suppress {checkTypes} */
+      MEMFS.doesNotExistError.stack = '<generic error, no stack>';
+      ;
 var wasmImports = {
   /** @export */
   __assert_fail: ___assert_fail,
@@ -6103,8 +5523,6 @@ var wasmImports = {
   /** @export */
   emscripten_date_now: _emscripten_date_now,
   /** @export */
-  emscripten_err: _emscripten_err,
-  /** @export */
   emscripten_fiber_swap: _emscripten_fiber_swap,
   /** @export */
   emscripten_get_now: _emscripten_get_now,
@@ -6139,777 +5557,483 @@ var wasmImports = {
 };
 var wasmExports;
 createWasm();
-var ___wasm_call_ctors = createExportWrapper('__wasm_call_ctors', 0);
-var _ff_nothing = Module['_ff_nothing'] = createExportWrapper('ff_nothing', 0);
-var _AVFrame_crop_bottom = Module['_AVFrame_crop_bottom'] = createExportWrapper('AVFrame_crop_bottom', 1);
-var _AVFrame_crop_bottom_s = Module['_AVFrame_crop_bottom_s'] = createExportWrapper('AVFrame_crop_bottom_s', 2);
-var _AVFrame_crop_left = Module['_AVFrame_crop_left'] = createExportWrapper('AVFrame_crop_left', 1);
-var _AVFrame_crop_left_s = Module['_AVFrame_crop_left_s'] = createExportWrapper('AVFrame_crop_left_s', 2);
-var _AVFrame_crop_right = Module['_AVFrame_crop_right'] = createExportWrapper('AVFrame_crop_right', 1);
-var _AVFrame_crop_right_s = Module['_AVFrame_crop_right_s'] = createExportWrapper('AVFrame_crop_right_s', 2);
-var _AVFrame_crop_top = Module['_AVFrame_crop_top'] = createExportWrapper('AVFrame_crop_top', 1);
-var _AVFrame_crop_top_s = Module['_AVFrame_crop_top_s'] = createExportWrapper('AVFrame_crop_top_s', 2);
-var _AVFrame_data_a = Module['_AVFrame_data_a'] = createExportWrapper('AVFrame_data_a', 2);
-var _AVFrame_data_a_s = Module['_AVFrame_data_a_s'] = createExportWrapper('AVFrame_data_a_s', 3);
-var _AVFrame_format = Module['_AVFrame_format'] = createExportWrapper('AVFrame_format', 1);
-var _AVFrame_format_s = Module['_AVFrame_format_s'] = createExportWrapper('AVFrame_format_s', 2);
-var _AVFrame_height = Module['_AVFrame_height'] = createExportWrapper('AVFrame_height', 1);
-var _AVFrame_height_s = Module['_AVFrame_height_s'] = createExportWrapper('AVFrame_height_s', 2);
-var _AVFrame_key_frame = Module['_AVFrame_key_frame'] = createExportWrapper('AVFrame_key_frame', 1);
-var _AVFrame_key_frame_s = Module['_AVFrame_key_frame_s'] = createExportWrapper('AVFrame_key_frame_s', 2);
-var _AVFrame_linesize_a = Module['_AVFrame_linesize_a'] = createExportWrapper('AVFrame_linesize_a', 2);
-var _AVFrame_linesize_a_s = Module['_AVFrame_linesize_a_s'] = createExportWrapper('AVFrame_linesize_a_s', 3);
-var _AVFrame_nb_samples = Module['_AVFrame_nb_samples'] = createExportWrapper('AVFrame_nb_samples', 1);
-var _AVFrame_nb_samples_s = Module['_AVFrame_nb_samples_s'] = createExportWrapper('AVFrame_nb_samples_s', 2);
-var _AVFrame_pict_type = Module['_AVFrame_pict_type'] = createExportWrapper('AVFrame_pict_type', 1);
-var _AVFrame_pict_type_s = Module['_AVFrame_pict_type_s'] = createExportWrapper('AVFrame_pict_type_s', 2);
-var _AVFrame_pts = Module['_AVFrame_pts'] = createExportWrapper('AVFrame_pts', 1);
-var _AVFrame_ptshi = Module['_AVFrame_ptshi'] = createExportWrapper('AVFrame_ptshi', 1);
-var _AVFrame_pts_s = Module['_AVFrame_pts_s'] = createExportWrapper('AVFrame_pts_s', 2);
-var _AVFrame_ptshi_s = Module['_AVFrame_ptshi_s'] = createExportWrapper('AVFrame_ptshi_s', 2);
-var _AVFrame_duration = Module['_AVFrame_duration'] = createExportWrapper('AVFrame_duration', 1);
-var _AVFrame_durationhi = Module['_AVFrame_durationhi'] = createExportWrapper('AVFrame_durationhi', 1);
-var _AVFrame_duration_s = Module['_AVFrame_duration_s'] = createExportWrapper('AVFrame_duration_s', 2);
-var _AVFrame_durationhi_s = Module['_AVFrame_durationhi_s'] = createExportWrapper('AVFrame_durationhi_s', 2);
-var _AVFrame_sample_rate = Module['_AVFrame_sample_rate'] = createExportWrapper('AVFrame_sample_rate', 1);
-var _AVFrame_sample_rate_s = Module['_AVFrame_sample_rate_s'] = createExportWrapper('AVFrame_sample_rate_s', 2);
-var _AVFrame_width = Module['_AVFrame_width'] = createExportWrapper('AVFrame_width', 1);
-var _AVFrame_width_s = Module['_AVFrame_width_s'] = createExportWrapper('AVFrame_width_s', 2);
-var _AVFrame_sample_aspect_ratio_num = Module['_AVFrame_sample_aspect_ratio_num'] = createExportWrapper('AVFrame_sample_aspect_ratio_num', 1);
-var _AVFrame_sample_aspect_ratio_den = Module['_AVFrame_sample_aspect_ratio_den'] = createExportWrapper('AVFrame_sample_aspect_ratio_den', 1);
-var _AVFrame_sample_aspect_ratio_num_s = Module['_AVFrame_sample_aspect_ratio_num_s'] = createExportWrapper('AVFrame_sample_aspect_ratio_num_s', 2);
-var _AVFrame_sample_aspect_ratio_den_s = Module['_AVFrame_sample_aspect_ratio_den_s'] = createExportWrapper('AVFrame_sample_aspect_ratio_den_s', 2);
-var _AVFrame_sample_aspect_ratio_s = Module['_AVFrame_sample_aspect_ratio_s'] = createExportWrapper('AVFrame_sample_aspect_ratio_s', 3);
-var _AVFrame_time_base_num = Module['_AVFrame_time_base_num'] = createExportWrapper('AVFrame_time_base_num', 1);
-var _AVFrame_time_base_den = Module['_AVFrame_time_base_den'] = createExportWrapper('AVFrame_time_base_den', 1);
-var _AVFrame_time_base_num_s = Module['_AVFrame_time_base_num_s'] = createExportWrapper('AVFrame_time_base_num_s', 2);
-var _AVFrame_time_base_den_s = Module['_AVFrame_time_base_den_s'] = createExportWrapper('AVFrame_time_base_den_s', 2);
-var _AVFrame_time_base_s = Module['_AVFrame_time_base_s'] = createExportWrapper('AVFrame_time_base_s', 3);
-var _AVFrame_channel_layoutmask_s = Module['_AVFrame_channel_layoutmask_s'] = createExportWrapper('AVFrame_channel_layoutmask_s', 3);
-var _AVFrame_channel_layoutmask = Module['_AVFrame_channel_layoutmask'] = createExportWrapper('AVFrame_channel_layoutmask', 1);
-var _AVFrame_channels = Module['_AVFrame_channels'] = createExportWrapper('AVFrame_channels', 1);
-var _AVFrame_channels_s = Module['_AVFrame_channels_s'] = createExportWrapper('AVFrame_channels_s', 2);
-var _AVFrame_ch_layout_nb_channels = Module['_AVFrame_ch_layout_nb_channels'] = createExportWrapper('AVFrame_ch_layout_nb_channels', 1);
-var _AVFrame_ch_layout_nb_channels_s = Module['_AVFrame_ch_layout_nb_channels_s'] = createExportWrapper('AVFrame_ch_layout_nb_channels_s', 2);
-var _AVFrame_channel_layout = Module['_AVFrame_channel_layout'] = createExportWrapper('AVFrame_channel_layout', 1);
-var _AVFrame_channel_layouthi = Module['_AVFrame_channel_layouthi'] = createExportWrapper('AVFrame_channel_layouthi', 1);
-var _AVFrame_channel_layout_s = Module['_AVFrame_channel_layout_s'] = createExportWrapper('AVFrame_channel_layout_s', 2);
-var _AVFrame_channel_layouthi_s = Module['_AVFrame_channel_layouthi_s'] = createExportWrapper('AVFrame_channel_layouthi_s', 2);
-var _ff_frame_rescale_ts_js = Module['_ff_frame_rescale_ts_js'] = createExportWrapper('ff_frame_rescale_ts_js', 5);
-var _AVPixFmtDescriptor_flags = Module['_AVPixFmtDescriptor_flags'] = createExportWrapper('AVPixFmtDescriptor_flags', 1);
-var _AVPixFmtDescriptor_flags_s = Module['_AVPixFmtDescriptor_flags_s'] = createExportWrapper('AVPixFmtDescriptor_flags_s', 3);
-var _AVPixFmtDescriptor_nb_components = Module['_AVPixFmtDescriptor_nb_components'] = createExportWrapper('AVPixFmtDescriptor_nb_components', 1);
-var _AVPixFmtDescriptor_nb_components_s = Module['_AVPixFmtDescriptor_nb_components_s'] = createExportWrapper('AVPixFmtDescriptor_nb_components_s', 2);
-var _AVPixFmtDescriptor_log2_chroma_h = Module['_AVPixFmtDescriptor_log2_chroma_h'] = createExportWrapper('AVPixFmtDescriptor_log2_chroma_h', 1);
-var _AVPixFmtDescriptor_log2_chroma_h_s = Module['_AVPixFmtDescriptor_log2_chroma_h_s'] = createExportWrapper('AVPixFmtDescriptor_log2_chroma_h_s', 2);
-var _AVPixFmtDescriptor_log2_chroma_w = Module['_AVPixFmtDescriptor_log2_chroma_w'] = createExportWrapper('AVPixFmtDescriptor_log2_chroma_w', 1);
-var _AVPixFmtDescriptor_log2_chroma_w_s = Module['_AVPixFmtDescriptor_log2_chroma_w_s'] = createExportWrapper('AVPixFmtDescriptor_log2_chroma_w_s', 2);
-var _AVPixFmtDescriptor_comp_depth = Module['_AVPixFmtDescriptor_comp_depth'] = createExportWrapper('AVPixFmtDescriptor_comp_depth', 2);
-var _av_opt_set_int_list_js = Module['_av_opt_set_int_list_js'] = createExportWrapper('av_opt_set_int_list_js', 6);
-var _AVCodec_name = Module['_AVCodec_name'] = createExportWrapper('AVCodec_name', 1);
-var _AVCodec_sample_fmts = Module['_AVCodec_sample_fmts'] = createExportWrapper('AVCodec_sample_fmts', 1);
-var _AVCodec_sample_fmts_s = Module['_AVCodec_sample_fmts_s'] = createExportWrapper('AVCodec_sample_fmts_s', 2);
-var _AVCodec_sample_fmts_a = Module['_AVCodec_sample_fmts_a'] = createExportWrapper('AVCodec_sample_fmts_a', 2);
-var _AVCodec_sample_fmts_a_s = Module['_AVCodec_sample_fmts_a_s'] = createExportWrapper('AVCodec_sample_fmts_a_s', 3);
-var _AVCodec_supported_samplerates = Module['_AVCodec_supported_samplerates'] = createExportWrapper('AVCodec_supported_samplerates', 1);
-var _AVCodec_supported_samplerates_s = Module['_AVCodec_supported_samplerates_s'] = createExportWrapper('AVCodec_supported_samplerates_s', 2);
-var _AVCodec_supported_samplerates_a = Module['_AVCodec_supported_samplerates_a'] = createExportWrapper('AVCodec_supported_samplerates_a', 2);
-var _AVCodec_supported_samplerates_a_s = Module['_AVCodec_supported_samplerates_a_s'] = createExportWrapper('AVCodec_supported_samplerates_a_s', 3);
-var _AVCodec_type = Module['_AVCodec_type'] = createExportWrapper('AVCodec_type', 1);
-var _AVCodec_type_s = Module['_AVCodec_type_s'] = createExportWrapper('AVCodec_type_s', 2);
-var _AVCodecContext_codec_id = Module['_AVCodecContext_codec_id'] = createExportWrapper('AVCodecContext_codec_id', 1);
-var _AVCodecContext_codec_id_s = Module['_AVCodecContext_codec_id_s'] = createExportWrapper('AVCodecContext_codec_id_s', 2);
-var _AVCodecContext_codec_type = Module['_AVCodecContext_codec_type'] = createExportWrapper('AVCodecContext_codec_type', 1);
-var _AVCodecContext_codec_type_s = Module['_AVCodecContext_codec_type_s'] = createExportWrapper('AVCodecContext_codec_type_s', 2);
-var _AVCodecContext_bit_rate = Module['_AVCodecContext_bit_rate'] = createExportWrapper('AVCodecContext_bit_rate', 1);
-var _AVCodecContext_bit_ratehi = Module['_AVCodecContext_bit_ratehi'] = createExportWrapper('AVCodecContext_bit_ratehi', 1);
-var _AVCodecContext_bit_rate_s = Module['_AVCodecContext_bit_rate_s'] = createExportWrapper('AVCodecContext_bit_rate_s', 2);
-var _AVCodecContext_bit_ratehi_s = Module['_AVCodecContext_bit_ratehi_s'] = createExportWrapper('AVCodecContext_bit_ratehi_s', 2);
-var _AVCodecContext_extradata = Module['_AVCodecContext_extradata'] = createExportWrapper('AVCodecContext_extradata', 1);
-var _AVCodecContext_extradata_s = Module['_AVCodecContext_extradata_s'] = createExportWrapper('AVCodecContext_extradata_s', 2);
-var _AVCodecContext_extradata_size = Module['_AVCodecContext_extradata_size'] = createExportWrapper('AVCodecContext_extradata_size', 1);
-var _AVCodecContext_extradata_size_s = Module['_AVCodecContext_extradata_size_s'] = createExportWrapper('AVCodecContext_extradata_size_s', 2);
-var _AVCodecContext_frame_size = Module['_AVCodecContext_frame_size'] = createExportWrapper('AVCodecContext_frame_size', 1);
-var _AVCodecContext_frame_size_s = Module['_AVCodecContext_frame_size_s'] = createExportWrapper('AVCodecContext_frame_size_s', 2);
-var _AVCodecContext_gop_size = Module['_AVCodecContext_gop_size'] = createExportWrapper('AVCodecContext_gop_size', 1);
-var _AVCodecContext_gop_size_s = Module['_AVCodecContext_gop_size_s'] = createExportWrapper('AVCodecContext_gop_size_s', 2);
-var _AVCodecContext_height = Module['_AVCodecContext_height'] = createExportWrapper('AVCodecContext_height', 1);
-var _AVCodecContext_height_s = Module['_AVCodecContext_height_s'] = createExportWrapper('AVCodecContext_height_s', 2);
-var _AVCodecContext_keyint_min = Module['_AVCodecContext_keyint_min'] = createExportWrapper('AVCodecContext_keyint_min', 1);
-var _AVCodecContext_keyint_min_s = Module['_AVCodecContext_keyint_min_s'] = createExportWrapper('AVCodecContext_keyint_min_s', 2);
-var _AVCodecContext_level = Module['_AVCodecContext_level'] = createExportWrapper('AVCodecContext_level', 1);
-var _AVCodecContext_level_s = Module['_AVCodecContext_level_s'] = createExportWrapper('AVCodecContext_level_s', 2);
-var _AVCodecContext_max_b_frames = Module['_AVCodecContext_max_b_frames'] = createExportWrapper('AVCodecContext_max_b_frames', 1);
-var _AVCodecContext_max_b_frames_s = Module['_AVCodecContext_max_b_frames_s'] = createExportWrapper('AVCodecContext_max_b_frames_s', 2);
-var _AVCodecContext_pix_fmt = Module['_AVCodecContext_pix_fmt'] = createExportWrapper('AVCodecContext_pix_fmt', 1);
-var _AVCodecContext_pix_fmt_s = Module['_AVCodecContext_pix_fmt_s'] = createExportWrapper('AVCodecContext_pix_fmt_s', 2);
-var _AVCodecContext_profile = Module['_AVCodecContext_profile'] = createExportWrapper('AVCodecContext_profile', 1);
-var _AVCodecContext_profile_s = Module['_AVCodecContext_profile_s'] = createExportWrapper('AVCodecContext_profile_s', 2);
-var _AVCodecContext_rc_max_rate = Module['_AVCodecContext_rc_max_rate'] = createExportWrapper('AVCodecContext_rc_max_rate', 1);
-var _AVCodecContext_rc_max_ratehi = Module['_AVCodecContext_rc_max_ratehi'] = createExportWrapper('AVCodecContext_rc_max_ratehi', 1);
-var _AVCodecContext_rc_max_rate_s = Module['_AVCodecContext_rc_max_rate_s'] = createExportWrapper('AVCodecContext_rc_max_rate_s', 2);
-var _AVCodecContext_rc_max_ratehi_s = Module['_AVCodecContext_rc_max_ratehi_s'] = createExportWrapper('AVCodecContext_rc_max_ratehi_s', 2);
-var _AVCodecContext_rc_min_rate = Module['_AVCodecContext_rc_min_rate'] = createExportWrapper('AVCodecContext_rc_min_rate', 1);
-var _AVCodecContext_rc_min_ratehi = Module['_AVCodecContext_rc_min_ratehi'] = createExportWrapper('AVCodecContext_rc_min_ratehi', 1);
-var _AVCodecContext_rc_min_rate_s = Module['_AVCodecContext_rc_min_rate_s'] = createExportWrapper('AVCodecContext_rc_min_rate_s', 2);
-var _AVCodecContext_rc_min_ratehi_s = Module['_AVCodecContext_rc_min_ratehi_s'] = createExportWrapper('AVCodecContext_rc_min_ratehi_s', 2);
-var _AVCodecContext_sample_fmt = Module['_AVCodecContext_sample_fmt'] = createExportWrapper('AVCodecContext_sample_fmt', 1);
-var _AVCodecContext_sample_fmt_s = Module['_AVCodecContext_sample_fmt_s'] = createExportWrapper('AVCodecContext_sample_fmt_s', 2);
-var _AVCodecContext_sample_rate = Module['_AVCodecContext_sample_rate'] = createExportWrapper('AVCodecContext_sample_rate', 1);
-var _AVCodecContext_sample_rate_s = Module['_AVCodecContext_sample_rate_s'] = createExportWrapper('AVCodecContext_sample_rate_s', 2);
-var _AVCodecContext_qmax = Module['_AVCodecContext_qmax'] = createExportWrapper('AVCodecContext_qmax', 1);
-var _AVCodecContext_qmax_s = Module['_AVCodecContext_qmax_s'] = createExportWrapper('AVCodecContext_qmax_s', 2);
-var _AVCodecContext_qmin = Module['_AVCodecContext_qmin'] = createExportWrapper('AVCodecContext_qmin', 1);
-var _AVCodecContext_qmin_s = Module['_AVCodecContext_qmin_s'] = createExportWrapper('AVCodecContext_qmin_s', 2);
-var _AVCodecContext_width = Module['_AVCodecContext_width'] = createExportWrapper('AVCodecContext_width', 1);
-var _AVCodecContext_width_s = Module['_AVCodecContext_width_s'] = createExportWrapper('AVCodecContext_width_s', 2);
-var _AVCodecContext_framerate_num = Module['_AVCodecContext_framerate_num'] = createExportWrapper('AVCodecContext_framerate_num', 1);
-var _AVCodecContext_framerate_den = Module['_AVCodecContext_framerate_den'] = createExportWrapper('AVCodecContext_framerate_den', 1);
-var _AVCodecContext_framerate_num_s = Module['_AVCodecContext_framerate_num_s'] = createExportWrapper('AVCodecContext_framerate_num_s', 2);
-var _AVCodecContext_framerate_den_s = Module['_AVCodecContext_framerate_den_s'] = createExportWrapper('AVCodecContext_framerate_den_s', 2);
-var _AVCodecContext_framerate_s = Module['_AVCodecContext_framerate_s'] = createExportWrapper('AVCodecContext_framerate_s', 3);
-var _AVCodecContext_sample_aspect_ratio_num = Module['_AVCodecContext_sample_aspect_ratio_num'] = createExportWrapper('AVCodecContext_sample_aspect_ratio_num', 1);
-var _AVCodecContext_sample_aspect_ratio_den = Module['_AVCodecContext_sample_aspect_ratio_den'] = createExportWrapper('AVCodecContext_sample_aspect_ratio_den', 1);
-var _AVCodecContext_sample_aspect_ratio_num_s = Module['_AVCodecContext_sample_aspect_ratio_num_s'] = createExportWrapper('AVCodecContext_sample_aspect_ratio_num_s', 2);
-var _AVCodecContext_sample_aspect_ratio_den_s = Module['_AVCodecContext_sample_aspect_ratio_den_s'] = createExportWrapper('AVCodecContext_sample_aspect_ratio_den_s', 2);
-var _AVCodecContext_sample_aspect_ratio_s = Module['_AVCodecContext_sample_aspect_ratio_s'] = createExportWrapper('AVCodecContext_sample_aspect_ratio_s', 3);
-var _AVCodecContext_time_base_num = Module['_AVCodecContext_time_base_num'] = createExportWrapper('AVCodecContext_time_base_num', 1);
-var _AVCodecContext_time_base_den = Module['_AVCodecContext_time_base_den'] = createExportWrapper('AVCodecContext_time_base_den', 1);
-var _AVCodecContext_time_base_num_s = Module['_AVCodecContext_time_base_num_s'] = createExportWrapper('AVCodecContext_time_base_num_s', 2);
-var _AVCodecContext_time_base_den_s = Module['_AVCodecContext_time_base_den_s'] = createExportWrapper('AVCodecContext_time_base_den_s', 2);
-var _AVCodecContext_time_base_s = Module['_AVCodecContext_time_base_s'] = createExportWrapper('AVCodecContext_time_base_s', 3);
-var _AVCodecContext_channel_layoutmask_s = Module['_AVCodecContext_channel_layoutmask_s'] = createExportWrapper('AVCodecContext_channel_layoutmask_s', 3);
-var _AVCodecContext_channel_layoutmask = Module['_AVCodecContext_channel_layoutmask'] = createExportWrapper('AVCodecContext_channel_layoutmask', 1);
-var _AVCodecContext_channels = Module['_AVCodecContext_channels'] = createExportWrapper('AVCodecContext_channels', 1);
-var _AVCodecContext_channels_s = Module['_AVCodecContext_channels_s'] = createExportWrapper('AVCodecContext_channels_s', 2);
-var _AVCodecContext_ch_layout_nb_channels = Module['_AVCodecContext_ch_layout_nb_channels'] = createExportWrapper('AVCodecContext_ch_layout_nb_channels', 1);
-var _AVCodecContext_ch_layout_nb_channels_s = Module['_AVCodecContext_ch_layout_nb_channels_s'] = createExportWrapper('AVCodecContext_ch_layout_nb_channels_s', 2);
-var _AVCodecContext_channel_layout = Module['_AVCodecContext_channel_layout'] = createExportWrapper('AVCodecContext_channel_layout', 1);
-var _AVCodecContext_channel_layouthi = Module['_AVCodecContext_channel_layouthi'] = createExportWrapper('AVCodecContext_channel_layouthi', 1);
-var _AVCodecContext_channel_layout_s = Module['_AVCodecContext_channel_layout_s'] = createExportWrapper('AVCodecContext_channel_layout_s', 2);
-var _AVCodecContext_channel_layouthi_s = Module['_AVCodecContext_channel_layouthi_s'] = createExportWrapper('AVCodecContext_channel_layouthi_s', 2);
-var _AVCodecDescriptor_id = Module['_AVCodecDescriptor_id'] = createExportWrapper('AVCodecDescriptor_id', 1);
-var _AVCodecDescriptor_id_s = Module['_AVCodecDescriptor_id_s'] = createExportWrapper('AVCodecDescriptor_id_s', 2);
-var _AVCodecDescriptor_long_name = Module['_AVCodecDescriptor_long_name'] = createExportWrapper('AVCodecDescriptor_long_name', 1);
-var _AVCodecDescriptor_long_name_s = Module['_AVCodecDescriptor_long_name_s'] = createExportWrapper('AVCodecDescriptor_long_name_s', 2);
-var _AVCodecDescriptor_mime_types_a = Module['_AVCodecDescriptor_mime_types_a'] = createExportWrapper('AVCodecDescriptor_mime_types_a', 2);
-var _AVCodecDescriptor_mime_types_a_s = Module['_AVCodecDescriptor_mime_types_a_s'] = createExportWrapper('AVCodecDescriptor_mime_types_a_s', 3);
-var _AVCodecDescriptor_name = Module['_AVCodecDescriptor_name'] = createExportWrapper('AVCodecDescriptor_name', 1);
-var _AVCodecDescriptor_name_s = Module['_AVCodecDescriptor_name_s'] = createExportWrapper('AVCodecDescriptor_name_s', 2);
-var _AVCodecDescriptor_props = Module['_AVCodecDescriptor_props'] = createExportWrapper('AVCodecDescriptor_props', 1);
-var _AVCodecDescriptor_props_s = Module['_AVCodecDescriptor_props_s'] = createExportWrapper('AVCodecDescriptor_props_s', 2);
-var _AVCodecDescriptor_type = Module['_AVCodecDescriptor_type'] = createExportWrapper('AVCodecDescriptor_type', 1);
-var _AVCodecDescriptor_type_s = Module['_AVCodecDescriptor_type_s'] = createExportWrapper('AVCodecDescriptor_type_s', 2);
-var _AVCodecParameters_codec_id = Module['_AVCodecParameters_codec_id'] = createExportWrapper('AVCodecParameters_codec_id', 1);
-var _AVCodecParameters_codec_id_s = Module['_AVCodecParameters_codec_id_s'] = createExportWrapper('AVCodecParameters_codec_id_s', 2);
-var _AVCodecParameters_codec_tag = Module['_AVCodecParameters_codec_tag'] = createExportWrapper('AVCodecParameters_codec_tag', 1);
-var _AVCodecParameters_codec_tag_s = Module['_AVCodecParameters_codec_tag_s'] = createExportWrapper('AVCodecParameters_codec_tag_s', 2);
-var _AVCodecParameters_codec_type = Module['_AVCodecParameters_codec_type'] = createExportWrapper('AVCodecParameters_codec_type', 1);
-var _AVCodecParameters_codec_type_s = Module['_AVCodecParameters_codec_type_s'] = createExportWrapper('AVCodecParameters_codec_type_s', 2);
-var _AVCodecParameters_extradata = Module['_AVCodecParameters_extradata'] = createExportWrapper('AVCodecParameters_extradata', 1);
-var _AVCodecParameters_extradata_s = Module['_AVCodecParameters_extradata_s'] = createExportWrapper('AVCodecParameters_extradata_s', 2);
-var _AVCodecParameters_extradata_size = Module['_AVCodecParameters_extradata_size'] = createExportWrapper('AVCodecParameters_extradata_size', 1);
-var _AVCodecParameters_extradata_size_s = Module['_AVCodecParameters_extradata_size_s'] = createExportWrapper('AVCodecParameters_extradata_size_s', 2);
-var _AVCodecParameters_format = Module['_AVCodecParameters_format'] = createExportWrapper('AVCodecParameters_format', 1);
-var _AVCodecParameters_format_s = Module['_AVCodecParameters_format_s'] = createExportWrapper('AVCodecParameters_format_s', 2);
-var _AVCodecParameters_bit_rate = Module['_AVCodecParameters_bit_rate'] = createExportWrapper('AVCodecParameters_bit_rate', 1);
-var _AVCodecParameters_bit_rate_s = Module['_AVCodecParameters_bit_rate_s'] = createExportWrapper('AVCodecParameters_bit_rate_s', 3);
-var _AVCodecParameters_profile = Module['_AVCodecParameters_profile'] = createExportWrapper('AVCodecParameters_profile', 1);
-var _AVCodecParameters_profile_s = Module['_AVCodecParameters_profile_s'] = createExportWrapper('AVCodecParameters_profile_s', 2);
-var _AVCodecParameters_level = Module['_AVCodecParameters_level'] = createExportWrapper('AVCodecParameters_level', 1);
-var _AVCodecParameters_level_s = Module['_AVCodecParameters_level_s'] = createExportWrapper('AVCodecParameters_level_s', 2);
-var _AVCodecParameters_width = Module['_AVCodecParameters_width'] = createExportWrapper('AVCodecParameters_width', 1);
-var _AVCodecParameters_width_s = Module['_AVCodecParameters_width_s'] = createExportWrapper('AVCodecParameters_width_s', 2);
-var _AVCodecParameters_height = Module['_AVCodecParameters_height'] = createExportWrapper('AVCodecParameters_height', 1);
-var _AVCodecParameters_height_s = Module['_AVCodecParameters_height_s'] = createExportWrapper('AVCodecParameters_height_s', 2);
-var _AVCodecParameters_color_range = Module['_AVCodecParameters_color_range'] = createExportWrapper('AVCodecParameters_color_range', 1);
-var _AVCodecParameters_color_range_s = Module['_AVCodecParameters_color_range_s'] = createExportWrapper('AVCodecParameters_color_range_s', 2);
-var _AVCodecParameters_color_primaries = Module['_AVCodecParameters_color_primaries'] = createExportWrapper('AVCodecParameters_color_primaries', 1);
-var _AVCodecParameters_color_primaries_s = Module['_AVCodecParameters_color_primaries_s'] = createExportWrapper('AVCodecParameters_color_primaries_s', 2);
-var _AVCodecParameters_color_trc = Module['_AVCodecParameters_color_trc'] = createExportWrapper('AVCodecParameters_color_trc', 1);
-var _AVCodecParameters_color_trc_s = Module['_AVCodecParameters_color_trc_s'] = createExportWrapper('AVCodecParameters_color_trc_s', 2);
-var _AVCodecParameters_color_space = Module['_AVCodecParameters_color_space'] = createExportWrapper('AVCodecParameters_color_space', 1);
-var _AVCodecParameters_color_space_s = Module['_AVCodecParameters_color_space_s'] = createExportWrapper('AVCodecParameters_color_space_s', 2);
-var _AVCodecParameters_chroma_location = Module['_AVCodecParameters_chroma_location'] = createExportWrapper('AVCodecParameters_chroma_location', 1);
-var _AVCodecParameters_chroma_location_s = Module['_AVCodecParameters_chroma_location_s'] = createExportWrapper('AVCodecParameters_chroma_location_s', 2);
-var _AVCodecParameters_sample_rate = Module['_AVCodecParameters_sample_rate'] = createExportWrapper('AVCodecParameters_sample_rate', 1);
-var _AVCodecParameters_sample_rate_s = Module['_AVCodecParameters_sample_rate_s'] = createExportWrapper('AVCodecParameters_sample_rate_s', 2);
-var _AVCodecParameters_framerate_num = Module['_AVCodecParameters_framerate_num'] = createExportWrapper('AVCodecParameters_framerate_num', 1);
-var _AVCodecParameters_framerate_den = Module['_AVCodecParameters_framerate_den'] = createExportWrapper('AVCodecParameters_framerate_den', 1);
-var _AVCodecParameters_framerate_num_s = Module['_AVCodecParameters_framerate_num_s'] = createExportWrapper('AVCodecParameters_framerate_num_s', 2);
-var _AVCodecParameters_framerate_den_s = Module['_AVCodecParameters_framerate_den_s'] = createExportWrapper('AVCodecParameters_framerate_den_s', 2);
-var _AVCodecParameters_framerate_s = Module['_AVCodecParameters_framerate_s'] = createExportWrapper('AVCodecParameters_framerate_s', 3);
-var _AVCodecParameters_channel_layoutmask_s = Module['_AVCodecParameters_channel_layoutmask_s'] = createExportWrapper('AVCodecParameters_channel_layoutmask_s', 3);
-var _AVCodecParameters_channel_layoutmask = Module['_AVCodecParameters_channel_layoutmask'] = createExportWrapper('AVCodecParameters_channel_layoutmask', 1);
-var _AVCodecParameters_channels = Module['_AVCodecParameters_channels'] = createExportWrapper('AVCodecParameters_channels', 1);
-var _AVCodecParameters_channels_s = Module['_AVCodecParameters_channels_s'] = createExportWrapper('AVCodecParameters_channels_s', 2);
-var _AVCodecParameters_ch_layout_nb_channels = Module['_AVCodecParameters_ch_layout_nb_channels'] = createExportWrapper('AVCodecParameters_ch_layout_nb_channels', 1);
-var _AVCodecParameters_ch_layout_nb_channels_s = Module['_AVCodecParameters_ch_layout_nb_channels_s'] = createExportWrapper('AVCodecParameters_ch_layout_nb_channels_s', 2);
-var _ff_get_colorspace_name = Module['_ff_get_colorspace_name'] = createExportWrapper('ff_get_colorspace_name', 1);
-var _ff_get_pix_fmt_name = Module['_ff_get_pix_fmt_name'] = createExportWrapper('ff_get_pix_fmt_name', 1);
-var _ff_get_color_range_name = Module['_ff_get_color_range_name'] = createExportWrapper('ff_get_color_range_name', 1);
-var _ff_get_input_format_name = Module['_ff_get_input_format_name'] = createExportWrapper('ff_get_input_format_name', 1);
-var _ff_get_major_brand = Module['_ff_get_major_brand'] = createExportWrapper('ff_get_major_brand', 1);
-var _ff_get_media_duration = Module['_ff_get_media_duration'] = createExportWrapper('ff_get_media_duration', 1);
-var _av_seek_frame = Module['_av_seek_frame'] = createExportWrapper('av_seek_frame', 5);
-var _av_packet_alloc = Module['_av_packet_alloc'] = createExportWrapper('av_packet_alloc', 0);
-var _av_read_frame = Module['_av_read_frame'] = createExportWrapper('av_read_frame', 2);
-var _av_packet_unref = Module['_av_packet_unref'] = createExportWrapper('av_packet_unref', 1);
-var _av_packet_free = Module['_av_packet_free'] = createExportWrapper('av_packet_free', 1);
-var _ff_get_timecode = Module['_ff_get_timecode'] = createExportWrapper('ff_get_timecode', 1);
-var _av_channel_layout_default_mask = Module['_av_channel_layout_default_mask'] = createExportWrapper('av_channel_layout_default_mask', 1);
-var _AVPacket_data = Module['_AVPacket_data'] = createExportWrapper('AVPacket_data', 1);
-var _AVPacket_data_s = Module['_AVPacket_data_s'] = createExportWrapper('AVPacket_data_s', 2);
-var _AVPacket_dts = Module['_AVPacket_dts'] = createExportWrapper('AVPacket_dts', 1);
-var _AVPacket_dtshi = Module['_AVPacket_dtshi'] = createExportWrapper('AVPacket_dtshi', 1);
-var _AVPacket_dts_s = Module['_AVPacket_dts_s'] = createExportWrapper('AVPacket_dts_s', 2);
-var _AVPacket_dtshi_s = Module['_AVPacket_dtshi_s'] = createExportWrapper('AVPacket_dtshi_s', 2);
-var _AVPacket_duration = Module['_AVPacket_duration'] = createExportWrapper('AVPacket_duration', 1);
-var _AVPacket_durationhi = Module['_AVPacket_durationhi'] = createExportWrapper('AVPacket_durationhi', 1);
-var _AVPacket_duration_s = Module['_AVPacket_duration_s'] = createExportWrapper('AVPacket_duration_s', 2);
-var _AVPacket_durationhi_s = Module['_AVPacket_durationhi_s'] = createExportWrapper('AVPacket_durationhi_s', 2);
-var _AVPacket_flags = Module['_AVPacket_flags'] = createExportWrapper('AVPacket_flags', 1);
-var _AVPacket_flags_s = Module['_AVPacket_flags_s'] = createExportWrapper('AVPacket_flags_s', 2);
-var _AVPacket_pos = Module['_AVPacket_pos'] = createExportWrapper('AVPacket_pos', 1);
-var _AVPacket_poshi = Module['_AVPacket_poshi'] = createExportWrapper('AVPacket_poshi', 1);
-var _AVPacket_pos_s = Module['_AVPacket_pos_s'] = createExportWrapper('AVPacket_pos_s', 2);
-var _AVPacket_poshi_s = Module['_AVPacket_poshi_s'] = createExportWrapper('AVPacket_poshi_s', 2);
-var _AVPacket_pts = Module['_AVPacket_pts'] = createExportWrapper('AVPacket_pts', 1);
-var _AVPacket_ptshi = Module['_AVPacket_ptshi'] = createExportWrapper('AVPacket_ptshi', 1);
-var _AVPacket_pts_s = Module['_AVPacket_pts_s'] = createExportWrapper('AVPacket_pts_s', 2);
-var _AVPacket_ptshi_s = Module['_AVPacket_ptshi_s'] = createExportWrapper('AVPacket_ptshi_s', 2);
-var _AVPacket_side_data = Module['_AVPacket_side_data'] = createExportWrapper('AVPacket_side_data', 1);
-var _AVPacket_side_data_s = Module['_AVPacket_side_data_s'] = createExportWrapper('AVPacket_side_data_s', 2);
-var _AVPacket_side_data_elems = Module['_AVPacket_side_data_elems'] = createExportWrapper('AVPacket_side_data_elems', 1);
-var _AVPacket_side_data_elems_s = Module['_AVPacket_side_data_elems_s'] = createExportWrapper('AVPacket_side_data_elems_s', 2);
-var _AVPacket_size = Module['_AVPacket_size'] = createExportWrapper('AVPacket_size', 1);
-var _AVPacket_size_s = Module['_AVPacket_size_s'] = createExportWrapper('AVPacket_size_s', 2);
-var _AVPacket_stream_index = Module['_AVPacket_stream_index'] = createExportWrapper('AVPacket_stream_index', 1);
-var _AVPacket_stream_index_s = Module['_AVPacket_stream_index_s'] = createExportWrapper('AVPacket_stream_index_s', 2);
-var _AVPacket_time_base_num = Module['_AVPacket_time_base_num'] = createExportWrapper('AVPacket_time_base_num', 1);
-var _AVPacket_time_base_den = Module['_AVPacket_time_base_den'] = createExportWrapper('AVPacket_time_base_den', 1);
-var _AVPacket_time_base_num_s = Module['_AVPacket_time_base_num_s'] = createExportWrapper('AVPacket_time_base_num_s', 2);
-var _AVPacket_time_base_den_s = Module['_AVPacket_time_base_den_s'] = createExportWrapper('AVPacket_time_base_den_s', 2);
-var _AVPacket_time_base_s = Module['_AVPacket_time_base_s'] = createExportWrapper('AVPacket_time_base_s', 3);
-var _AVPacketSideData_data = Module['_AVPacketSideData_data'] = createExportWrapper('AVPacketSideData_data', 2);
-var _AVPacketSideData_size = Module['_AVPacketSideData_size'] = createExportWrapper('AVPacketSideData_size', 2);
-var _AVPacketSideData_type = Module['_AVPacketSideData_type'] = createExportWrapper('AVPacketSideData_type', 2);
-var _avcodec_open2_js = Module['_avcodec_open2_js'] = createExportWrapper('avcodec_open2_js', 3);
-var _avcodec_open2 = Module['_avcodec_open2'] = createExportWrapper('avcodec_open2', 3);
-var _av_packet_rescale_ts_js = Module['_av_packet_rescale_ts_js'] = createExportWrapper('av_packet_rescale_ts_js', 5);
-var _AVFormatContext_duration = Module['_AVFormatContext_duration'] = createExportWrapper('AVFormatContext_duration', 1);
-var _AVFormatContext_durationhi = Module['_AVFormatContext_durationhi'] = createExportWrapper('AVFormatContext_durationhi', 1);
-var _AVFormatContext_duration_s = Module['_AVFormatContext_duration_s'] = createExportWrapper('AVFormatContext_duration_s', 2);
-var _AVFormatContext_durationhi_s = Module['_AVFormatContext_durationhi_s'] = createExportWrapper('AVFormatContext_durationhi_s', 2);
-var _AVFormatContext_flags = Module['_AVFormatContext_flags'] = createExportWrapper('AVFormatContext_flags', 1);
-var _AVFormatContext_flags_s = Module['_AVFormatContext_flags_s'] = createExportWrapper('AVFormatContext_flags_s', 2);
-var _AVFormatContext_nb_streams = Module['_AVFormatContext_nb_streams'] = createExportWrapper('AVFormatContext_nb_streams', 1);
-var _AVFormatContext_nb_streams_s = Module['_AVFormatContext_nb_streams_s'] = createExportWrapper('AVFormatContext_nb_streams_s', 2);
-var _AVFormatContext_oformat = Module['_AVFormatContext_oformat'] = createExportWrapper('AVFormatContext_oformat', 1);
-var _AVFormatContext_oformat_s = Module['_AVFormatContext_oformat_s'] = createExportWrapper('AVFormatContext_oformat_s', 2);
-var _AVFormatContext_pb = Module['_AVFormatContext_pb'] = createExportWrapper('AVFormatContext_pb', 1);
-var _AVFormatContext_pb_s = Module['_AVFormatContext_pb_s'] = createExportWrapper('AVFormatContext_pb_s', 2);
-var _AVFormatContext_start_time = Module['_AVFormatContext_start_time'] = createExportWrapper('AVFormatContext_start_time', 1);
-var _AVFormatContext_start_timehi = Module['_AVFormatContext_start_timehi'] = createExportWrapper('AVFormatContext_start_timehi', 1);
-var _AVFormatContext_start_time_s = Module['_AVFormatContext_start_time_s'] = createExportWrapper('AVFormatContext_start_time_s', 2);
-var _AVFormatContext_start_timehi_s = Module['_AVFormatContext_start_timehi_s'] = createExportWrapper('AVFormatContext_start_timehi_s', 2);
-var _AVFormatContext_streams_a = Module['_AVFormatContext_streams_a'] = createExportWrapper('AVFormatContext_streams_a', 2);
-var _AVFormatContext_streams_a_s = Module['_AVFormatContext_streams_a_s'] = createExportWrapper('AVFormatContext_streams_a_s', 3);
-var _AVStream_codecpar = Module['_AVStream_codecpar'] = createExportWrapper('AVStream_codecpar', 1);
-var _AVStream_codecpar_s = Module['_AVStream_codecpar_s'] = createExportWrapper('AVStream_codecpar_s', 2);
-var _AVStream_discard = Module['_AVStream_discard'] = createExportWrapper('AVStream_discard', 1);
-var _AVStream_discard_s = Module['_AVStream_discard_s'] = createExportWrapper('AVStream_discard_s', 2);
-var _AVStream_start_time = Module['_AVStream_start_time'] = createExportWrapper('AVStream_start_time', 1);
-var _AVStream_start_timehi = Module['_AVStream_start_timehi'] = createExportWrapper('AVStream_start_timehi', 1);
-var _AVStream_start_time_s = Module['_AVStream_start_time_s'] = createExportWrapper('AVStream_start_time_s', 2);
-var _AVStream_start_timehi_s = Module['_AVStream_start_timehi_s'] = createExportWrapper('AVStream_start_timehi_s', 2);
-var _AVStream_duration = Module['_AVStream_duration'] = createExportWrapper('AVStream_duration', 1);
-var _AVStream_durationhi = Module['_AVStream_durationhi'] = createExportWrapper('AVStream_durationhi', 1);
-var _AVStream_duration_s = Module['_AVStream_duration_s'] = createExportWrapper('AVStream_duration_s', 2);
-var _AVStream_durationhi_s = Module['_AVStream_durationhi_s'] = createExportWrapper('AVStream_durationhi_s', 2);
-var _AVStream_time_base_num = Module['_AVStream_time_base_num'] = createExportWrapper('AVStream_time_base_num', 1);
-var _AVStream_time_base_den = Module['_AVStream_time_base_den'] = createExportWrapper('AVStream_time_base_den', 1);
-var _AVStream_time_base_num_s = Module['_AVStream_time_base_num_s'] = createExportWrapper('AVStream_time_base_num_s', 2);
-var _AVStream_time_base_den_s = Module['_AVStream_time_base_den_s'] = createExportWrapper('AVStream_time_base_den_s', 2);
-var _AVStream_time_base_s = Module['_AVStream_time_base_s'] = createExportWrapper('AVStream_time_base_s', 3);
-var _avformat_seek_file_min = Module['_avformat_seek_file_min'] = createExportWrapper('avformat_seek_file_min', 5);
-var _avformat_seek_file = Module['_avformat_seek_file'] = createExportWrapper('avformat_seek_file', 9);
-var _avformat_seek_file_max = Module['_avformat_seek_file_max'] = createExportWrapper('avformat_seek_file_max', 5);
-var _avformat_seek_file_approx = Module['_avformat_seek_file_approx'] = createExportWrapper('avformat_seek_file_approx', 5);
-var _avformat_get_rotation = Module['_avformat_get_rotation'] = createExportWrapper('avformat_get_rotation', 1);
-var _avstream_get_frame_rate = Module['_avstream_get_frame_rate'] = createExportWrapper('avstream_get_frame_rate', 1);
-var _AVFilterInOut_filter_ctx = Module['_AVFilterInOut_filter_ctx'] = createExportWrapper('AVFilterInOut_filter_ctx', 1);
-var _AVFilterInOut_filter_ctx_s = Module['_AVFilterInOut_filter_ctx_s'] = createExportWrapper('AVFilterInOut_filter_ctx_s', 2);
-var _AVFilterInOut_name = Module['_AVFilterInOut_name'] = createExportWrapper('AVFilterInOut_name', 1);
-var _AVFilterInOut_name_s = Module['_AVFilterInOut_name_s'] = createExportWrapper('AVFilterInOut_name_s', 2);
-var _AVFilterInOut_next = Module['_AVFilterInOut_next'] = createExportWrapper('AVFilterInOut_next', 1);
-var _AVFilterInOut_next_s = Module['_AVFilterInOut_next_s'] = createExportWrapper('AVFilterInOut_next_s', 2);
-var _AVFilterInOut_pad_idx = Module['_AVFilterInOut_pad_idx'] = createExportWrapper('AVFilterInOut_pad_idx', 1);
-var _AVFilterInOut_pad_idx_s = Module['_AVFilterInOut_pad_idx_s'] = createExportWrapper('AVFilterInOut_pad_idx_s', 2);
-var _av_buffersink_get_time_base_num = Module['_av_buffersink_get_time_base_num'] = createExportWrapper('av_buffersink_get_time_base_num', 1);
-var _av_buffersink_get_time_base_den = Module['_av_buffersink_get_time_base_den'] = createExportWrapper('av_buffersink_get_time_base_den', 1);
-var _ff_buffersink_set_ch_layout = Module['_ff_buffersink_set_ch_layout'] = createExportWrapper('ff_buffersink_set_ch_layout', 3);
-var _av_opt_set = Module['_av_opt_set'] = createExportWrapper('av_opt_set', 4);
-var _libavjs_with_swscale = Module['_libavjs_with_swscale'] = createExportWrapper('libavjs_with_swscale', 0);
-var _avformat_free_context = Module['_avformat_free_context'] = createExportWrapper('avformat_free_context', 1);
-var _avformat_close_input = Module['_avformat_close_input'] = createExportWrapper('avformat_close_input', 1);
-var _ff_extract_audio = Module['_ff_extract_audio'] = createExportWrapper('ff_extract_audio', 2);
-var _avformat_alloc_context = Module['_avformat_alloc_context'] = createExportWrapper('avformat_alloc_context', 0);
-var _avformat_open_input = Module['_avformat_open_input'] = createExportWrapper('avformat_open_input', 4);
-var _avformat_find_stream_info = Module['_avformat_find_stream_info'] = createExportWrapper('avformat_find_stream_info', 2);
-var _avformat_new_stream = Module['_avformat_new_stream'] = createExportWrapper('avformat_new_stream', 2);
-var _avcodec_parameters_copy = Module['_avcodec_parameters_copy'] = createExportWrapper('avcodec_parameters_copy', 2);
-var _avformat_write_header = Module['_avformat_write_header'] = createExportWrapper('avformat_write_header', 2);
-var _av_interleaved_write_frame = Module['_av_interleaved_write_frame'] = createExportWrapper('av_interleaved_write_frame', 2);
-var _av_write_trailer = Module['_av_write_trailer'] = createExportWrapper('av_write_trailer', 1);
-var _fflush = createExportWrapper('fflush', 1);
-var _ff_slice_audio = Module['_ff_slice_audio'] = createExportWrapper('ff_slice_audio', 4);
-var _avformat_flush = Module['_avformat_flush'] = createExportWrapper('avformat_flush', 1);
-var _libavjs_create_main_thread = Module['_libavjs_create_main_thread'] = createExportWrapper('libavjs_create_main_thread', 0);
-var _avformat_alloc_output_context2_js = Module['_avformat_alloc_output_context2_js'] = createExportWrapper('avformat_alloc_output_context2_js', 3);
-var _avformat_open_input_js = Module['_avformat_open_input_js'] = createExportWrapper('avformat_open_input_js', 3);
-var _avio_open2_js = Module['_avio_open2_js'] = createExportWrapper('avio_open2_js', 4);
-var _avfilter_graph_create_filter_js = Module['_avfilter_graph_create_filter_js'] = createExportWrapper('avfilter_graph_create_filter_js', 5);
-var _av_dict_copy_js = Module['_av_dict_copy_js'] = createExportWrapper('av_dict_copy_js', 3);
-var _av_dict_set_js = Module['_av_dict_set_js'] = createExportWrapper('av_dict_set_js', 4);
-var _av_compare_ts_js = Module['_av_compare_ts_js'] = createExportWrapper('av_compare_ts_js', 8);
-var _ff_error = Module['_ff_error'] = createExportWrapper('ff_error', 1);
-var _mallinfo_uordblks = Module['_mallinfo_uordblks'] = createExportWrapper('mallinfo_uordblks', 0);
-var _av_dict_free = Module['_av_dict_free'] = createExportWrapper('av_dict_free', 1);
-var _av_log_set_level = Module['_av_log_set_level'] = createExportWrapper('av_log_set_level', 1);
-var _av_strdup = Module['_av_strdup'] = createExportWrapper('av_strdup', 1);
-var _avcodec_parameters_alloc = Module['_avcodec_parameters_alloc'] = createExportWrapper('avcodec_parameters_alloc', 0);
-var _ffmpeg_main = Module['_ffmpeg_main'] = createExportWrapper('ffmpeg_main', 2);
-var _avcodec_descriptor_get = Module['_avcodec_descriptor_get'] = createExportWrapper('avcodec_descriptor_get', 1);
-var _av_log_get_level = Module['_av_log_get_level'] = createExportWrapper('av_log_get_level', 0);
-var _avcodec_parameters_free = Module['_avcodec_parameters_free'] = createExportWrapper('avcodec_parameters_free', 1);
-var _avio_flush = Module['_avio_flush'] = createExportWrapper('avio_flush', 1);
-var _avcodec_free_context = Module['_avcodec_free_context'] = createExportWrapper('avcodec_free_context', 1);
-var _av_frame_free = Module['_av_frame_free'] = createExportWrapper('av_frame_free', 1);
-var _av_frame_alloc = Module['_av_frame_alloc'] = createExportWrapper('av_frame_alloc', 0);
-var _avcodec_alloc_context3 = Module['_avcodec_alloc_context3'] = createExportWrapper('avcodec_alloc_context3', 1);
-var _avcodec_parameters_to_context = Module['_avcodec_parameters_to_context'] = createExportWrapper('avcodec_parameters_to_context', 2);
-var _avcodec_find_decoder_by_name = Module['_avcodec_find_decoder_by_name'] = createExportWrapper('avcodec_find_decoder_by_name', 1);
-var _avcodec_find_decoder = Module['_avcodec_find_decoder'] = createExportWrapper('avcodec_find_decoder', 1);
-var _av_frame_unref = Module['_av_frame_unref'] = createExportWrapper('av_frame_unref', 1);
-var _avcodec_send_packet = Module['_avcodec_send_packet'] = createExportWrapper('avcodec_send_packet', 2);
-var _avcodec_receive_frame = Module['_avcodec_receive_frame'] = createExportWrapper('avcodec_receive_frame', 2);
-var _av_frame_ref = Module['_av_frame_ref'] = createExportWrapper('av_frame_ref', 2);
-var _av_pix_fmt_desc_get = Module['_av_pix_fmt_desc_get'] = createExportWrapper('av_pix_fmt_desc_get', 1);
-var _avcodec_get_name = Module['_avcodec_get_name'] = createExportWrapper('avcodec_get_name', 1);
-var _av_find_input_format = Module['_av_find_input_format'] = createExportWrapper('av_find_input_format', 1);
-var _avio_close = Module['_avio_close'] = createExportWrapper('avio_close', 1);
-var _av_get_bytes_per_sample = Module['_av_get_bytes_per_sample'] = createExportWrapper('av_get_bytes_per_sample', 1);
-var _avcodec_parameters_from_context = Module['_avcodec_parameters_from_context'] = createExportWrapper('avcodec_parameters_from_context', 2);
-var _av_shrink_packet = Module['_av_shrink_packet'] = createExportWrapper('av_shrink_packet', 2);
-var _avcodec_send_frame = Module['_avcodec_send_frame'] = createExportWrapper('avcodec_send_frame', 2);
-var _avcodec_receive_packet = Module['_avcodec_receive_packet'] = createExportWrapper('avcodec_receive_packet', 2);
-var _avfilter_graph_alloc = Module['_avfilter_graph_alloc'] = createExportWrapper('avfilter_graph_alloc', 0);
-var _avfilter_inout_free = Module['_avfilter_inout_free'] = createExportWrapper('avfilter_inout_free', 1);
-var _avfilter_graph_free = Module['_avfilter_graph_free'] = createExportWrapper('avfilter_graph_free', 1);
-var _av_get_sample_fmt_name = Module['_av_get_sample_fmt_name'] = createExportWrapper('av_get_sample_fmt_name', 1);
-var _av_buffersrc_add_frame_flags = Module['_av_buffersrc_add_frame_flags'] = createExportWrapper('av_buffersrc_add_frame_flags', 3);
-var _avfilter_get_by_name = Module['_avfilter_get_by_name'] = createExportWrapper('avfilter_get_by_name', 1);
-var _avfilter_link = Module['_avfilter_link'] = createExportWrapper('avfilter_link', 4);
-var _avfilter_graph_config = Module['_avfilter_graph_config'] = createExportWrapper('avfilter_graph_config', 2);
-var _av_frame_get_buffer = Module['_av_frame_get_buffer'] = createExportWrapper('av_frame_get_buffer', 2);
-var _avcodec_find_encoder = Module['_avcodec_find_encoder'] = createExportWrapper('avcodec_find_encoder', 1);
-var _strerror = Module['_strerror'] = createExportWrapper('strerror', 1);
-var _avcodec_find_encoder_by_name = Module['_avcodec_find_encoder_by_name'] = createExportWrapper('avcodec_find_encoder_by_name', 1);
-var _avcodec_descriptor_get_by_name = Module['_avcodec_descriptor_get_by_name'] = createExportWrapper('avcodec_descriptor_get_by_name', 1);
-var _av_packet_ref = Module['_av_packet_ref'] = createExportWrapper('av_packet_ref', 2);
-var _ffprobe_main = Module['_ffprobe_main'] = createExportWrapper('ffprobe_main', 2);
-var _avcodec_descriptor_next = Module['_avcodec_descriptor_next'] = createExportWrapper('avcodec_descriptor_next', 1);
-var _av_frame_clone = Module['_av_frame_clone'] = createExportWrapper('av_frame_clone', 1);
-var _av_frame_make_writable = Module['_av_frame_make_writable'] = createExportWrapper('av_frame_make_writable', 1);
-var _free = Module['_free'] = createExportWrapper('free', 1);
-var _open = Module['_open'] = createExportWrapper('open', 3);
-var _av_find_best_stream = Module['_av_find_best_stream'] = createExportWrapper('av_find_best_stream', 6);
-var _av_packet_new_side_data = Module['_av_packet_new_side_data'] = createExportWrapper('av_packet_new_side_data', 3);
-var _av_grow_packet = Module['_av_grow_packet'] = createExportWrapper('av_grow_packet', 2);
-var _av_packet_make_writable = Module['_av_packet_make_writable'] = createExportWrapper('av_packet_make_writable', 1);
-var _av_write_frame = Module['_av_write_frame'] = createExportWrapper('av_write_frame', 2);
-var _close = Module['_close'] = createExportWrapper('close', 1);
-var _avcodec_close = Module['_avcodec_close'] = createExportWrapper('avcodec_close', 1);
-var _av_packet_clone = Module['_av_packet_clone'] = createExportWrapper('av_packet_clone', 1);
-var _avfilter_free = Module['_avfilter_free'] = createExportWrapper('avfilter_free', 1);
-var _av_buffersink_get_frame = Module['_av_buffersink_get_frame'] = createExportWrapper('av_buffersink_get_frame', 2);
-var _av_buffersink_set_frame_size = Module['_av_buffersink_set_frame_size'] = createExportWrapper('av_buffersink_set_frame_size', 2);
-var _avfilter_inout_alloc = Module['_avfilter_inout_alloc'] = createExportWrapper('avfilter_inout_alloc', 0);
-var _avfilter_graph_parse = Module['_avfilter_graph_parse'] = createExportWrapper('avfilter_graph_parse', 5);
-var _sws_freeContext = Module['_sws_freeContext'] = createExportWrapper('sws_freeContext', 1);
-var _sws_scale_frame = Module['_sws_scale_frame'] = createExportWrapper('sws_scale_frame', 3);
-var _sws_getContext = Module['_sws_getContext'] = createExportWrapper('sws_getContext', 10);
-var _malloc = Module['_malloc'] = createExportWrapper('malloc', 1);
-var _calloc = Module['_calloc'] = createExportWrapper('calloc', 2);
-var _emfiberthreads_timeout_expiry = Module['_emfiberthreads_timeout_expiry'] = createExportWrapper('emfiberthreads_timeout_expiry', 2);
-var _dup2 = Module['_dup2'] = createExportWrapper('dup2', 2);
-var _emscripten_stack_get_base = () => (_emscripten_stack_get_base = wasmExports['emscripten_stack_get_base'])();
-var _emscripten_stack_get_end = () => (_emscripten_stack_get_end = wasmExports['emscripten_stack_get_end'])();
-var __emscripten_tempret_set = createExportWrapper('_emscripten_tempret_set', 1);
-var _emscripten_stack_init = () => (_emscripten_stack_init = wasmExports['emscripten_stack_init'])();
+var ___wasm_call_ctors = () => (___wasm_call_ctors = wasmExports['__wasm_call_ctors'])();
+var _ff_nothing = Module['_ff_nothing'] = () => (_ff_nothing = Module['_ff_nothing'] = wasmExports['ff_nothing'])();
+var _AVFrame_crop_bottom = Module['_AVFrame_crop_bottom'] = (a0) => (_AVFrame_crop_bottom = Module['_AVFrame_crop_bottom'] = wasmExports['AVFrame_crop_bottom'])(a0);
+var _AVFrame_crop_bottom_s = Module['_AVFrame_crop_bottom_s'] = (a0, a1) => (_AVFrame_crop_bottom_s = Module['_AVFrame_crop_bottom_s'] = wasmExports['AVFrame_crop_bottom_s'])(a0, a1);
+var _AVFrame_crop_left = Module['_AVFrame_crop_left'] = (a0) => (_AVFrame_crop_left = Module['_AVFrame_crop_left'] = wasmExports['AVFrame_crop_left'])(a0);
+var _AVFrame_crop_left_s = Module['_AVFrame_crop_left_s'] = (a0, a1) => (_AVFrame_crop_left_s = Module['_AVFrame_crop_left_s'] = wasmExports['AVFrame_crop_left_s'])(a0, a1);
+var _AVFrame_crop_right = Module['_AVFrame_crop_right'] = (a0) => (_AVFrame_crop_right = Module['_AVFrame_crop_right'] = wasmExports['AVFrame_crop_right'])(a0);
+var _AVFrame_crop_right_s = Module['_AVFrame_crop_right_s'] = (a0, a1) => (_AVFrame_crop_right_s = Module['_AVFrame_crop_right_s'] = wasmExports['AVFrame_crop_right_s'])(a0, a1);
+var _AVFrame_crop_top = Module['_AVFrame_crop_top'] = (a0) => (_AVFrame_crop_top = Module['_AVFrame_crop_top'] = wasmExports['AVFrame_crop_top'])(a0);
+var _AVFrame_crop_top_s = Module['_AVFrame_crop_top_s'] = (a0, a1) => (_AVFrame_crop_top_s = Module['_AVFrame_crop_top_s'] = wasmExports['AVFrame_crop_top_s'])(a0, a1);
+var _AVFrame_data_a = Module['_AVFrame_data_a'] = (a0, a1) => (_AVFrame_data_a = Module['_AVFrame_data_a'] = wasmExports['AVFrame_data_a'])(a0, a1);
+var _AVFrame_data_a_s = Module['_AVFrame_data_a_s'] = (a0, a1, a2) => (_AVFrame_data_a_s = Module['_AVFrame_data_a_s'] = wasmExports['AVFrame_data_a_s'])(a0, a1, a2);
+var _AVFrame_format = Module['_AVFrame_format'] = (a0) => (_AVFrame_format = Module['_AVFrame_format'] = wasmExports['AVFrame_format'])(a0);
+var _AVFrame_format_s = Module['_AVFrame_format_s'] = (a0, a1) => (_AVFrame_format_s = Module['_AVFrame_format_s'] = wasmExports['AVFrame_format_s'])(a0, a1);
+var _AVFrame_height = Module['_AVFrame_height'] = (a0) => (_AVFrame_height = Module['_AVFrame_height'] = wasmExports['AVFrame_height'])(a0);
+var _AVFrame_height_s = Module['_AVFrame_height_s'] = (a0, a1) => (_AVFrame_height_s = Module['_AVFrame_height_s'] = wasmExports['AVFrame_height_s'])(a0, a1);
+var _AVFrame_key_frame = Module['_AVFrame_key_frame'] = (a0) => (_AVFrame_key_frame = Module['_AVFrame_key_frame'] = wasmExports['AVFrame_key_frame'])(a0);
+var _AVFrame_key_frame_s = Module['_AVFrame_key_frame_s'] = (a0, a1) => (_AVFrame_key_frame_s = Module['_AVFrame_key_frame_s'] = wasmExports['AVFrame_key_frame_s'])(a0, a1);
+var _AVFrame_linesize_a = Module['_AVFrame_linesize_a'] = (a0, a1) => (_AVFrame_linesize_a = Module['_AVFrame_linesize_a'] = wasmExports['AVFrame_linesize_a'])(a0, a1);
+var _AVFrame_linesize_a_s = Module['_AVFrame_linesize_a_s'] = (a0, a1, a2) => (_AVFrame_linesize_a_s = Module['_AVFrame_linesize_a_s'] = wasmExports['AVFrame_linesize_a_s'])(a0, a1, a2);
+var _AVFrame_nb_samples = Module['_AVFrame_nb_samples'] = (a0) => (_AVFrame_nb_samples = Module['_AVFrame_nb_samples'] = wasmExports['AVFrame_nb_samples'])(a0);
+var _AVFrame_nb_samples_s = Module['_AVFrame_nb_samples_s'] = (a0, a1) => (_AVFrame_nb_samples_s = Module['_AVFrame_nb_samples_s'] = wasmExports['AVFrame_nb_samples_s'])(a0, a1);
+var _AVFrame_pict_type = Module['_AVFrame_pict_type'] = (a0) => (_AVFrame_pict_type = Module['_AVFrame_pict_type'] = wasmExports['AVFrame_pict_type'])(a0);
+var _AVFrame_pict_type_s = Module['_AVFrame_pict_type_s'] = (a0, a1) => (_AVFrame_pict_type_s = Module['_AVFrame_pict_type_s'] = wasmExports['AVFrame_pict_type_s'])(a0, a1);
+var _AVFrame_pts = Module['_AVFrame_pts'] = (a0) => (_AVFrame_pts = Module['_AVFrame_pts'] = wasmExports['AVFrame_pts'])(a0);
+var _AVFrame_ptshi = Module['_AVFrame_ptshi'] = (a0) => (_AVFrame_ptshi = Module['_AVFrame_ptshi'] = wasmExports['AVFrame_ptshi'])(a0);
+var _AVFrame_pts_s = Module['_AVFrame_pts_s'] = (a0, a1) => (_AVFrame_pts_s = Module['_AVFrame_pts_s'] = wasmExports['AVFrame_pts_s'])(a0, a1);
+var _AVFrame_ptshi_s = Module['_AVFrame_ptshi_s'] = (a0, a1) => (_AVFrame_ptshi_s = Module['_AVFrame_ptshi_s'] = wasmExports['AVFrame_ptshi_s'])(a0, a1);
+var _AVFrame_duration = Module['_AVFrame_duration'] = (a0) => (_AVFrame_duration = Module['_AVFrame_duration'] = wasmExports['AVFrame_duration'])(a0);
+var _AVFrame_durationhi = Module['_AVFrame_durationhi'] = (a0) => (_AVFrame_durationhi = Module['_AVFrame_durationhi'] = wasmExports['AVFrame_durationhi'])(a0);
+var _AVFrame_duration_s = Module['_AVFrame_duration_s'] = (a0, a1) => (_AVFrame_duration_s = Module['_AVFrame_duration_s'] = wasmExports['AVFrame_duration_s'])(a0, a1);
+var _AVFrame_durationhi_s = Module['_AVFrame_durationhi_s'] = (a0, a1) => (_AVFrame_durationhi_s = Module['_AVFrame_durationhi_s'] = wasmExports['AVFrame_durationhi_s'])(a0, a1);
+var _AVFrame_sample_rate = Module['_AVFrame_sample_rate'] = (a0) => (_AVFrame_sample_rate = Module['_AVFrame_sample_rate'] = wasmExports['AVFrame_sample_rate'])(a0);
+var _AVFrame_sample_rate_s = Module['_AVFrame_sample_rate_s'] = (a0, a1) => (_AVFrame_sample_rate_s = Module['_AVFrame_sample_rate_s'] = wasmExports['AVFrame_sample_rate_s'])(a0, a1);
+var _AVFrame_width = Module['_AVFrame_width'] = (a0) => (_AVFrame_width = Module['_AVFrame_width'] = wasmExports['AVFrame_width'])(a0);
+var _AVFrame_width_s = Module['_AVFrame_width_s'] = (a0, a1) => (_AVFrame_width_s = Module['_AVFrame_width_s'] = wasmExports['AVFrame_width_s'])(a0, a1);
+var _AVFrame_sample_aspect_ratio_num = Module['_AVFrame_sample_aspect_ratio_num'] = (a0) => (_AVFrame_sample_aspect_ratio_num = Module['_AVFrame_sample_aspect_ratio_num'] = wasmExports['AVFrame_sample_aspect_ratio_num'])(a0);
+var _AVFrame_sample_aspect_ratio_den = Module['_AVFrame_sample_aspect_ratio_den'] = (a0) => (_AVFrame_sample_aspect_ratio_den = Module['_AVFrame_sample_aspect_ratio_den'] = wasmExports['AVFrame_sample_aspect_ratio_den'])(a0);
+var _AVFrame_sample_aspect_ratio_num_s = Module['_AVFrame_sample_aspect_ratio_num_s'] = (a0, a1) => (_AVFrame_sample_aspect_ratio_num_s = Module['_AVFrame_sample_aspect_ratio_num_s'] = wasmExports['AVFrame_sample_aspect_ratio_num_s'])(a0, a1);
+var _AVFrame_sample_aspect_ratio_den_s = Module['_AVFrame_sample_aspect_ratio_den_s'] = (a0, a1) => (_AVFrame_sample_aspect_ratio_den_s = Module['_AVFrame_sample_aspect_ratio_den_s'] = wasmExports['AVFrame_sample_aspect_ratio_den_s'])(a0, a1);
+var _AVFrame_sample_aspect_ratio_s = Module['_AVFrame_sample_aspect_ratio_s'] = (a0, a1, a2) => (_AVFrame_sample_aspect_ratio_s = Module['_AVFrame_sample_aspect_ratio_s'] = wasmExports['AVFrame_sample_aspect_ratio_s'])(a0, a1, a2);
+var _AVFrame_time_base_num = Module['_AVFrame_time_base_num'] = (a0) => (_AVFrame_time_base_num = Module['_AVFrame_time_base_num'] = wasmExports['AVFrame_time_base_num'])(a0);
+var _AVFrame_time_base_den = Module['_AVFrame_time_base_den'] = (a0) => (_AVFrame_time_base_den = Module['_AVFrame_time_base_den'] = wasmExports['AVFrame_time_base_den'])(a0);
+var _AVFrame_time_base_num_s = Module['_AVFrame_time_base_num_s'] = (a0, a1) => (_AVFrame_time_base_num_s = Module['_AVFrame_time_base_num_s'] = wasmExports['AVFrame_time_base_num_s'])(a0, a1);
+var _AVFrame_time_base_den_s = Module['_AVFrame_time_base_den_s'] = (a0, a1) => (_AVFrame_time_base_den_s = Module['_AVFrame_time_base_den_s'] = wasmExports['AVFrame_time_base_den_s'])(a0, a1);
+var _AVFrame_time_base_s = Module['_AVFrame_time_base_s'] = (a0, a1, a2) => (_AVFrame_time_base_s = Module['_AVFrame_time_base_s'] = wasmExports['AVFrame_time_base_s'])(a0, a1, a2);
+var _AVFrame_channel_layoutmask_s = Module['_AVFrame_channel_layoutmask_s'] = (a0, a1, a2) => (_AVFrame_channel_layoutmask_s = Module['_AVFrame_channel_layoutmask_s'] = wasmExports['AVFrame_channel_layoutmask_s'])(a0, a1, a2);
+var _AVFrame_channel_layoutmask = Module['_AVFrame_channel_layoutmask'] = (a0) => (_AVFrame_channel_layoutmask = Module['_AVFrame_channel_layoutmask'] = wasmExports['AVFrame_channel_layoutmask'])(a0);
+var _AVFrame_channels = Module['_AVFrame_channels'] = (a0) => (_AVFrame_channels = Module['_AVFrame_channels'] = wasmExports['AVFrame_channels'])(a0);
+var _AVFrame_channels_s = Module['_AVFrame_channels_s'] = (a0, a1) => (_AVFrame_channels_s = Module['_AVFrame_channels_s'] = wasmExports['AVFrame_channels_s'])(a0, a1);
+var _AVFrame_ch_layout_nb_channels = Module['_AVFrame_ch_layout_nb_channels'] = (a0) => (_AVFrame_ch_layout_nb_channels = Module['_AVFrame_ch_layout_nb_channels'] = wasmExports['AVFrame_ch_layout_nb_channels'])(a0);
+var _AVFrame_ch_layout_nb_channels_s = Module['_AVFrame_ch_layout_nb_channels_s'] = (a0, a1) => (_AVFrame_ch_layout_nb_channels_s = Module['_AVFrame_ch_layout_nb_channels_s'] = wasmExports['AVFrame_ch_layout_nb_channels_s'])(a0, a1);
+var _AVFrame_channel_layout = Module['_AVFrame_channel_layout'] = (a0) => (_AVFrame_channel_layout = Module['_AVFrame_channel_layout'] = wasmExports['AVFrame_channel_layout'])(a0);
+var _AVFrame_channel_layouthi = Module['_AVFrame_channel_layouthi'] = (a0) => (_AVFrame_channel_layouthi = Module['_AVFrame_channel_layouthi'] = wasmExports['AVFrame_channel_layouthi'])(a0);
+var _AVFrame_channel_layout_s = Module['_AVFrame_channel_layout_s'] = (a0, a1) => (_AVFrame_channel_layout_s = Module['_AVFrame_channel_layout_s'] = wasmExports['AVFrame_channel_layout_s'])(a0, a1);
+var _AVFrame_channel_layouthi_s = Module['_AVFrame_channel_layouthi_s'] = (a0, a1) => (_AVFrame_channel_layouthi_s = Module['_AVFrame_channel_layouthi_s'] = wasmExports['AVFrame_channel_layouthi_s'])(a0, a1);
+var _ff_frame_rescale_ts_js = Module['_ff_frame_rescale_ts_js'] = (a0, a1, a2, a3, a4) => (_ff_frame_rescale_ts_js = Module['_ff_frame_rescale_ts_js'] = wasmExports['ff_frame_rescale_ts_js'])(a0, a1, a2, a3, a4);
+var _AVPixFmtDescriptor_flags = Module['_AVPixFmtDescriptor_flags'] = (a0) => (_AVPixFmtDescriptor_flags = Module['_AVPixFmtDescriptor_flags'] = wasmExports['AVPixFmtDescriptor_flags'])(a0);
+var _AVPixFmtDescriptor_flags_s = Module['_AVPixFmtDescriptor_flags_s'] = (a0, a1, a2) => (_AVPixFmtDescriptor_flags_s = Module['_AVPixFmtDescriptor_flags_s'] = wasmExports['AVPixFmtDescriptor_flags_s'])(a0, a1, a2);
+var _AVPixFmtDescriptor_nb_components = Module['_AVPixFmtDescriptor_nb_components'] = (a0) => (_AVPixFmtDescriptor_nb_components = Module['_AVPixFmtDescriptor_nb_components'] = wasmExports['AVPixFmtDescriptor_nb_components'])(a0);
+var _AVPixFmtDescriptor_nb_components_s = Module['_AVPixFmtDescriptor_nb_components_s'] = (a0, a1) => (_AVPixFmtDescriptor_nb_components_s = Module['_AVPixFmtDescriptor_nb_components_s'] = wasmExports['AVPixFmtDescriptor_nb_components_s'])(a0, a1);
+var _AVPixFmtDescriptor_log2_chroma_h = Module['_AVPixFmtDescriptor_log2_chroma_h'] = (a0) => (_AVPixFmtDescriptor_log2_chroma_h = Module['_AVPixFmtDescriptor_log2_chroma_h'] = wasmExports['AVPixFmtDescriptor_log2_chroma_h'])(a0);
+var _AVPixFmtDescriptor_log2_chroma_h_s = Module['_AVPixFmtDescriptor_log2_chroma_h_s'] = (a0, a1) => (_AVPixFmtDescriptor_log2_chroma_h_s = Module['_AVPixFmtDescriptor_log2_chroma_h_s'] = wasmExports['AVPixFmtDescriptor_log2_chroma_h_s'])(a0, a1);
+var _AVPixFmtDescriptor_log2_chroma_w = Module['_AVPixFmtDescriptor_log2_chroma_w'] = (a0) => (_AVPixFmtDescriptor_log2_chroma_w = Module['_AVPixFmtDescriptor_log2_chroma_w'] = wasmExports['AVPixFmtDescriptor_log2_chroma_w'])(a0);
+var _AVPixFmtDescriptor_log2_chroma_w_s = Module['_AVPixFmtDescriptor_log2_chroma_w_s'] = (a0, a1) => (_AVPixFmtDescriptor_log2_chroma_w_s = Module['_AVPixFmtDescriptor_log2_chroma_w_s'] = wasmExports['AVPixFmtDescriptor_log2_chroma_w_s'])(a0, a1);
+var _AVPixFmtDescriptor_comp_depth = Module['_AVPixFmtDescriptor_comp_depth'] = (a0, a1) => (_AVPixFmtDescriptor_comp_depth = Module['_AVPixFmtDescriptor_comp_depth'] = wasmExports['AVPixFmtDescriptor_comp_depth'])(a0, a1);
+var _av_opt_set_int_list_js = Module['_av_opt_set_int_list_js'] = (a0, a1, a2, a3, a4, a5) => (_av_opt_set_int_list_js = Module['_av_opt_set_int_list_js'] = wasmExports['av_opt_set_int_list_js'])(a0, a1, a2, a3, a4, a5);
+var _AVCodec_name = Module['_AVCodec_name'] = (a0) => (_AVCodec_name = Module['_AVCodec_name'] = wasmExports['AVCodec_name'])(a0);
+var _AVCodec_sample_fmts = Module['_AVCodec_sample_fmts'] = (a0) => (_AVCodec_sample_fmts = Module['_AVCodec_sample_fmts'] = wasmExports['AVCodec_sample_fmts'])(a0);
+var _AVCodec_sample_fmts_s = Module['_AVCodec_sample_fmts_s'] = (a0, a1) => (_AVCodec_sample_fmts_s = Module['_AVCodec_sample_fmts_s'] = wasmExports['AVCodec_sample_fmts_s'])(a0, a1);
+var _AVCodec_sample_fmts_a = Module['_AVCodec_sample_fmts_a'] = (a0, a1) => (_AVCodec_sample_fmts_a = Module['_AVCodec_sample_fmts_a'] = wasmExports['AVCodec_sample_fmts_a'])(a0, a1);
+var _AVCodec_sample_fmts_a_s = Module['_AVCodec_sample_fmts_a_s'] = (a0, a1, a2) => (_AVCodec_sample_fmts_a_s = Module['_AVCodec_sample_fmts_a_s'] = wasmExports['AVCodec_sample_fmts_a_s'])(a0, a1, a2);
+var _AVCodec_supported_samplerates = Module['_AVCodec_supported_samplerates'] = (a0) => (_AVCodec_supported_samplerates = Module['_AVCodec_supported_samplerates'] = wasmExports['AVCodec_supported_samplerates'])(a0);
+var _AVCodec_supported_samplerates_s = Module['_AVCodec_supported_samplerates_s'] = (a0, a1) => (_AVCodec_supported_samplerates_s = Module['_AVCodec_supported_samplerates_s'] = wasmExports['AVCodec_supported_samplerates_s'])(a0, a1);
+var _AVCodec_supported_samplerates_a = Module['_AVCodec_supported_samplerates_a'] = (a0, a1) => (_AVCodec_supported_samplerates_a = Module['_AVCodec_supported_samplerates_a'] = wasmExports['AVCodec_supported_samplerates_a'])(a0, a1);
+var _AVCodec_supported_samplerates_a_s = Module['_AVCodec_supported_samplerates_a_s'] = (a0, a1, a2) => (_AVCodec_supported_samplerates_a_s = Module['_AVCodec_supported_samplerates_a_s'] = wasmExports['AVCodec_supported_samplerates_a_s'])(a0, a1, a2);
+var _AVCodec_type = Module['_AVCodec_type'] = (a0) => (_AVCodec_type = Module['_AVCodec_type'] = wasmExports['AVCodec_type'])(a0);
+var _AVCodec_type_s = Module['_AVCodec_type_s'] = (a0, a1) => (_AVCodec_type_s = Module['_AVCodec_type_s'] = wasmExports['AVCodec_type_s'])(a0, a1);
+var _AVCodecContext_codec_id = Module['_AVCodecContext_codec_id'] = (a0) => (_AVCodecContext_codec_id = Module['_AVCodecContext_codec_id'] = wasmExports['AVCodecContext_codec_id'])(a0);
+var _AVCodecContext_codec_id_s = Module['_AVCodecContext_codec_id_s'] = (a0, a1) => (_AVCodecContext_codec_id_s = Module['_AVCodecContext_codec_id_s'] = wasmExports['AVCodecContext_codec_id_s'])(a0, a1);
+var _AVCodecContext_codec_type = Module['_AVCodecContext_codec_type'] = (a0) => (_AVCodecContext_codec_type = Module['_AVCodecContext_codec_type'] = wasmExports['AVCodecContext_codec_type'])(a0);
+var _AVCodecContext_codec_type_s = Module['_AVCodecContext_codec_type_s'] = (a0, a1) => (_AVCodecContext_codec_type_s = Module['_AVCodecContext_codec_type_s'] = wasmExports['AVCodecContext_codec_type_s'])(a0, a1);
+var _AVCodecContext_bit_rate = Module['_AVCodecContext_bit_rate'] = (a0) => (_AVCodecContext_bit_rate = Module['_AVCodecContext_bit_rate'] = wasmExports['AVCodecContext_bit_rate'])(a0);
+var _AVCodecContext_bit_ratehi = Module['_AVCodecContext_bit_ratehi'] = (a0) => (_AVCodecContext_bit_ratehi = Module['_AVCodecContext_bit_ratehi'] = wasmExports['AVCodecContext_bit_ratehi'])(a0);
+var _AVCodecContext_bit_rate_s = Module['_AVCodecContext_bit_rate_s'] = (a0, a1) => (_AVCodecContext_bit_rate_s = Module['_AVCodecContext_bit_rate_s'] = wasmExports['AVCodecContext_bit_rate_s'])(a0, a1);
+var _AVCodecContext_bit_ratehi_s = Module['_AVCodecContext_bit_ratehi_s'] = (a0, a1) => (_AVCodecContext_bit_ratehi_s = Module['_AVCodecContext_bit_ratehi_s'] = wasmExports['AVCodecContext_bit_ratehi_s'])(a0, a1);
+var _AVCodecContext_extradata = Module['_AVCodecContext_extradata'] = (a0) => (_AVCodecContext_extradata = Module['_AVCodecContext_extradata'] = wasmExports['AVCodecContext_extradata'])(a0);
+var _AVCodecContext_extradata_s = Module['_AVCodecContext_extradata_s'] = (a0, a1) => (_AVCodecContext_extradata_s = Module['_AVCodecContext_extradata_s'] = wasmExports['AVCodecContext_extradata_s'])(a0, a1);
+var _AVCodecContext_extradata_size = Module['_AVCodecContext_extradata_size'] = (a0) => (_AVCodecContext_extradata_size = Module['_AVCodecContext_extradata_size'] = wasmExports['AVCodecContext_extradata_size'])(a0);
+var _AVCodecContext_extradata_size_s = Module['_AVCodecContext_extradata_size_s'] = (a0, a1) => (_AVCodecContext_extradata_size_s = Module['_AVCodecContext_extradata_size_s'] = wasmExports['AVCodecContext_extradata_size_s'])(a0, a1);
+var _AVCodecContext_frame_size = Module['_AVCodecContext_frame_size'] = (a0) => (_AVCodecContext_frame_size = Module['_AVCodecContext_frame_size'] = wasmExports['AVCodecContext_frame_size'])(a0);
+var _AVCodecContext_frame_size_s = Module['_AVCodecContext_frame_size_s'] = (a0, a1) => (_AVCodecContext_frame_size_s = Module['_AVCodecContext_frame_size_s'] = wasmExports['AVCodecContext_frame_size_s'])(a0, a1);
+var _AVCodecContext_gop_size = Module['_AVCodecContext_gop_size'] = (a0) => (_AVCodecContext_gop_size = Module['_AVCodecContext_gop_size'] = wasmExports['AVCodecContext_gop_size'])(a0);
+var _AVCodecContext_gop_size_s = Module['_AVCodecContext_gop_size_s'] = (a0, a1) => (_AVCodecContext_gop_size_s = Module['_AVCodecContext_gop_size_s'] = wasmExports['AVCodecContext_gop_size_s'])(a0, a1);
+var _AVCodecContext_height = Module['_AVCodecContext_height'] = (a0) => (_AVCodecContext_height = Module['_AVCodecContext_height'] = wasmExports['AVCodecContext_height'])(a0);
+var _AVCodecContext_height_s = Module['_AVCodecContext_height_s'] = (a0, a1) => (_AVCodecContext_height_s = Module['_AVCodecContext_height_s'] = wasmExports['AVCodecContext_height_s'])(a0, a1);
+var _AVCodecContext_keyint_min = Module['_AVCodecContext_keyint_min'] = (a0) => (_AVCodecContext_keyint_min = Module['_AVCodecContext_keyint_min'] = wasmExports['AVCodecContext_keyint_min'])(a0);
+var _AVCodecContext_keyint_min_s = Module['_AVCodecContext_keyint_min_s'] = (a0, a1) => (_AVCodecContext_keyint_min_s = Module['_AVCodecContext_keyint_min_s'] = wasmExports['AVCodecContext_keyint_min_s'])(a0, a1);
+var _AVCodecContext_level = Module['_AVCodecContext_level'] = (a0) => (_AVCodecContext_level = Module['_AVCodecContext_level'] = wasmExports['AVCodecContext_level'])(a0);
+var _AVCodecContext_level_s = Module['_AVCodecContext_level_s'] = (a0, a1) => (_AVCodecContext_level_s = Module['_AVCodecContext_level_s'] = wasmExports['AVCodecContext_level_s'])(a0, a1);
+var _AVCodecContext_max_b_frames = Module['_AVCodecContext_max_b_frames'] = (a0) => (_AVCodecContext_max_b_frames = Module['_AVCodecContext_max_b_frames'] = wasmExports['AVCodecContext_max_b_frames'])(a0);
+var _AVCodecContext_max_b_frames_s = Module['_AVCodecContext_max_b_frames_s'] = (a0, a1) => (_AVCodecContext_max_b_frames_s = Module['_AVCodecContext_max_b_frames_s'] = wasmExports['AVCodecContext_max_b_frames_s'])(a0, a1);
+var _AVCodecContext_pix_fmt = Module['_AVCodecContext_pix_fmt'] = (a0) => (_AVCodecContext_pix_fmt = Module['_AVCodecContext_pix_fmt'] = wasmExports['AVCodecContext_pix_fmt'])(a0);
+var _AVCodecContext_pix_fmt_s = Module['_AVCodecContext_pix_fmt_s'] = (a0, a1) => (_AVCodecContext_pix_fmt_s = Module['_AVCodecContext_pix_fmt_s'] = wasmExports['AVCodecContext_pix_fmt_s'])(a0, a1);
+var _AVCodecContext_profile = Module['_AVCodecContext_profile'] = (a0) => (_AVCodecContext_profile = Module['_AVCodecContext_profile'] = wasmExports['AVCodecContext_profile'])(a0);
+var _AVCodecContext_profile_s = Module['_AVCodecContext_profile_s'] = (a0, a1) => (_AVCodecContext_profile_s = Module['_AVCodecContext_profile_s'] = wasmExports['AVCodecContext_profile_s'])(a0, a1);
+var _AVCodecContext_rc_max_rate = Module['_AVCodecContext_rc_max_rate'] = (a0) => (_AVCodecContext_rc_max_rate = Module['_AVCodecContext_rc_max_rate'] = wasmExports['AVCodecContext_rc_max_rate'])(a0);
+var _AVCodecContext_rc_max_ratehi = Module['_AVCodecContext_rc_max_ratehi'] = (a0) => (_AVCodecContext_rc_max_ratehi = Module['_AVCodecContext_rc_max_ratehi'] = wasmExports['AVCodecContext_rc_max_ratehi'])(a0);
+var _AVCodecContext_rc_max_rate_s = Module['_AVCodecContext_rc_max_rate_s'] = (a0, a1) => (_AVCodecContext_rc_max_rate_s = Module['_AVCodecContext_rc_max_rate_s'] = wasmExports['AVCodecContext_rc_max_rate_s'])(a0, a1);
+var _AVCodecContext_rc_max_ratehi_s = Module['_AVCodecContext_rc_max_ratehi_s'] = (a0, a1) => (_AVCodecContext_rc_max_ratehi_s = Module['_AVCodecContext_rc_max_ratehi_s'] = wasmExports['AVCodecContext_rc_max_ratehi_s'])(a0, a1);
+var _AVCodecContext_rc_min_rate = Module['_AVCodecContext_rc_min_rate'] = (a0) => (_AVCodecContext_rc_min_rate = Module['_AVCodecContext_rc_min_rate'] = wasmExports['AVCodecContext_rc_min_rate'])(a0);
+var _AVCodecContext_rc_min_ratehi = Module['_AVCodecContext_rc_min_ratehi'] = (a0) => (_AVCodecContext_rc_min_ratehi = Module['_AVCodecContext_rc_min_ratehi'] = wasmExports['AVCodecContext_rc_min_ratehi'])(a0);
+var _AVCodecContext_rc_min_rate_s = Module['_AVCodecContext_rc_min_rate_s'] = (a0, a1) => (_AVCodecContext_rc_min_rate_s = Module['_AVCodecContext_rc_min_rate_s'] = wasmExports['AVCodecContext_rc_min_rate_s'])(a0, a1);
+var _AVCodecContext_rc_min_ratehi_s = Module['_AVCodecContext_rc_min_ratehi_s'] = (a0, a1) => (_AVCodecContext_rc_min_ratehi_s = Module['_AVCodecContext_rc_min_ratehi_s'] = wasmExports['AVCodecContext_rc_min_ratehi_s'])(a0, a1);
+var _AVCodecContext_sample_fmt = Module['_AVCodecContext_sample_fmt'] = (a0) => (_AVCodecContext_sample_fmt = Module['_AVCodecContext_sample_fmt'] = wasmExports['AVCodecContext_sample_fmt'])(a0);
+var _AVCodecContext_sample_fmt_s = Module['_AVCodecContext_sample_fmt_s'] = (a0, a1) => (_AVCodecContext_sample_fmt_s = Module['_AVCodecContext_sample_fmt_s'] = wasmExports['AVCodecContext_sample_fmt_s'])(a0, a1);
+var _AVCodecContext_sample_rate = Module['_AVCodecContext_sample_rate'] = (a0) => (_AVCodecContext_sample_rate = Module['_AVCodecContext_sample_rate'] = wasmExports['AVCodecContext_sample_rate'])(a0);
+var _AVCodecContext_sample_rate_s = Module['_AVCodecContext_sample_rate_s'] = (a0, a1) => (_AVCodecContext_sample_rate_s = Module['_AVCodecContext_sample_rate_s'] = wasmExports['AVCodecContext_sample_rate_s'])(a0, a1);
+var _AVCodecContext_qmax = Module['_AVCodecContext_qmax'] = (a0) => (_AVCodecContext_qmax = Module['_AVCodecContext_qmax'] = wasmExports['AVCodecContext_qmax'])(a0);
+var _AVCodecContext_qmax_s = Module['_AVCodecContext_qmax_s'] = (a0, a1) => (_AVCodecContext_qmax_s = Module['_AVCodecContext_qmax_s'] = wasmExports['AVCodecContext_qmax_s'])(a0, a1);
+var _AVCodecContext_qmin = Module['_AVCodecContext_qmin'] = (a0) => (_AVCodecContext_qmin = Module['_AVCodecContext_qmin'] = wasmExports['AVCodecContext_qmin'])(a0);
+var _AVCodecContext_qmin_s = Module['_AVCodecContext_qmin_s'] = (a0, a1) => (_AVCodecContext_qmin_s = Module['_AVCodecContext_qmin_s'] = wasmExports['AVCodecContext_qmin_s'])(a0, a1);
+var _AVCodecContext_width = Module['_AVCodecContext_width'] = (a0) => (_AVCodecContext_width = Module['_AVCodecContext_width'] = wasmExports['AVCodecContext_width'])(a0);
+var _AVCodecContext_width_s = Module['_AVCodecContext_width_s'] = (a0, a1) => (_AVCodecContext_width_s = Module['_AVCodecContext_width_s'] = wasmExports['AVCodecContext_width_s'])(a0, a1);
+var _AVCodecContext_framerate_num = Module['_AVCodecContext_framerate_num'] = (a0) => (_AVCodecContext_framerate_num = Module['_AVCodecContext_framerate_num'] = wasmExports['AVCodecContext_framerate_num'])(a0);
+var _AVCodecContext_framerate_den = Module['_AVCodecContext_framerate_den'] = (a0) => (_AVCodecContext_framerate_den = Module['_AVCodecContext_framerate_den'] = wasmExports['AVCodecContext_framerate_den'])(a0);
+var _AVCodecContext_framerate_num_s = Module['_AVCodecContext_framerate_num_s'] = (a0, a1) => (_AVCodecContext_framerate_num_s = Module['_AVCodecContext_framerate_num_s'] = wasmExports['AVCodecContext_framerate_num_s'])(a0, a1);
+var _AVCodecContext_framerate_den_s = Module['_AVCodecContext_framerate_den_s'] = (a0, a1) => (_AVCodecContext_framerate_den_s = Module['_AVCodecContext_framerate_den_s'] = wasmExports['AVCodecContext_framerate_den_s'])(a0, a1);
+var _AVCodecContext_framerate_s = Module['_AVCodecContext_framerate_s'] = (a0, a1, a2) => (_AVCodecContext_framerate_s = Module['_AVCodecContext_framerate_s'] = wasmExports['AVCodecContext_framerate_s'])(a0, a1, a2);
+var _AVCodecContext_sample_aspect_ratio_num = Module['_AVCodecContext_sample_aspect_ratio_num'] = (a0) => (_AVCodecContext_sample_aspect_ratio_num = Module['_AVCodecContext_sample_aspect_ratio_num'] = wasmExports['AVCodecContext_sample_aspect_ratio_num'])(a0);
+var _AVCodecContext_sample_aspect_ratio_den = Module['_AVCodecContext_sample_aspect_ratio_den'] = (a0) => (_AVCodecContext_sample_aspect_ratio_den = Module['_AVCodecContext_sample_aspect_ratio_den'] = wasmExports['AVCodecContext_sample_aspect_ratio_den'])(a0);
+var _AVCodecContext_sample_aspect_ratio_num_s = Module['_AVCodecContext_sample_aspect_ratio_num_s'] = (a0, a1) => (_AVCodecContext_sample_aspect_ratio_num_s = Module['_AVCodecContext_sample_aspect_ratio_num_s'] = wasmExports['AVCodecContext_sample_aspect_ratio_num_s'])(a0, a1);
+var _AVCodecContext_sample_aspect_ratio_den_s = Module['_AVCodecContext_sample_aspect_ratio_den_s'] = (a0, a1) => (_AVCodecContext_sample_aspect_ratio_den_s = Module['_AVCodecContext_sample_aspect_ratio_den_s'] = wasmExports['AVCodecContext_sample_aspect_ratio_den_s'])(a0, a1);
+var _AVCodecContext_sample_aspect_ratio_s = Module['_AVCodecContext_sample_aspect_ratio_s'] = (a0, a1, a2) => (_AVCodecContext_sample_aspect_ratio_s = Module['_AVCodecContext_sample_aspect_ratio_s'] = wasmExports['AVCodecContext_sample_aspect_ratio_s'])(a0, a1, a2);
+var _AVCodecContext_time_base_num = Module['_AVCodecContext_time_base_num'] = (a0) => (_AVCodecContext_time_base_num = Module['_AVCodecContext_time_base_num'] = wasmExports['AVCodecContext_time_base_num'])(a0);
+var _AVCodecContext_time_base_den = Module['_AVCodecContext_time_base_den'] = (a0) => (_AVCodecContext_time_base_den = Module['_AVCodecContext_time_base_den'] = wasmExports['AVCodecContext_time_base_den'])(a0);
+var _AVCodecContext_time_base_num_s = Module['_AVCodecContext_time_base_num_s'] = (a0, a1) => (_AVCodecContext_time_base_num_s = Module['_AVCodecContext_time_base_num_s'] = wasmExports['AVCodecContext_time_base_num_s'])(a0, a1);
+var _AVCodecContext_time_base_den_s = Module['_AVCodecContext_time_base_den_s'] = (a0, a1) => (_AVCodecContext_time_base_den_s = Module['_AVCodecContext_time_base_den_s'] = wasmExports['AVCodecContext_time_base_den_s'])(a0, a1);
+var _AVCodecContext_time_base_s = Module['_AVCodecContext_time_base_s'] = (a0, a1, a2) => (_AVCodecContext_time_base_s = Module['_AVCodecContext_time_base_s'] = wasmExports['AVCodecContext_time_base_s'])(a0, a1, a2);
+var _AVCodecContext_channel_layoutmask_s = Module['_AVCodecContext_channel_layoutmask_s'] = (a0, a1, a2) => (_AVCodecContext_channel_layoutmask_s = Module['_AVCodecContext_channel_layoutmask_s'] = wasmExports['AVCodecContext_channel_layoutmask_s'])(a0, a1, a2);
+var _AVCodecContext_channel_layoutmask = Module['_AVCodecContext_channel_layoutmask'] = (a0) => (_AVCodecContext_channel_layoutmask = Module['_AVCodecContext_channel_layoutmask'] = wasmExports['AVCodecContext_channel_layoutmask'])(a0);
+var _AVCodecContext_channels = Module['_AVCodecContext_channels'] = (a0) => (_AVCodecContext_channels = Module['_AVCodecContext_channels'] = wasmExports['AVCodecContext_channels'])(a0);
+var _AVCodecContext_channels_s = Module['_AVCodecContext_channels_s'] = (a0, a1) => (_AVCodecContext_channels_s = Module['_AVCodecContext_channels_s'] = wasmExports['AVCodecContext_channels_s'])(a0, a1);
+var _AVCodecContext_ch_layout_nb_channels = Module['_AVCodecContext_ch_layout_nb_channels'] = (a0) => (_AVCodecContext_ch_layout_nb_channels = Module['_AVCodecContext_ch_layout_nb_channels'] = wasmExports['AVCodecContext_ch_layout_nb_channels'])(a0);
+var _AVCodecContext_ch_layout_nb_channels_s = Module['_AVCodecContext_ch_layout_nb_channels_s'] = (a0, a1) => (_AVCodecContext_ch_layout_nb_channels_s = Module['_AVCodecContext_ch_layout_nb_channels_s'] = wasmExports['AVCodecContext_ch_layout_nb_channels_s'])(a0, a1);
+var _AVCodecContext_channel_layout = Module['_AVCodecContext_channel_layout'] = (a0) => (_AVCodecContext_channel_layout = Module['_AVCodecContext_channel_layout'] = wasmExports['AVCodecContext_channel_layout'])(a0);
+var _AVCodecContext_channel_layouthi = Module['_AVCodecContext_channel_layouthi'] = (a0) => (_AVCodecContext_channel_layouthi = Module['_AVCodecContext_channel_layouthi'] = wasmExports['AVCodecContext_channel_layouthi'])(a0);
+var _AVCodecContext_channel_layout_s = Module['_AVCodecContext_channel_layout_s'] = (a0, a1) => (_AVCodecContext_channel_layout_s = Module['_AVCodecContext_channel_layout_s'] = wasmExports['AVCodecContext_channel_layout_s'])(a0, a1);
+var _AVCodecContext_channel_layouthi_s = Module['_AVCodecContext_channel_layouthi_s'] = (a0, a1) => (_AVCodecContext_channel_layouthi_s = Module['_AVCodecContext_channel_layouthi_s'] = wasmExports['AVCodecContext_channel_layouthi_s'])(a0, a1);
+var _AVCodecDescriptor_id = Module['_AVCodecDescriptor_id'] = (a0) => (_AVCodecDescriptor_id = Module['_AVCodecDescriptor_id'] = wasmExports['AVCodecDescriptor_id'])(a0);
+var _AVCodecDescriptor_id_s = Module['_AVCodecDescriptor_id_s'] = (a0, a1) => (_AVCodecDescriptor_id_s = Module['_AVCodecDescriptor_id_s'] = wasmExports['AVCodecDescriptor_id_s'])(a0, a1);
+var _AVCodecDescriptor_long_name = Module['_AVCodecDescriptor_long_name'] = (a0) => (_AVCodecDescriptor_long_name = Module['_AVCodecDescriptor_long_name'] = wasmExports['AVCodecDescriptor_long_name'])(a0);
+var _AVCodecDescriptor_long_name_s = Module['_AVCodecDescriptor_long_name_s'] = (a0, a1) => (_AVCodecDescriptor_long_name_s = Module['_AVCodecDescriptor_long_name_s'] = wasmExports['AVCodecDescriptor_long_name_s'])(a0, a1);
+var _AVCodecDescriptor_mime_types_a = Module['_AVCodecDescriptor_mime_types_a'] = (a0, a1) => (_AVCodecDescriptor_mime_types_a = Module['_AVCodecDescriptor_mime_types_a'] = wasmExports['AVCodecDescriptor_mime_types_a'])(a0, a1);
+var _AVCodecDescriptor_mime_types_a_s = Module['_AVCodecDescriptor_mime_types_a_s'] = (a0, a1, a2) => (_AVCodecDescriptor_mime_types_a_s = Module['_AVCodecDescriptor_mime_types_a_s'] = wasmExports['AVCodecDescriptor_mime_types_a_s'])(a0, a1, a2);
+var _AVCodecDescriptor_name = Module['_AVCodecDescriptor_name'] = (a0) => (_AVCodecDescriptor_name = Module['_AVCodecDescriptor_name'] = wasmExports['AVCodecDescriptor_name'])(a0);
+var _AVCodecDescriptor_name_s = Module['_AVCodecDescriptor_name_s'] = (a0, a1) => (_AVCodecDescriptor_name_s = Module['_AVCodecDescriptor_name_s'] = wasmExports['AVCodecDescriptor_name_s'])(a0, a1);
+var _AVCodecDescriptor_props = Module['_AVCodecDescriptor_props'] = (a0) => (_AVCodecDescriptor_props = Module['_AVCodecDescriptor_props'] = wasmExports['AVCodecDescriptor_props'])(a0);
+var _AVCodecDescriptor_props_s = Module['_AVCodecDescriptor_props_s'] = (a0, a1) => (_AVCodecDescriptor_props_s = Module['_AVCodecDescriptor_props_s'] = wasmExports['AVCodecDescriptor_props_s'])(a0, a1);
+var _AVCodecDescriptor_type = Module['_AVCodecDescriptor_type'] = (a0) => (_AVCodecDescriptor_type = Module['_AVCodecDescriptor_type'] = wasmExports['AVCodecDescriptor_type'])(a0);
+var _AVCodecDescriptor_type_s = Module['_AVCodecDescriptor_type_s'] = (a0, a1) => (_AVCodecDescriptor_type_s = Module['_AVCodecDescriptor_type_s'] = wasmExports['AVCodecDescriptor_type_s'])(a0, a1);
+var _AVCodecParameters_codec_id = Module['_AVCodecParameters_codec_id'] = (a0) => (_AVCodecParameters_codec_id = Module['_AVCodecParameters_codec_id'] = wasmExports['AVCodecParameters_codec_id'])(a0);
+var _AVCodecParameters_codec_id_s = Module['_AVCodecParameters_codec_id_s'] = (a0, a1) => (_AVCodecParameters_codec_id_s = Module['_AVCodecParameters_codec_id_s'] = wasmExports['AVCodecParameters_codec_id_s'])(a0, a1);
+var _AVCodecParameters_codec_tag = Module['_AVCodecParameters_codec_tag'] = (a0) => (_AVCodecParameters_codec_tag = Module['_AVCodecParameters_codec_tag'] = wasmExports['AVCodecParameters_codec_tag'])(a0);
+var _AVCodecParameters_codec_tag_s = Module['_AVCodecParameters_codec_tag_s'] = (a0, a1) => (_AVCodecParameters_codec_tag_s = Module['_AVCodecParameters_codec_tag_s'] = wasmExports['AVCodecParameters_codec_tag_s'])(a0, a1);
+var _AVCodecParameters_codec_type = Module['_AVCodecParameters_codec_type'] = (a0) => (_AVCodecParameters_codec_type = Module['_AVCodecParameters_codec_type'] = wasmExports['AVCodecParameters_codec_type'])(a0);
+var _AVCodecParameters_codec_type_s = Module['_AVCodecParameters_codec_type_s'] = (a0, a1) => (_AVCodecParameters_codec_type_s = Module['_AVCodecParameters_codec_type_s'] = wasmExports['AVCodecParameters_codec_type_s'])(a0, a1);
+var _AVCodecParameters_extradata = Module['_AVCodecParameters_extradata'] = (a0) => (_AVCodecParameters_extradata = Module['_AVCodecParameters_extradata'] = wasmExports['AVCodecParameters_extradata'])(a0);
+var _AVCodecParameters_extradata_s = Module['_AVCodecParameters_extradata_s'] = (a0, a1) => (_AVCodecParameters_extradata_s = Module['_AVCodecParameters_extradata_s'] = wasmExports['AVCodecParameters_extradata_s'])(a0, a1);
+var _AVCodecParameters_extradata_size = Module['_AVCodecParameters_extradata_size'] = (a0) => (_AVCodecParameters_extradata_size = Module['_AVCodecParameters_extradata_size'] = wasmExports['AVCodecParameters_extradata_size'])(a0);
+var _AVCodecParameters_extradata_size_s = Module['_AVCodecParameters_extradata_size_s'] = (a0, a1) => (_AVCodecParameters_extradata_size_s = Module['_AVCodecParameters_extradata_size_s'] = wasmExports['AVCodecParameters_extradata_size_s'])(a0, a1);
+var _AVCodecParameters_format = Module['_AVCodecParameters_format'] = (a0) => (_AVCodecParameters_format = Module['_AVCodecParameters_format'] = wasmExports['AVCodecParameters_format'])(a0);
+var _AVCodecParameters_format_s = Module['_AVCodecParameters_format_s'] = (a0, a1) => (_AVCodecParameters_format_s = Module['_AVCodecParameters_format_s'] = wasmExports['AVCodecParameters_format_s'])(a0, a1);
+var _AVCodecParameters_bit_rate = Module['_AVCodecParameters_bit_rate'] = (a0) => (_AVCodecParameters_bit_rate = Module['_AVCodecParameters_bit_rate'] = wasmExports['AVCodecParameters_bit_rate'])(a0);
+var _AVCodecParameters_bit_rate_s = Module['_AVCodecParameters_bit_rate_s'] = (a0, a1, a2) => (_AVCodecParameters_bit_rate_s = Module['_AVCodecParameters_bit_rate_s'] = wasmExports['AVCodecParameters_bit_rate_s'])(a0, a1, a2);
+var _AVCodecParameters_profile = Module['_AVCodecParameters_profile'] = (a0) => (_AVCodecParameters_profile = Module['_AVCodecParameters_profile'] = wasmExports['AVCodecParameters_profile'])(a0);
+var _AVCodecParameters_profile_s = Module['_AVCodecParameters_profile_s'] = (a0, a1) => (_AVCodecParameters_profile_s = Module['_AVCodecParameters_profile_s'] = wasmExports['AVCodecParameters_profile_s'])(a0, a1);
+var _AVCodecParameters_level = Module['_AVCodecParameters_level'] = (a0) => (_AVCodecParameters_level = Module['_AVCodecParameters_level'] = wasmExports['AVCodecParameters_level'])(a0);
+var _AVCodecParameters_level_s = Module['_AVCodecParameters_level_s'] = (a0, a1) => (_AVCodecParameters_level_s = Module['_AVCodecParameters_level_s'] = wasmExports['AVCodecParameters_level_s'])(a0, a1);
+var _AVCodecParameters_width = Module['_AVCodecParameters_width'] = (a0) => (_AVCodecParameters_width = Module['_AVCodecParameters_width'] = wasmExports['AVCodecParameters_width'])(a0);
+var _AVCodecParameters_width_s = Module['_AVCodecParameters_width_s'] = (a0, a1) => (_AVCodecParameters_width_s = Module['_AVCodecParameters_width_s'] = wasmExports['AVCodecParameters_width_s'])(a0, a1);
+var _AVCodecParameters_height = Module['_AVCodecParameters_height'] = (a0) => (_AVCodecParameters_height = Module['_AVCodecParameters_height'] = wasmExports['AVCodecParameters_height'])(a0);
+var _AVCodecParameters_height_s = Module['_AVCodecParameters_height_s'] = (a0, a1) => (_AVCodecParameters_height_s = Module['_AVCodecParameters_height_s'] = wasmExports['AVCodecParameters_height_s'])(a0, a1);
+var _AVCodecParameters_color_range = Module['_AVCodecParameters_color_range'] = (a0) => (_AVCodecParameters_color_range = Module['_AVCodecParameters_color_range'] = wasmExports['AVCodecParameters_color_range'])(a0);
+var _AVCodecParameters_color_range_s = Module['_AVCodecParameters_color_range_s'] = (a0, a1) => (_AVCodecParameters_color_range_s = Module['_AVCodecParameters_color_range_s'] = wasmExports['AVCodecParameters_color_range_s'])(a0, a1);
+var _AVCodecParameters_color_primaries = Module['_AVCodecParameters_color_primaries'] = (a0) => (_AVCodecParameters_color_primaries = Module['_AVCodecParameters_color_primaries'] = wasmExports['AVCodecParameters_color_primaries'])(a0);
+var _AVCodecParameters_color_primaries_s = Module['_AVCodecParameters_color_primaries_s'] = (a0, a1) => (_AVCodecParameters_color_primaries_s = Module['_AVCodecParameters_color_primaries_s'] = wasmExports['AVCodecParameters_color_primaries_s'])(a0, a1);
+var _AVCodecParameters_color_trc = Module['_AVCodecParameters_color_trc'] = (a0) => (_AVCodecParameters_color_trc = Module['_AVCodecParameters_color_trc'] = wasmExports['AVCodecParameters_color_trc'])(a0);
+var _AVCodecParameters_color_trc_s = Module['_AVCodecParameters_color_trc_s'] = (a0, a1) => (_AVCodecParameters_color_trc_s = Module['_AVCodecParameters_color_trc_s'] = wasmExports['AVCodecParameters_color_trc_s'])(a0, a1);
+var _AVCodecParameters_color_space = Module['_AVCodecParameters_color_space'] = (a0) => (_AVCodecParameters_color_space = Module['_AVCodecParameters_color_space'] = wasmExports['AVCodecParameters_color_space'])(a0);
+var _AVCodecParameters_color_space_s = Module['_AVCodecParameters_color_space_s'] = (a0, a1) => (_AVCodecParameters_color_space_s = Module['_AVCodecParameters_color_space_s'] = wasmExports['AVCodecParameters_color_space_s'])(a0, a1);
+var _AVCodecParameters_chroma_location = Module['_AVCodecParameters_chroma_location'] = (a0) => (_AVCodecParameters_chroma_location = Module['_AVCodecParameters_chroma_location'] = wasmExports['AVCodecParameters_chroma_location'])(a0);
+var _AVCodecParameters_chroma_location_s = Module['_AVCodecParameters_chroma_location_s'] = (a0, a1) => (_AVCodecParameters_chroma_location_s = Module['_AVCodecParameters_chroma_location_s'] = wasmExports['AVCodecParameters_chroma_location_s'])(a0, a1);
+var _AVCodecParameters_sample_rate = Module['_AVCodecParameters_sample_rate'] = (a0) => (_AVCodecParameters_sample_rate = Module['_AVCodecParameters_sample_rate'] = wasmExports['AVCodecParameters_sample_rate'])(a0);
+var _AVCodecParameters_sample_rate_s = Module['_AVCodecParameters_sample_rate_s'] = (a0, a1) => (_AVCodecParameters_sample_rate_s = Module['_AVCodecParameters_sample_rate_s'] = wasmExports['AVCodecParameters_sample_rate_s'])(a0, a1);
+var _AVCodecParameters_framerate_num = Module['_AVCodecParameters_framerate_num'] = (a0) => (_AVCodecParameters_framerate_num = Module['_AVCodecParameters_framerate_num'] = wasmExports['AVCodecParameters_framerate_num'])(a0);
+var _AVCodecParameters_framerate_den = Module['_AVCodecParameters_framerate_den'] = (a0) => (_AVCodecParameters_framerate_den = Module['_AVCodecParameters_framerate_den'] = wasmExports['AVCodecParameters_framerate_den'])(a0);
+var _AVCodecParameters_framerate_num_s = Module['_AVCodecParameters_framerate_num_s'] = (a0, a1) => (_AVCodecParameters_framerate_num_s = Module['_AVCodecParameters_framerate_num_s'] = wasmExports['AVCodecParameters_framerate_num_s'])(a0, a1);
+var _AVCodecParameters_framerate_den_s = Module['_AVCodecParameters_framerate_den_s'] = (a0, a1) => (_AVCodecParameters_framerate_den_s = Module['_AVCodecParameters_framerate_den_s'] = wasmExports['AVCodecParameters_framerate_den_s'])(a0, a1);
+var _AVCodecParameters_framerate_s = Module['_AVCodecParameters_framerate_s'] = (a0, a1, a2) => (_AVCodecParameters_framerate_s = Module['_AVCodecParameters_framerate_s'] = wasmExports['AVCodecParameters_framerate_s'])(a0, a1, a2);
+var _AVCodecParameters_channel_layoutmask_s = Module['_AVCodecParameters_channel_layoutmask_s'] = (a0, a1, a2) => (_AVCodecParameters_channel_layoutmask_s = Module['_AVCodecParameters_channel_layoutmask_s'] = wasmExports['AVCodecParameters_channel_layoutmask_s'])(a0, a1, a2);
+var _AVCodecParameters_channel_layoutmask = Module['_AVCodecParameters_channel_layoutmask'] = (a0) => (_AVCodecParameters_channel_layoutmask = Module['_AVCodecParameters_channel_layoutmask'] = wasmExports['AVCodecParameters_channel_layoutmask'])(a0);
+var _AVCodecParameters_channels = Module['_AVCodecParameters_channels'] = (a0) => (_AVCodecParameters_channels = Module['_AVCodecParameters_channels'] = wasmExports['AVCodecParameters_channels'])(a0);
+var _AVCodecParameters_channels_s = Module['_AVCodecParameters_channels_s'] = (a0, a1) => (_AVCodecParameters_channels_s = Module['_AVCodecParameters_channels_s'] = wasmExports['AVCodecParameters_channels_s'])(a0, a1);
+var _AVCodecParameters_ch_layout_nb_channels = Module['_AVCodecParameters_ch_layout_nb_channels'] = (a0) => (_AVCodecParameters_ch_layout_nb_channels = Module['_AVCodecParameters_ch_layout_nb_channels'] = wasmExports['AVCodecParameters_ch_layout_nb_channels'])(a0);
+var _AVCodecParameters_ch_layout_nb_channels_s = Module['_AVCodecParameters_ch_layout_nb_channels_s'] = (a0, a1) => (_AVCodecParameters_ch_layout_nb_channels_s = Module['_AVCodecParameters_ch_layout_nb_channels_s'] = wasmExports['AVCodecParameters_ch_layout_nb_channels_s'])(a0, a1);
+var _ff_get_colorspace_name = Module['_ff_get_colorspace_name'] = (a0) => (_ff_get_colorspace_name = Module['_ff_get_colorspace_name'] = wasmExports['ff_get_colorspace_name'])(a0);
+var _ff_get_pix_fmt_name = Module['_ff_get_pix_fmt_name'] = (a0) => (_ff_get_pix_fmt_name = Module['_ff_get_pix_fmt_name'] = wasmExports['ff_get_pix_fmt_name'])(a0);
+var _ff_get_color_range_name = Module['_ff_get_color_range_name'] = (a0) => (_ff_get_color_range_name = Module['_ff_get_color_range_name'] = wasmExports['ff_get_color_range_name'])(a0);
+var _ff_get_input_format_name = Module['_ff_get_input_format_name'] = (a0) => (_ff_get_input_format_name = Module['_ff_get_input_format_name'] = wasmExports['ff_get_input_format_name'])(a0);
+var _ff_get_major_brand = Module['_ff_get_major_brand'] = (a0) => (_ff_get_major_brand = Module['_ff_get_major_brand'] = wasmExports['ff_get_major_brand'])(a0);
+var _ff_get_media_duration = Module['_ff_get_media_duration'] = (a0) => (_ff_get_media_duration = Module['_ff_get_media_duration'] = wasmExports['ff_get_media_duration'])(a0);
+var _av_seek_frame = Module['_av_seek_frame'] = (a0, a1, a2, a3, a4) => (_av_seek_frame = Module['_av_seek_frame'] = wasmExports['av_seek_frame'])(a0, a1, a2, a3, a4);
+var _av_packet_alloc = Module['_av_packet_alloc'] = () => (_av_packet_alloc = Module['_av_packet_alloc'] = wasmExports['av_packet_alloc'])();
+var _av_read_frame = Module['_av_read_frame'] = (a0, a1) => (_av_read_frame = Module['_av_read_frame'] = wasmExports['av_read_frame'])(a0, a1);
+var _av_packet_unref = Module['_av_packet_unref'] = (a0) => (_av_packet_unref = Module['_av_packet_unref'] = wasmExports['av_packet_unref'])(a0);
+var _av_packet_free = Module['_av_packet_free'] = (a0) => (_av_packet_free = Module['_av_packet_free'] = wasmExports['av_packet_free'])(a0);
+var _ff_get_timecode = Module['_ff_get_timecode'] = (a0) => (_ff_get_timecode = Module['_ff_get_timecode'] = wasmExports['ff_get_timecode'])(a0);
+var _av_channel_layout_default_mask = Module['_av_channel_layout_default_mask'] = (a0) => (_av_channel_layout_default_mask = Module['_av_channel_layout_default_mask'] = wasmExports['av_channel_layout_default_mask'])(a0);
+var _AVPacket_data = Module['_AVPacket_data'] = (a0) => (_AVPacket_data = Module['_AVPacket_data'] = wasmExports['AVPacket_data'])(a0);
+var _AVPacket_data_s = Module['_AVPacket_data_s'] = (a0, a1) => (_AVPacket_data_s = Module['_AVPacket_data_s'] = wasmExports['AVPacket_data_s'])(a0, a1);
+var _AVPacket_dts = Module['_AVPacket_dts'] = (a0) => (_AVPacket_dts = Module['_AVPacket_dts'] = wasmExports['AVPacket_dts'])(a0);
+var _AVPacket_dtshi = Module['_AVPacket_dtshi'] = (a0) => (_AVPacket_dtshi = Module['_AVPacket_dtshi'] = wasmExports['AVPacket_dtshi'])(a0);
+var _AVPacket_dts_s = Module['_AVPacket_dts_s'] = (a0, a1) => (_AVPacket_dts_s = Module['_AVPacket_dts_s'] = wasmExports['AVPacket_dts_s'])(a0, a1);
+var _AVPacket_dtshi_s = Module['_AVPacket_dtshi_s'] = (a0, a1) => (_AVPacket_dtshi_s = Module['_AVPacket_dtshi_s'] = wasmExports['AVPacket_dtshi_s'])(a0, a1);
+var _AVPacket_duration = Module['_AVPacket_duration'] = (a0) => (_AVPacket_duration = Module['_AVPacket_duration'] = wasmExports['AVPacket_duration'])(a0);
+var _AVPacket_durationhi = Module['_AVPacket_durationhi'] = (a0) => (_AVPacket_durationhi = Module['_AVPacket_durationhi'] = wasmExports['AVPacket_durationhi'])(a0);
+var _AVPacket_duration_s = Module['_AVPacket_duration_s'] = (a0, a1) => (_AVPacket_duration_s = Module['_AVPacket_duration_s'] = wasmExports['AVPacket_duration_s'])(a0, a1);
+var _AVPacket_durationhi_s = Module['_AVPacket_durationhi_s'] = (a0, a1) => (_AVPacket_durationhi_s = Module['_AVPacket_durationhi_s'] = wasmExports['AVPacket_durationhi_s'])(a0, a1);
+var _AVPacket_flags = Module['_AVPacket_flags'] = (a0) => (_AVPacket_flags = Module['_AVPacket_flags'] = wasmExports['AVPacket_flags'])(a0);
+var _AVPacket_flags_s = Module['_AVPacket_flags_s'] = (a0, a1) => (_AVPacket_flags_s = Module['_AVPacket_flags_s'] = wasmExports['AVPacket_flags_s'])(a0, a1);
+var _AVPacket_pos = Module['_AVPacket_pos'] = (a0) => (_AVPacket_pos = Module['_AVPacket_pos'] = wasmExports['AVPacket_pos'])(a0);
+var _AVPacket_poshi = Module['_AVPacket_poshi'] = (a0) => (_AVPacket_poshi = Module['_AVPacket_poshi'] = wasmExports['AVPacket_poshi'])(a0);
+var _AVPacket_pos_s = Module['_AVPacket_pos_s'] = (a0, a1) => (_AVPacket_pos_s = Module['_AVPacket_pos_s'] = wasmExports['AVPacket_pos_s'])(a0, a1);
+var _AVPacket_poshi_s = Module['_AVPacket_poshi_s'] = (a0, a1) => (_AVPacket_poshi_s = Module['_AVPacket_poshi_s'] = wasmExports['AVPacket_poshi_s'])(a0, a1);
+var _AVPacket_pts = Module['_AVPacket_pts'] = (a0) => (_AVPacket_pts = Module['_AVPacket_pts'] = wasmExports['AVPacket_pts'])(a0);
+var _AVPacket_ptshi = Module['_AVPacket_ptshi'] = (a0) => (_AVPacket_ptshi = Module['_AVPacket_ptshi'] = wasmExports['AVPacket_ptshi'])(a0);
+var _AVPacket_pts_s = Module['_AVPacket_pts_s'] = (a0, a1) => (_AVPacket_pts_s = Module['_AVPacket_pts_s'] = wasmExports['AVPacket_pts_s'])(a0, a1);
+var _AVPacket_ptshi_s = Module['_AVPacket_ptshi_s'] = (a0, a1) => (_AVPacket_ptshi_s = Module['_AVPacket_ptshi_s'] = wasmExports['AVPacket_ptshi_s'])(a0, a1);
+var _AVPacket_side_data = Module['_AVPacket_side_data'] = (a0) => (_AVPacket_side_data = Module['_AVPacket_side_data'] = wasmExports['AVPacket_side_data'])(a0);
+var _AVPacket_side_data_s = Module['_AVPacket_side_data_s'] = (a0, a1) => (_AVPacket_side_data_s = Module['_AVPacket_side_data_s'] = wasmExports['AVPacket_side_data_s'])(a0, a1);
+var _AVPacket_side_data_elems = Module['_AVPacket_side_data_elems'] = (a0) => (_AVPacket_side_data_elems = Module['_AVPacket_side_data_elems'] = wasmExports['AVPacket_side_data_elems'])(a0);
+var _AVPacket_side_data_elems_s = Module['_AVPacket_side_data_elems_s'] = (a0, a1) => (_AVPacket_side_data_elems_s = Module['_AVPacket_side_data_elems_s'] = wasmExports['AVPacket_side_data_elems_s'])(a0, a1);
+var _AVPacket_size = Module['_AVPacket_size'] = (a0) => (_AVPacket_size = Module['_AVPacket_size'] = wasmExports['AVPacket_size'])(a0);
+var _AVPacket_size_s = Module['_AVPacket_size_s'] = (a0, a1) => (_AVPacket_size_s = Module['_AVPacket_size_s'] = wasmExports['AVPacket_size_s'])(a0, a1);
+var _AVPacket_stream_index = Module['_AVPacket_stream_index'] = (a0) => (_AVPacket_stream_index = Module['_AVPacket_stream_index'] = wasmExports['AVPacket_stream_index'])(a0);
+var _AVPacket_stream_index_s = Module['_AVPacket_stream_index_s'] = (a0, a1) => (_AVPacket_stream_index_s = Module['_AVPacket_stream_index_s'] = wasmExports['AVPacket_stream_index_s'])(a0, a1);
+var _AVPacket_time_base_num = Module['_AVPacket_time_base_num'] = (a0) => (_AVPacket_time_base_num = Module['_AVPacket_time_base_num'] = wasmExports['AVPacket_time_base_num'])(a0);
+var _AVPacket_time_base_den = Module['_AVPacket_time_base_den'] = (a0) => (_AVPacket_time_base_den = Module['_AVPacket_time_base_den'] = wasmExports['AVPacket_time_base_den'])(a0);
+var _AVPacket_time_base_num_s = Module['_AVPacket_time_base_num_s'] = (a0, a1) => (_AVPacket_time_base_num_s = Module['_AVPacket_time_base_num_s'] = wasmExports['AVPacket_time_base_num_s'])(a0, a1);
+var _AVPacket_time_base_den_s = Module['_AVPacket_time_base_den_s'] = (a0, a1) => (_AVPacket_time_base_den_s = Module['_AVPacket_time_base_den_s'] = wasmExports['AVPacket_time_base_den_s'])(a0, a1);
+var _AVPacket_time_base_s = Module['_AVPacket_time_base_s'] = (a0, a1, a2) => (_AVPacket_time_base_s = Module['_AVPacket_time_base_s'] = wasmExports['AVPacket_time_base_s'])(a0, a1, a2);
+var _AVPacketSideData_data = Module['_AVPacketSideData_data'] = (a0, a1) => (_AVPacketSideData_data = Module['_AVPacketSideData_data'] = wasmExports['AVPacketSideData_data'])(a0, a1);
+var _AVPacketSideData_size = Module['_AVPacketSideData_size'] = (a0, a1) => (_AVPacketSideData_size = Module['_AVPacketSideData_size'] = wasmExports['AVPacketSideData_size'])(a0, a1);
+var _AVPacketSideData_type = Module['_AVPacketSideData_type'] = (a0, a1) => (_AVPacketSideData_type = Module['_AVPacketSideData_type'] = wasmExports['AVPacketSideData_type'])(a0, a1);
+var _avcodec_open2_js = Module['_avcodec_open2_js'] = (a0, a1, a2) => (_avcodec_open2_js = Module['_avcodec_open2_js'] = wasmExports['avcodec_open2_js'])(a0, a1, a2);
+var _avcodec_open2 = Module['_avcodec_open2'] = (a0, a1, a2) => (_avcodec_open2 = Module['_avcodec_open2'] = wasmExports['avcodec_open2'])(a0, a1, a2);
+var _av_packet_rescale_ts_js = Module['_av_packet_rescale_ts_js'] = (a0, a1, a2, a3, a4) => (_av_packet_rescale_ts_js = Module['_av_packet_rescale_ts_js'] = wasmExports['av_packet_rescale_ts_js'])(a0, a1, a2, a3, a4);
+var _AVFormatContext_duration = Module['_AVFormatContext_duration'] = (a0) => (_AVFormatContext_duration = Module['_AVFormatContext_duration'] = wasmExports['AVFormatContext_duration'])(a0);
+var _AVFormatContext_durationhi = Module['_AVFormatContext_durationhi'] = (a0) => (_AVFormatContext_durationhi = Module['_AVFormatContext_durationhi'] = wasmExports['AVFormatContext_durationhi'])(a0);
+var _AVFormatContext_duration_s = Module['_AVFormatContext_duration_s'] = (a0, a1) => (_AVFormatContext_duration_s = Module['_AVFormatContext_duration_s'] = wasmExports['AVFormatContext_duration_s'])(a0, a1);
+var _AVFormatContext_durationhi_s = Module['_AVFormatContext_durationhi_s'] = (a0, a1) => (_AVFormatContext_durationhi_s = Module['_AVFormatContext_durationhi_s'] = wasmExports['AVFormatContext_durationhi_s'])(a0, a1);
+var _AVFormatContext_flags = Module['_AVFormatContext_flags'] = (a0) => (_AVFormatContext_flags = Module['_AVFormatContext_flags'] = wasmExports['AVFormatContext_flags'])(a0);
+var _AVFormatContext_flags_s = Module['_AVFormatContext_flags_s'] = (a0, a1) => (_AVFormatContext_flags_s = Module['_AVFormatContext_flags_s'] = wasmExports['AVFormatContext_flags_s'])(a0, a1);
+var _AVFormatContext_nb_streams = Module['_AVFormatContext_nb_streams'] = (a0) => (_AVFormatContext_nb_streams = Module['_AVFormatContext_nb_streams'] = wasmExports['AVFormatContext_nb_streams'])(a0);
+var _AVFormatContext_nb_streams_s = Module['_AVFormatContext_nb_streams_s'] = (a0, a1) => (_AVFormatContext_nb_streams_s = Module['_AVFormatContext_nb_streams_s'] = wasmExports['AVFormatContext_nb_streams_s'])(a0, a1);
+var _AVFormatContext_oformat = Module['_AVFormatContext_oformat'] = (a0) => (_AVFormatContext_oformat = Module['_AVFormatContext_oformat'] = wasmExports['AVFormatContext_oformat'])(a0);
+var _AVFormatContext_oformat_s = Module['_AVFormatContext_oformat_s'] = (a0, a1) => (_AVFormatContext_oformat_s = Module['_AVFormatContext_oformat_s'] = wasmExports['AVFormatContext_oformat_s'])(a0, a1);
+var _AVFormatContext_pb = Module['_AVFormatContext_pb'] = (a0) => (_AVFormatContext_pb = Module['_AVFormatContext_pb'] = wasmExports['AVFormatContext_pb'])(a0);
+var _AVFormatContext_pb_s = Module['_AVFormatContext_pb_s'] = (a0, a1) => (_AVFormatContext_pb_s = Module['_AVFormatContext_pb_s'] = wasmExports['AVFormatContext_pb_s'])(a0, a1);
+var _AVFormatContext_start_time = Module['_AVFormatContext_start_time'] = (a0) => (_AVFormatContext_start_time = Module['_AVFormatContext_start_time'] = wasmExports['AVFormatContext_start_time'])(a0);
+var _AVFormatContext_start_timehi = Module['_AVFormatContext_start_timehi'] = (a0) => (_AVFormatContext_start_timehi = Module['_AVFormatContext_start_timehi'] = wasmExports['AVFormatContext_start_timehi'])(a0);
+var _AVFormatContext_start_time_s = Module['_AVFormatContext_start_time_s'] = (a0, a1) => (_AVFormatContext_start_time_s = Module['_AVFormatContext_start_time_s'] = wasmExports['AVFormatContext_start_time_s'])(a0, a1);
+var _AVFormatContext_start_timehi_s = Module['_AVFormatContext_start_timehi_s'] = (a0, a1) => (_AVFormatContext_start_timehi_s = Module['_AVFormatContext_start_timehi_s'] = wasmExports['AVFormatContext_start_timehi_s'])(a0, a1);
+var _AVFormatContext_streams_a = Module['_AVFormatContext_streams_a'] = (a0, a1) => (_AVFormatContext_streams_a = Module['_AVFormatContext_streams_a'] = wasmExports['AVFormatContext_streams_a'])(a0, a1);
+var _AVFormatContext_streams_a_s = Module['_AVFormatContext_streams_a_s'] = (a0, a1, a2) => (_AVFormatContext_streams_a_s = Module['_AVFormatContext_streams_a_s'] = wasmExports['AVFormatContext_streams_a_s'])(a0, a1, a2);
+var _AVStream_codecpar = Module['_AVStream_codecpar'] = (a0) => (_AVStream_codecpar = Module['_AVStream_codecpar'] = wasmExports['AVStream_codecpar'])(a0);
+var _AVStream_codecpar_s = Module['_AVStream_codecpar_s'] = (a0, a1) => (_AVStream_codecpar_s = Module['_AVStream_codecpar_s'] = wasmExports['AVStream_codecpar_s'])(a0, a1);
+var _AVStream_discard = Module['_AVStream_discard'] = (a0) => (_AVStream_discard = Module['_AVStream_discard'] = wasmExports['AVStream_discard'])(a0);
+var _AVStream_discard_s = Module['_AVStream_discard_s'] = (a0, a1) => (_AVStream_discard_s = Module['_AVStream_discard_s'] = wasmExports['AVStream_discard_s'])(a0, a1);
+var _AVStream_start_time = Module['_AVStream_start_time'] = (a0) => (_AVStream_start_time = Module['_AVStream_start_time'] = wasmExports['AVStream_start_time'])(a0);
+var _AVStream_start_timehi = Module['_AVStream_start_timehi'] = (a0) => (_AVStream_start_timehi = Module['_AVStream_start_timehi'] = wasmExports['AVStream_start_timehi'])(a0);
+var _AVStream_start_time_s = Module['_AVStream_start_time_s'] = (a0, a1) => (_AVStream_start_time_s = Module['_AVStream_start_time_s'] = wasmExports['AVStream_start_time_s'])(a0, a1);
+var _AVStream_start_timehi_s = Module['_AVStream_start_timehi_s'] = (a0, a1) => (_AVStream_start_timehi_s = Module['_AVStream_start_timehi_s'] = wasmExports['AVStream_start_timehi_s'])(a0, a1);
+var _AVStream_duration = Module['_AVStream_duration'] = (a0) => (_AVStream_duration = Module['_AVStream_duration'] = wasmExports['AVStream_duration'])(a0);
+var _AVStream_durationhi = Module['_AVStream_durationhi'] = (a0) => (_AVStream_durationhi = Module['_AVStream_durationhi'] = wasmExports['AVStream_durationhi'])(a0);
+var _AVStream_duration_s = Module['_AVStream_duration_s'] = (a0, a1) => (_AVStream_duration_s = Module['_AVStream_duration_s'] = wasmExports['AVStream_duration_s'])(a0, a1);
+var _AVStream_durationhi_s = Module['_AVStream_durationhi_s'] = (a0, a1) => (_AVStream_durationhi_s = Module['_AVStream_durationhi_s'] = wasmExports['AVStream_durationhi_s'])(a0, a1);
+var _AVStream_time_base_num = Module['_AVStream_time_base_num'] = (a0) => (_AVStream_time_base_num = Module['_AVStream_time_base_num'] = wasmExports['AVStream_time_base_num'])(a0);
+var _AVStream_time_base_den = Module['_AVStream_time_base_den'] = (a0) => (_AVStream_time_base_den = Module['_AVStream_time_base_den'] = wasmExports['AVStream_time_base_den'])(a0);
+var _AVStream_time_base_num_s = Module['_AVStream_time_base_num_s'] = (a0, a1) => (_AVStream_time_base_num_s = Module['_AVStream_time_base_num_s'] = wasmExports['AVStream_time_base_num_s'])(a0, a1);
+var _AVStream_time_base_den_s = Module['_AVStream_time_base_den_s'] = (a0, a1) => (_AVStream_time_base_den_s = Module['_AVStream_time_base_den_s'] = wasmExports['AVStream_time_base_den_s'])(a0, a1);
+var _AVStream_time_base_s = Module['_AVStream_time_base_s'] = (a0, a1, a2) => (_AVStream_time_base_s = Module['_AVStream_time_base_s'] = wasmExports['AVStream_time_base_s'])(a0, a1, a2);
+var _avformat_seek_file_min = Module['_avformat_seek_file_min'] = (a0, a1, a2, a3, a4) => (_avformat_seek_file_min = Module['_avformat_seek_file_min'] = wasmExports['avformat_seek_file_min'])(a0, a1, a2, a3, a4);
+var _avformat_seek_file = Module['_avformat_seek_file'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8) => (_avformat_seek_file = Module['_avformat_seek_file'] = wasmExports['avformat_seek_file'])(a0, a1, a2, a3, a4, a5, a6, a7, a8);
+var _avformat_seek_file_max = Module['_avformat_seek_file_max'] = (a0, a1, a2, a3, a4) => (_avformat_seek_file_max = Module['_avformat_seek_file_max'] = wasmExports['avformat_seek_file_max'])(a0, a1, a2, a3, a4);
+var _avformat_seek_file_approx = Module['_avformat_seek_file_approx'] = (a0, a1, a2, a3, a4) => (_avformat_seek_file_approx = Module['_avformat_seek_file_approx'] = wasmExports['avformat_seek_file_approx'])(a0, a1, a2, a3, a4);
+var _avformat_get_rotation = Module['_avformat_get_rotation'] = (a0) => (_avformat_get_rotation = Module['_avformat_get_rotation'] = wasmExports['avformat_get_rotation'])(a0);
+var _avstream_get_frame_rate = Module['_avstream_get_frame_rate'] = (a0) => (_avstream_get_frame_rate = Module['_avstream_get_frame_rate'] = wasmExports['avstream_get_frame_rate'])(a0);
+var _AVFilterInOut_filter_ctx = Module['_AVFilterInOut_filter_ctx'] = (a0) => (_AVFilterInOut_filter_ctx = Module['_AVFilterInOut_filter_ctx'] = wasmExports['AVFilterInOut_filter_ctx'])(a0);
+var _AVFilterInOut_filter_ctx_s = Module['_AVFilterInOut_filter_ctx_s'] = (a0, a1) => (_AVFilterInOut_filter_ctx_s = Module['_AVFilterInOut_filter_ctx_s'] = wasmExports['AVFilterInOut_filter_ctx_s'])(a0, a1);
+var _AVFilterInOut_name = Module['_AVFilterInOut_name'] = (a0) => (_AVFilterInOut_name = Module['_AVFilterInOut_name'] = wasmExports['AVFilterInOut_name'])(a0);
+var _AVFilterInOut_name_s = Module['_AVFilterInOut_name_s'] = (a0, a1) => (_AVFilterInOut_name_s = Module['_AVFilterInOut_name_s'] = wasmExports['AVFilterInOut_name_s'])(a0, a1);
+var _AVFilterInOut_next = Module['_AVFilterInOut_next'] = (a0) => (_AVFilterInOut_next = Module['_AVFilterInOut_next'] = wasmExports['AVFilterInOut_next'])(a0);
+var _AVFilterInOut_next_s = Module['_AVFilterInOut_next_s'] = (a0, a1) => (_AVFilterInOut_next_s = Module['_AVFilterInOut_next_s'] = wasmExports['AVFilterInOut_next_s'])(a0, a1);
+var _AVFilterInOut_pad_idx = Module['_AVFilterInOut_pad_idx'] = (a0) => (_AVFilterInOut_pad_idx = Module['_AVFilterInOut_pad_idx'] = wasmExports['AVFilterInOut_pad_idx'])(a0);
+var _AVFilterInOut_pad_idx_s = Module['_AVFilterInOut_pad_idx_s'] = (a0, a1) => (_AVFilterInOut_pad_idx_s = Module['_AVFilterInOut_pad_idx_s'] = wasmExports['AVFilterInOut_pad_idx_s'])(a0, a1);
+var _av_buffersink_get_time_base_num = Module['_av_buffersink_get_time_base_num'] = (a0) => (_av_buffersink_get_time_base_num = Module['_av_buffersink_get_time_base_num'] = wasmExports['av_buffersink_get_time_base_num'])(a0);
+var _av_buffersink_get_time_base_den = Module['_av_buffersink_get_time_base_den'] = (a0) => (_av_buffersink_get_time_base_den = Module['_av_buffersink_get_time_base_den'] = wasmExports['av_buffersink_get_time_base_den'])(a0);
+var _ff_buffersink_set_ch_layout = Module['_ff_buffersink_set_ch_layout'] = (a0, a1, a2) => (_ff_buffersink_set_ch_layout = Module['_ff_buffersink_set_ch_layout'] = wasmExports['ff_buffersink_set_ch_layout'])(a0, a1, a2);
+var _av_opt_set = Module['_av_opt_set'] = (a0, a1, a2, a3) => (_av_opt_set = Module['_av_opt_set'] = wasmExports['av_opt_set'])(a0, a1, a2, a3);
+var _libavjs_with_swscale = Module['_libavjs_with_swscale'] = () => (_libavjs_with_swscale = Module['_libavjs_with_swscale'] = wasmExports['libavjs_with_swscale'])();
+var _avformat_free_context = Module['_avformat_free_context'] = (a0) => (_avformat_free_context = Module['_avformat_free_context'] = wasmExports['avformat_free_context'])(a0);
+var _avformat_close_input = Module['_avformat_close_input'] = (a0) => (_avformat_close_input = Module['_avformat_close_input'] = wasmExports['avformat_close_input'])(a0);
+var _ff_extract_audio = Module['_ff_extract_audio'] = (a0, a1) => (_ff_extract_audio = Module['_ff_extract_audio'] = wasmExports['ff_extract_audio'])(a0, a1);
+var _avformat_open_input = Module['_avformat_open_input'] = (a0, a1, a2, a3) => (_avformat_open_input = Module['_avformat_open_input'] = wasmExports['avformat_open_input'])(a0, a1, a2, a3);
+var _avformat_find_stream_info = Module['_avformat_find_stream_info'] = (a0, a1) => (_avformat_find_stream_info = Module['_avformat_find_stream_info'] = wasmExports['avformat_find_stream_info'])(a0, a1);
+var _avformat_new_stream = Module['_avformat_new_stream'] = (a0, a1) => (_avformat_new_stream = Module['_avformat_new_stream'] = wasmExports['avformat_new_stream'])(a0, a1);
+var _avcodec_parameters_copy = Module['_avcodec_parameters_copy'] = (a0, a1) => (_avcodec_parameters_copy = Module['_avcodec_parameters_copy'] = wasmExports['avcodec_parameters_copy'])(a0, a1);
+var _avformat_write_header = Module['_avformat_write_header'] = (a0, a1) => (_avformat_write_header = Module['_avformat_write_header'] = wasmExports['avformat_write_header'])(a0, a1);
+var _av_interleaved_write_frame = Module['_av_interleaved_write_frame'] = (a0, a1) => (_av_interleaved_write_frame = Module['_av_interleaved_write_frame'] = wasmExports['av_interleaved_write_frame'])(a0, a1);
+var _av_write_trailer = Module['_av_write_trailer'] = (a0) => (_av_write_trailer = Module['_av_write_trailer'] = wasmExports['av_write_trailer'])(a0);
+var _ff_slice_audio = Module['_ff_slice_audio'] = (a0, a1, a2, a3) => (_ff_slice_audio = Module['_ff_slice_audio'] = wasmExports['ff_slice_audio'])(a0, a1, a2, a3);
+var _avformat_flush = Module['_avformat_flush'] = (a0) => (_avformat_flush = Module['_avformat_flush'] = wasmExports['avformat_flush'])(a0);
+var _libavjs_create_main_thread = Module['_libavjs_create_main_thread'] = () => (_libavjs_create_main_thread = Module['_libavjs_create_main_thread'] = wasmExports['libavjs_create_main_thread'])();
+var _avformat_alloc_output_context2_js = Module['_avformat_alloc_output_context2_js'] = (a0, a1, a2) => (_avformat_alloc_output_context2_js = Module['_avformat_alloc_output_context2_js'] = wasmExports['avformat_alloc_output_context2_js'])(a0, a1, a2);
+var _avformat_open_input_js = Module['_avformat_open_input_js'] = (a0, a1, a2) => (_avformat_open_input_js = Module['_avformat_open_input_js'] = wasmExports['avformat_open_input_js'])(a0, a1, a2);
+var _avformat_alloc_context = Module['_avformat_alloc_context'] = () => (_avformat_alloc_context = Module['_avformat_alloc_context'] = wasmExports['avformat_alloc_context'])();
+var _avio_open2_js = Module['_avio_open2_js'] = (a0, a1, a2, a3) => (_avio_open2_js = Module['_avio_open2_js'] = wasmExports['avio_open2_js'])(a0, a1, a2, a3);
+var _avfilter_graph_create_filter_js = Module['_avfilter_graph_create_filter_js'] = (a0, a1, a2, a3, a4) => (_avfilter_graph_create_filter_js = Module['_avfilter_graph_create_filter_js'] = wasmExports['avfilter_graph_create_filter_js'])(a0, a1, a2, a3, a4);
+var _av_dict_copy_js = Module['_av_dict_copy_js'] = (a0, a1, a2) => (_av_dict_copy_js = Module['_av_dict_copy_js'] = wasmExports['av_dict_copy_js'])(a0, a1, a2);
+var _av_dict_set_js = Module['_av_dict_set_js'] = (a0, a1, a2, a3) => (_av_dict_set_js = Module['_av_dict_set_js'] = wasmExports['av_dict_set_js'])(a0, a1, a2, a3);
+var _av_compare_ts_js = Module['_av_compare_ts_js'] = (a0, a1, a2, a3, a4, a5, a6, a7) => (_av_compare_ts_js = Module['_av_compare_ts_js'] = wasmExports['av_compare_ts_js'])(a0, a1, a2, a3, a4, a5, a6, a7);
+var _ff_error = Module['_ff_error'] = (a0) => (_ff_error = Module['_ff_error'] = wasmExports['ff_error'])(a0);
+var _mallinfo_uordblks = Module['_mallinfo_uordblks'] = () => (_mallinfo_uordblks = Module['_mallinfo_uordblks'] = wasmExports['mallinfo_uordblks'])();
+var _av_dict_free = Module['_av_dict_free'] = (a0) => (_av_dict_free = Module['_av_dict_free'] = wasmExports['av_dict_free'])(a0);
+var _av_log_set_level = Module['_av_log_set_level'] = (a0) => (_av_log_set_level = Module['_av_log_set_level'] = wasmExports['av_log_set_level'])(a0);
+var _av_strdup = Module['_av_strdup'] = (a0) => (_av_strdup = Module['_av_strdup'] = wasmExports['av_strdup'])(a0);
+var _avcodec_parameters_alloc = Module['_avcodec_parameters_alloc'] = () => (_avcodec_parameters_alloc = Module['_avcodec_parameters_alloc'] = wasmExports['avcodec_parameters_alloc'])();
+var _ffmpeg_main = Module['_ffmpeg_main'] = (a0, a1) => (_ffmpeg_main = Module['_ffmpeg_main'] = wasmExports['ffmpeg_main'])(a0, a1);
+var _avcodec_descriptor_get = Module['_avcodec_descriptor_get'] = (a0) => (_avcodec_descriptor_get = Module['_avcodec_descriptor_get'] = wasmExports['avcodec_descriptor_get'])(a0);
+var _av_log_get_level = Module['_av_log_get_level'] = () => (_av_log_get_level = Module['_av_log_get_level'] = wasmExports['av_log_get_level'])();
+var _avcodec_parameters_free = Module['_avcodec_parameters_free'] = (a0) => (_avcodec_parameters_free = Module['_avcodec_parameters_free'] = wasmExports['avcodec_parameters_free'])(a0);
+var _avio_flush = Module['_avio_flush'] = (a0) => (_avio_flush = Module['_avio_flush'] = wasmExports['avio_flush'])(a0);
+var _avcodec_free_context = Module['_avcodec_free_context'] = (a0) => (_avcodec_free_context = Module['_avcodec_free_context'] = wasmExports['avcodec_free_context'])(a0);
+var _av_frame_free = Module['_av_frame_free'] = (a0) => (_av_frame_free = Module['_av_frame_free'] = wasmExports['av_frame_free'])(a0);
+var _av_frame_alloc = Module['_av_frame_alloc'] = () => (_av_frame_alloc = Module['_av_frame_alloc'] = wasmExports['av_frame_alloc'])();
+var _avcodec_alloc_context3 = Module['_avcodec_alloc_context3'] = (a0) => (_avcodec_alloc_context3 = Module['_avcodec_alloc_context3'] = wasmExports['avcodec_alloc_context3'])(a0);
+var _avcodec_parameters_to_context = Module['_avcodec_parameters_to_context'] = (a0, a1) => (_avcodec_parameters_to_context = Module['_avcodec_parameters_to_context'] = wasmExports['avcodec_parameters_to_context'])(a0, a1);
+var _avcodec_find_decoder_by_name = Module['_avcodec_find_decoder_by_name'] = (a0) => (_avcodec_find_decoder_by_name = Module['_avcodec_find_decoder_by_name'] = wasmExports['avcodec_find_decoder_by_name'])(a0);
+var _avcodec_find_decoder = Module['_avcodec_find_decoder'] = (a0) => (_avcodec_find_decoder = Module['_avcodec_find_decoder'] = wasmExports['avcodec_find_decoder'])(a0);
+var _av_frame_unref = Module['_av_frame_unref'] = (a0) => (_av_frame_unref = Module['_av_frame_unref'] = wasmExports['av_frame_unref'])(a0);
+var _avcodec_send_packet = Module['_avcodec_send_packet'] = (a0, a1) => (_avcodec_send_packet = Module['_avcodec_send_packet'] = wasmExports['avcodec_send_packet'])(a0, a1);
+var _avcodec_receive_frame = Module['_avcodec_receive_frame'] = (a0, a1) => (_avcodec_receive_frame = Module['_avcodec_receive_frame'] = wasmExports['avcodec_receive_frame'])(a0, a1);
+var _av_frame_ref = Module['_av_frame_ref'] = (a0, a1) => (_av_frame_ref = Module['_av_frame_ref'] = wasmExports['av_frame_ref'])(a0, a1);
+var _av_pix_fmt_desc_get = Module['_av_pix_fmt_desc_get'] = (a0) => (_av_pix_fmt_desc_get = Module['_av_pix_fmt_desc_get'] = wasmExports['av_pix_fmt_desc_get'])(a0);
+var _avcodec_get_name = Module['_avcodec_get_name'] = (a0) => (_avcodec_get_name = Module['_avcodec_get_name'] = wasmExports['avcodec_get_name'])(a0);
+var _av_find_input_format = Module['_av_find_input_format'] = (a0) => (_av_find_input_format = Module['_av_find_input_format'] = wasmExports['av_find_input_format'])(a0);
+var _avio_close = Module['_avio_close'] = (a0) => (_avio_close = Module['_avio_close'] = wasmExports['avio_close'])(a0);
+var _av_get_bytes_per_sample = Module['_av_get_bytes_per_sample'] = (a0) => (_av_get_bytes_per_sample = Module['_av_get_bytes_per_sample'] = wasmExports['av_get_bytes_per_sample'])(a0);
+var _avcodec_parameters_from_context = Module['_avcodec_parameters_from_context'] = (a0, a1) => (_avcodec_parameters_from_context = Module['_avcodec_parameters_from_context'] = wasmExports['avcodec_parameters_from_context'])(a0, a1);
+var _av_shrink_packet = Module['_av_shrink_packet'] = (a0, a1) => (_av_shrink_packet = Module['_av_shrink_packet'] = wasmExports['av_shrink_packet'])(a0, a1);
+var _avcodec_send_frame = Module['_avcodec_send_frame'] = (a0, a1) => (_avcodec_send_frame = Module['_avcodec_send_frame'] = wasmExports['avcodec_send_frame'])(a0, a1);
+var _avcodec_receive_packet = Module['_avcodec_receive_packet'] = (a0, a1) => (_avcodec_receive_packet = Module['_avcodec_receive_packet'] = wasmExports['avcodec_receive_packet'])(a0, a1);
+var _avfilter_graph_alloc = Module['_avfilter_graph_alloc'] = () => (_avfilter_graph_alloc = Module['_avfilter_graph_alloc'] = wasmExports['avfilter_graph_alloc'])();
+var _avfilter_inout_free = Module['_avfilter_inout_free'] = (a0) => (_avfilter_inout_free = Module['_avfilter_inout_free'] = wasmExports['avfilter_inout_free'])(a0);
+var _avfilter_graph_free = Module['_avfilter_graph_free'] = (a0) => (_avfilter_graph_free = Module['_avfilter_graph_free'] = wasmExports['avfilter_graph_free'])(a0);
+var _av_get_sample_fmt_name = Module['_av_get_sample_fmt_name'] = (a0) => (_av_get_sample_fmt_name = Module['_av_get_sample_fmt_name'] = wasmExports['av_get_sample_fmt_name'])(a0);
+var _av_buffersrc_add_frame_flags = Module['_av_buffersrc_add_frame_flags'] = (a0, a1, a2) => (_av_buffersrc_add_frame_flags = Module['_av_buffersrc_add_frame_flags'] = wasmExports['av_buffersrc_add_frame_flags'])(a0, a1, a2);
+var _avfilter_get_by_name = Module['_avfilter_get_by_name'] = (a0) => (_avfilter_get_by_name = Module['_avfilter_get_by_name'] = wasmExports['avfilter_get_by_name'])(a0);
+var _avfilter_link = Module['_avfilter_link'] = (a0, a1, a2, a3) => (_avfilter_link = Module['_avfilter_link'] = wasmExports['avfilter_link'])(a0, a1, a2, a3);
+var _avfilter_graph_config = Module['_avfilter_graph_config'] = (a0, a1) => (_avfilter_graph_config = Module['_avfilter_graph_config'] = wasmExports['avfilter_graph_config'])(a0, a1);
+var _av_frame_get_buffer = Module['_av_frame_get_buffer'] = (a0, a1) => (_av_frame_get_buffer = Module['_av_frame_get_buffer'] = wasmExports['av_frame_get_buffer'])(a0, a1);
+var _avcodec_find_encoder = Module['_avcodec_find_encoder'] = (a0) => (_avcodec_find_encoder = Module['_avcodec_find_encoder'] = wasmExports['avcodec_find_encoder'])(a0);
+var _strerror = Module['_strerror'] = (a0) => (_strerror = Module['_strerror'] = wasmExports['strerror'])(a0);
+var _avcodec_find_encoder_by_name = Module['_avcodec_find_encoder_by_name'] = (a0) => (_avcodec_find_encoder_by_name = Module['_avcodec_find_encoder_by_name'] = wasmExports['avcodec_find_encoder_by_name'])(a0);
+var _avcodec_descriptor_get_by_name = Module['_avcodec_descriptor_get_by_name'] = (a0) => (_avcodec_descriptor_get_by_name = Module['_avcodec_descriptor_get_by_name'] = wasmExports['avcodec_descriptor_get_by_name'])(a0);
+var _av_packet_ref = Module['_av_packet_ref'] = (a0, a1) => (_av_packet_ref = Module['_av_packet_ref'] = wasmExports['av_packet_ref'])(a0, a1);
+var _ffprobe_main = Module['_ffprobe_main'] = (a0, a1) => (_ffprobe_main = Module['_ffprobe_main'] = wasmExports['ffprobe_main'])(a0, a1);
+var _avcodec_descriptor_next = Module['_avcodec_descriptor_next'] = (a0) => (_avcodec_descriptor_next = Module['_avcodec_descriptor_next'] = wasmExports['avcodec_descriptor_next'])(a0);
+var _av_frame_clone = Module['_av_frame_clone'] = (a0) => (_av_frame_clone = Module['_av_frame_clone'] = wasmExports['av_frame_clone'])(a0);
+var _av_frame_make_writable = Module['_av_frame_make_writable'] = (a0) => (_av_frame_make_writable = Module['_av_frame_make_writable'] = wasmExports['av_frame_make_writable'])(a0);
+var _free = Module['_free'] = (a0) => (_free = Module['_free'] = wasmExports['free'])(a0);
+var _open = Module['_open'] = (a0, a1, a2) => (_open = Module['_open'] = wasmExports['open'])(a0, a1, a2);
+var _av_find_best_stream = Module['_av_find_best_stream'] = (a0, a1, a2, a3, a4, a5) => (_av_find_best_stream = Module['_av_find_best_stream'] = wasmExports['av_find_best_stream'])(a0, a1, a2, a3, a4, a5);
+var _av_packet_new_side_data = Module['_av_packet_new_side_data'] = (a0, a1, a2) => (_av_packet_new_side_data = Module['_av_packet_new_side_data'] = wasmExports['av_packet_new_side_data'])(a0, a1, a2);
+var _av_grow_packet = Module['_av_grow_packet'] = (a0, a1) => (_av_grow_packet = Module['_av_grow_packet'] = wasmExports['av_grow_packet'])(a0, a1);
+var _av_packet_make_writable = Module['_av_packet_make_writable'] = (a0) => (_av_packet_make_writable = Module['_av_packet_make_writable'] = wasmExports['av_packet_make_writable'])(a0);
+var _av_write_frame = Module['_av_write_frame'] = (a0, a1) => (_av_write_frame = Module['_av_write_frame'] = wasmExports['av_write_frame'])(a0, a1);
+var _close = Module['_close'] = (a0) => (_close = Module['_close'] = wasmExports['close'])(a0);
+var _avcodec_close = Module['_avcodec_close'] = (a0) => (_avcodec_close = Module['_avcodec_close'] = wasmExports['avcodec_close'])(a0);
+var _av_packet_clone = Module['_av_packet_clone'] = (a0) => (_av_packet_clone = Module['_av_packet_clone'] = wasmExports['av_packet_clone'])(a0);
+var _avfilter_free = Module['_avfilter_free'] = (a0) => (_avfilter_free = Module['_avfilter_free'] = wasmExports['avfilter_free'])(a0);
+var _av_buffersink_get_frame = Module['_av_buffersink_get_frame'] = (a0, a1) => (_av_buffersink_get_frame = Module['_av_buffersink_get_frame'] = wasmExports['av_buffersink_get_frame'])(a0, a1);
+var _av_buffersink_set_frame_size = Module['_av_buffersink_set_frame_size'] = (a0, a1) => (_av_buffersink_set_frame_size = Module['_av_buffersink_set_frame_size'] = wasmExports['av_buffersink_set_frame_size'])(a0, a1);
+var _avfilter_inout_alloc = Module['_avfilter_inout_alloc'] = () => (_avfilter_inout_alloc = Module['_avfilter_inout_alloc'] = wasmExports['avfilter_inout_alloc'])();
+var _avfilter_graph_parse = Module['_avfilter_graph_parse'] = (a0, a1, a2, a3, a4) => (_avfilter_graph_parse = Module['_avfilter_graph_parse'] = wasmExports['avfilter_graph_parse'])(a0, a1, a2, a3, a4);
+var _sws_freeContext = Module['_sws_freeContext'] = (a0) => (_sws_freeContext = Module['_sws_freeContext'] = wasmExports['sws_freeContext'])(a0);
+var _sws_scale_frame = Module['_sws_scale_frame'] = (a0, a1, a2) => (_sws_scale_frame = Module['_sws_scale_frame'] = wasmExports['sws_scale_frame'])(a0, a1, a2);
+var _sws_getContext = Module['_sws_getContext'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) => (_sws_getContext = Module['_sws_getContext'] = wasmExports['sws_getContext'])(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);
+var _malloc = Module['_malloc'] = (a0) => (_malloc = Module['_malloc'] = wasmExports['malloc'])(a0);
+var _calloc = Module['_calloc'] = (a0, a1) => (_calloc = Module['_calloc'] = wasmExports['calloc'])(a0, a1);
+var _emfiberthreads_timeout_expiry = Module['_emfiberthreads_timeout_expiry'] = (a0, a1) => (_emfiberthreads_timeout_expiry = Module['_emfiberthreads_timeout_expiry'] = wasmExports['emfiberthreads_timeout_expiry'])(a0, a1);
+var _dup2 = Module['_dup2'] = (a0, a1) => (_dup2 = Module['_dup2'] = wasmExports['dup2'])(a0, a1);
+var __emscripten_tempret_set = (a0) => (__emscripten_tempret_set = wasmExports['_emscripten_tempret_set'])(a0);
 var _emscripten_stack_set_limits = (a0, a1) => (_emscripten_stack_set_limits = wasmExports['emscripten_stack_set_limits'])(a0, a1);
-var _emscripten_stack_get_free = () => (_emscripten_stack_get_free = wasmExports['emscripten_stack_get_free'])();
 var __emscripten_stack_restore = (a0) => (__emscripten_stack_restore = wasmExports['_emscripten_stack_restore'])(a0);
 var __emscripten_stack_alloc = (a0) => (__emscripten_stack_alloc = wasmExports['_emscripten_stack_alloc'])(a0);
 var _emscripten_stack_get_current = () => (_emscripten_stack_get_current = wasmExports['emscripten_stack_get_current'])();
-var dynCall_iiii = Module['dynCall_iiii'] = createExportWrapper('dynCall_iiii', 4);
-var dynCall_jiji = Module['dynCall_jiji'] = createExportWrapper('dynCall_jiji', 5);
-var dynCall_vi = Module['dynCall_vi'] = createExportWrapper('dynCall_vi', 2);
-var dynCall_vii = Module['dynCall_vii'] = createExportWrapper('dynCall_vii', 3);
-var dynCall_ii = Module['dynCall_ii'] = createExportWrapper('dynCall_ii', 2);
-var dynCall_iii = Module['dynCall_iii'] = createExportWrapper('dynCall_iii', 3);
-var dynCall_viii = Module['dynCall_viii'] = createExportWrapper('dynCall_viii', 4);
-var dynCall_iiiii = Module['dynCall_iiiii'] = createExportWrapper('dynCall_iiiii', 5);
-var dynCall_viij = Module['dynCall_viij'] = createExportWrapper('dynCall_viij', 5);
-var dynCall_i = Module['dynCall_i'] = createExportWrapper('dynCall_i', 1);
-var dynCall_viiii = Module['dynCall_viiii'] = createExportWrapper('dynCall_viiii', 5);
-var dynCall_dd = Module['dynCall_dd'] = createExportWrapper('dynCall_dd', 2);
-var dynCall_viiiiii = Module['dynCall_viiiiii'] = createExportWrapper('dynCall_viiiiii', 7);
-var dynCall_iiiiii = Module['dynCall_iiiiii'] = createExportWrapper('dynCall_iiiiii', 6);
-var dynCall_iiiji = Module['dynCall_iiiji'] = createExportWrapper('dynCall_iiiji', 6);
-var dynCall_ijii = Module['dynCall_ijii'] = createExportWrapper('dynCall_ijii', 5);
-var dynCall_iiiiiii = Module['dynCall_iiiiiii'] = createExportWrapper('dynCall_iiiiiii', 7);
-var dynCall_fiiiiiiiiffii = Module['dynCall_fiiiiiiiiffii'] = createExportWrapper('dynCall_fiiiiiiiiffii', 13);
-var dynCall_viiif = Module['dynCall_viiif'] = createExportWrapper('dynCall_viiif', 5);
-var dynCall_viiiif = Module['dynCall_viiiif'] = createExportWrapper('dynCall_viiiif', 6);
-var dynCall_viiiiiiifi = Module['dynCall_viiiiiiifi'] = createExportWrapper('dynCall_viiiiiiifi', 10);
-var dynCall_viifi = Module['dynCall_viifi'] = createExportWrapper('dynCall_viifi', 5);
-var dynCall_diii = Module['dynCall_diii'] = createExportWrapper('dynCall_diii', 4);
-var dynCall_fiii = Module['dynCall_fiii'] = createExportWrapper('dynCall_fiii', 4);
-var dynCall_viiiii = Module['dynCall_viiiii'] = createExportWrapper('dynCall_viiiii', 6);
-var dynCall_viidi = Module['dynCall_viidi'] = createExportWrapper('dynCall_viidi', 5);
-var dynCall_v = Module['dynCall_v'] = createExportWrapper('dynCall_v', 1);
-var dynCall_iiijiiii = Module['dynCall_iiijiiii'] = createExportWrapper('dynCall_iiijiiii', 9);
-var dynCall_viiiiiiff = Module['dynCall_viiiiiiff'] = createExportWrapper('dynCall_viiiiiiff', 9);
-var dynCall_viiiiiifi = Module['dynCall_viiiiiifi'] = createExportWrapper('dynCall_viiiiiifi', 9);
-var dynCall_viiiiij = Module['dynCall_viiiiij'] = createExportWrapper('dynCall_viiiiij', 8);
-var dynCall_viiiiiiiii = Module['dynCall_viiiiiiiii'] = createExportWrapper('dynCall_viiiiiiiii', 10);
-var dynCall_viiiiiiii = Module['dynCall_viiiiiiii'] = createExportWrapper('dynCall_viiiiiiii', 9);
-var dynCall_viiiiiii = Module['dynCall_viiiiiii'] = createExportWrapper('dynCall_viiiiiii', 8);
-var dynCall_viiiiiiiiiiii = Module['dynCall_viiiiiiiiiiii'] = createExportWrapper('dynCall_viiiiiiiiiiii', 13);
-var dynCall_viiiiiiiiiiiiii = Module['dynCall_viiiiiiiiiiiiii'] = createExportWrapper('dynCall_viiiiiiiiiiiiii', 15);
-var dynCall_viiiiiiiiiii = Module['dynCall_viiiiiiiiiii'] = createExportWrapper('dynCall_viiiiiiiiiii', 12);
-var dynCall_viiiifii = Module['dynCall_viiiifii'] = createExportWrapper('dynCall_viiiifii', 8);
-var dynCall_fii = Module['dynCall_fii'] = createExportWrapper('dynCall_fii', 3);
-var dynCall_viiiiiiiiii = Module['dynCall_viiiiiiiiii'] = createExportWrapper('dynCall_viiiiiiiiii', 11);
-var dynCall_iiidiiiiii = Module['dynCall_iiidiiiiii'] = createExportWrapper('dynCall_iiidiiiiii', 10);
-var dynCall_viiiiijjidd = Module['dynCall_viiiiijjidd'] = createExportWrapper('dynCall_viiiiijjidd', 13);
-var dynCall_viiiid = Module['dynCall_viiiid'] = createExportWrapper('dynCall_viiiid', 6);
-var dynCall_iiiiiiiii = Module['dynCall_iiiiiiiii'] = createExportWrapper('dynCall_iiiiiiiii', 9);
-var dynCall_did = Module['dynCall_did'] = createExportWrapper('dynCall_did', 3);
-var dynCall_viiijj = Module['dynCall_viiijj'] = createExportWrapper('dynCall_viiijj', 8);
-var dynCall_iiiiiiidiiddii = Module['dynCall_iiiiiiidiiddii'] = createExportWrapper('dynCall_iiiiiiidiiddii', 14);
-var dynCall_jij = Module['dynCall_jij'] = createExportWrapper('dynCall_jij', 4);
-var dynCall_jii = Module['dynCall_jii'] = createExportWrapper('dynCall_jii', 3);
-var dynCall_iiiiiiii = Module['dynCall_iiiiiiii'] = createExportWrapper('dynCall_iiiiiiii', 8);
-var dynCall_vij = Module['dynCall_vij'] = createExportWrapper('dynCall_vij', 4);
-var dynCall_iiij = Module['dynCall_iiij'] = createExportWrapper('dynCall_iiij', 5);
-var dynCall_viji = Module['dynCall_viji'] = createExportWrapper('dynCall_viji', 5);
-var dynCall_iiiiiiiiii = Module['dynCall_iiiiiiiiii'] = createExportWrapper('dynCall_iiiiiiiiii', 10);
-var dynCall_iiifii = Module['dynCall_iiifii'] = createExportWrapper('dynCall_iiifii', 6);
-var dynCall_iidiiii = Module['dynCall_iidiiii'] = createExportWrapper('dynCall_iidiiii', 7);
-var _asyncify_start_unwind = createExportWrapper('asyncify_start_unwind', 1);
-var _asyncify_stop_unwind = createExportWrapper('asyncify_stop_unwind', 0);
-var _asyncify_start_rewind = createExportWrapper('asyncify_start_rewind', 1);
-var _asyncify_stop_rewind = createExportWrapper('asyncify_stop_rewind', 0);
-var _ff_h264_cabac_tables = Module['_ff_h264_cabac_tables'] = 543388;
+var dynCall_iiii = Module['dynCall_iiii'] = (a0, a1, a2, a3) => (dynCall_iiii = Module['dynCall_iiii'] = wasmExports['dynCall_iiii'])(a0, a1, a2, a3);
+var dynCall_vi = Module['dynCall_vi'] = (a0, a1) => (dynCall_vi = Module['dynCall_vi'] = wasmExports['dynCall_vi'])(a0, a1);
+var dynCall_vii = Module['dynCall_vii'] = (a0, a1, a2) => (dynCall_vii = Module['dynCall_vii'] = wasmExports['dynCall_vii'])(a0, a1, a2);
+var dynCall_ii = Module['dynCall_ii'] = (a0, a1) => (dynCall_ii = Module['dynCall_ii'] = wasmExports['dynCall_ii'])(a0, a1);
+var dynCall_iii = Module['dynCall_iii'] = (a0, a1, a2) => (dynCall_iii = Module['dynCall_iii'] = wasmExports['dynCall_iii'])(a0, a1, a2);
+var dynCall_viii = Module['dynCall_viii'] = (a0, a1, a2, a3) => (dynCall_viii = Module['dynCall_viii'] = wasmExports['dynCall_viii'])(a0, a1, a2, a3);
+var dynCall_iiiii = Module['dynCall_iiiii'] = (a0, a1, a2, a3, a4) => (dynCall_iiiii = Module['dynCall_iiiii'] = wasmExports['dynCall_iiiii'])(a0, a1, a2, a3, a4);
+var dynCall_viij = Module['dynCall_viij'] = (a0, a1, a2, a3, a4) => (dynCall_viij = Module['dynCall_viij'] = wasmExports['dynCall_viij'])(a0, a1, a2, a3, a4);
+var dynCall_i = Module['dynCall_i'] = (a0) => (dynCall_i = Module['dynCall_i'] = wasmExports['dynCall_i'])(a0);
+var dynCall_viiii = Module['dynCall_viiii'] = (a0, a1, a2, a3, a4) => (dynCall_viiii = Module['dynCall_viiii'] = wasmExports['dynCall_viiii'])(a0, a1, a2, a3, a4);
+var dynCall_dd = Module['dynCall_dd'] = (a0, a1) => (dynCall_dd = Module['dynCall_dd'] = wasmExports['dynCall_dd'])(a0, a1);
+var dynCall_viiiiii = Module['dynCall_viiiiii'] = (a0, a1, a2, a3, a4, a5, a6) => (dynCall_viiiiii = Module['dynCall_viiiiii'] = wasmExports['dynCall_viiiiii'])(a0, a1, a2, a3, a4, a5, a6);
+var dynCall_iiiiii = Module['dynCall_iiiiii'] = (a0, a1, a2, a3, a4, a5) => (dynCall_iiiiii = Module['dynCall_iiiiii'] = wasmExports['dynCall_iiiiii'])(a0, a1, a2, a3, a4, a5);
+var dynCall_jiji = Module['dynCall_jiji'] = (a0, a1, a2, a3, a4) => (dynCall_jiji = Module['dynCall_jiji'] = wasmExports['dynCall_jiji'])(a0, a1, a2, a3, a4);
+var dynCall_iiiji = Module['dynCall_iiiji'] = (a0, a1, a2, a3, a4, a5) => (dynCall_iiiji = Module['dynCall_iiiji'] = wasmExports['dynCall_iiiji'])(a0, a1, a2, a3, a4, a5);
+var dynCall_ijii = Module['dynCall_ijii'] = (a0, a1, a2, a3, a4) => (dynCall_ijii = Module['dynCall_ijii'] = wasmExports['dynCall_ijii'])(a0, a1, a2, a3, a4);
+var dynCall_iiiiiii = Module['dynCall_iiiiiii'] = (a0, a1, a2, a3, a4, a5, a6) => (dynCall_iiiiiii = Module['dynCall_iiiiiii'] = wasmExports['dynCall_iiiiiii'])(a0, a1, a2, a3, a4, a5, a6);
+var dynCall_fiiiiiiiiffii = Module['dynCall_fiiiiiiiiffii'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12) => (dynCall_fiiiiiiiiffii = Module['dynCall_fiiiiiiiiffii'] = wasmExports['dynCall_fiiiiiiiiffii'])(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12);
+var dynCall_viiif = Module['dynCall_viiif'] = (a0, a1, a2, a3, a4) => (dynCall_viiif = Module['dynCall_viiif'] = wasmExports['dynCall_viiif'])(a0, a1, a2, a3, a4);
+var dynCall_viiiif = Module['dynCall_viiiif'] = (a0, a1, a2, a3, a4, a5) => (dynCall_viiiif = Module['dynCall_viiiif'] = wasmExports['dynCall_viiiif'])(a0, a1, a2, a3, a4, a5);
+var dynCall_viiiiiiifi = Module['dynCall_viiiiiiifi'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) => (dynCall_viiiiiiifi = Module['dynCall_viiiiiiifi'] = wasmExports['dynCall_viiiiiiifi'])(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);
+var dynCall_viifi = Module['dynCall_viifi'] = (a0, a1, a2, a3, a4) => (dynCall_viifi = Module['dynCall_viifi'] = wasmExports['dynCall_viifi'])(a0, a1, a2, a3, a4);
+var dynCall_diii = Module['dynCall_diii'] = (a0, a1, a2, a3) => (dynCall_diii = Module['dynCall_diii'] = wasmExports['dynCall_diii'])(a0, a1, a2, a3);
+var dynCall_fiii = Module['dynCall_fiii'] = (a0, a1, a2, a3) => (dynCall_fiii = Module['dynCall_fiii'] = wasmExports['dynCall_fiii'])(a0, a1, a2, a3);
+var dynCall_viiiii = Module['dynCall_viiiii'] = (a0, a1, a2, a3, a4, a5) => (dynCall_viiiii = Module['dynCall_viiiii'] = wasmExports['dynCall_viiiii'])(a0, a1, a2, a3, a4, a5);
+var dynCall_viidi = Module['dynCall_viidi'] = (a0, a1, a2, a3, a4) => (dynCall_viidi = Module['dynCall_viidi'] = wasmExports['dynCall_viidi'])(a0, a1, a2, a3, a4);
+var dynCall_v = Module['dynCall_v'] = (a0) => (dynCall_v = Module['dynCall_v'] = wasmExports['dynCall_v'])(a0);
+var dynCall_iiijiiii = Module['dynCall_iiijiiii'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8) => (dynCall_iiijiiii = Module['dynCall_iiijiiii'] = wasmExports['dynCall_iiijiiii'])(a0, a1, a2, a3, a4, a5, a6, a7, a8);
+var dynCall_viiiiiiff = Module['dynCall_viiiiiiff'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8) => (dynCall_viiiiiiff = Module['dynCall_viiiiiiff'] = wasmExports['dynCall_viiiiiiff'])(a0, a1, a2, a3, a4, a5, a6, a7, a8);
+var dynCall_viiiiiifi = Module['dynCall_viiiiiifi'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8) => (dynCall_viiiiiifi = Module['dynCall_viiiiiifi'] = wasmExports['dynCall_viiiiiifi'])(a0, a1, a2, a3, a4, a5, a6, a7, a8);
+var dynCall_viiiiij = Module['dynCall_viiiiij'] = (a0, a1, a2, a3, a4, a5, a6, a7) => (dynCall_viiiiij = Module['dynCall_viiiiij'] = wasmExports['dynCall_viiiiij'])(a0, a1, a2, a3, a4, a5, a6, a7);
+var dynCall_viiiiiiiii = Module['dynCall_viiiiiiiii'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) => (dynCall_viiiiiiiii = Module['dynCall_viiiiiiiii'] = wasmExports['dynCall_viiiiiiiii'])(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);
+var dynCall_viiiiiiii = Module['dynCall_viiiiiiii'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8) => (dynCall_viiiiiiii = Module['dynCall_viiiiiiii'] = wasmExports['dynCall_viiiiiiii'])(a0, a1, a2, a3, a4, a5, a6, a7, a8);
+var dynCall_viiiiiii = Module['dynCall_viiiiiii'] = (a0, a1, a2, a3, a4, a5, a6, a7) => (dynCall_viiiiiii = Module['dynCall_viiiiiii'] = wasmExports['dynCall_viiiiiii'])(a0, a1, a2, a3, a4, a5, a6, a7);
+var dynCall_viiiiiiiiiiii = Module['dynCall_viiiiiiiiiiii'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12) => (dynCall_viiiiiiiiiiii = Module['dynCall_viiiiiiiiiiii'] = wasmExports['dynCall_viiiiiiiiiiii'])(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12);
+var dynCall_viiiiiiiiiiiiii = Module['dynCall_viiiiiiiiiiiiii'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14) => (dynCall_viiiiiiiiiiiiii = Module['dynCall_viiiiiiiiiiiiii'] = wasmExports['dynCall_viiiiiiiiiiiiii'])(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14);
+var dynCall_viiiiiiiiiii = Module['dynCall_viiiiiiiiiii'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11) => (dynCall_viiiiiiiiiii = Module['dynCall_viiiiiiiiiii'] = wasmExports['dynCall_viiiiiiiiiii'])(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11);
+var dynCall_viiiifii = Module['dynCall_viiiifii'] = (a0, a1, a2, a3, a4, a5, a6, a7) => (dynCall_viiiifii = Module['dynCall_viiiifii'] = wasmExports['dynCall_viiiifii'])(a0, a1, a2, a3, a4, a5, a6, a7);
+var dynCall_fii = Module['dynCall_fii'] = (a0, a1, a2) => (dynCall_fii = Module['dynCall_fii'] = wasmExports['dynCall_fii'])(a0, a1, a2);
+var dynCall_viiiiiiiiii = Module['dynCall_viiiiiiiiii'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10) => (dynCall_viiiiiiiiii = Module['dynCall_viiiiiiiiii'] = wasmExports['dynCall_viiiiiiiiii'])(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10);
+var dynCall_iiidiiiiii = Module['dynCall_iiidiiiiii'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) => (dynCall_iiidiiiiii = Module['dynCall_iiidiiiiii'] = wasmExports['dynCall_iiidiiiiii'])(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);
+var dynCall_viiiiijjidd = Module['dynCall_viiiiijjidd'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12) => (dynCall_viiiiijjidd = Module['dynCall_viiiiijjidd'] = wasmExports['dynCall_viiiiijjidd'])(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12);
+var dynCall_viiiid = Module['dynCall_viiiid'] = (a0, a1, a2, a3, a4, a5) => (dynCall_viiiid = Module['dynCall_viiiid'] = wasmExports['dynCall_viiiid'])(a0, a1, a2, a3, a4, a5);
+var dynCall_iiiiiiiii = Module['dynCall_iiiiiiiii'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8) => (dynCall_iiiiiiiii = Module['dynCall_iiiiiiiii'] = wasmExports['dynCall_iiiiiiiii'])(a0, a1, a2, a3, a4, a5, a6, a7, a8);
+var dynCall_did = Module['dynCall_did'] = (a0, a1, a2) => (dynCall_did = Module['dynCall_did'] = wasmExports['dynCall_did'])(a0, a1, a2);
+var dynCall_viiijj = Module['dynCall_viiijj'] = (a0, a1, a2, a3, a4, a5, a6, a7) => (dynCall_viiijj = Module['dynCall_viiijj'] = wasmExports['dynCall_viiijj'])(a0, a1, a2, a3, a4, a5, a6, a7);
+var dynCall_iiiiiiidiiddii = Module['dynCall_iiiiiiidiiddii'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13) => (dynCall_iiiiiiidiiddii = Module['dynCall_iiiiiiidiiddii'] = wasmExports['dynCall_iiiiiiidiiddii'])(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13);
+var dynCall_jij = Module['dynCall_jij'] = (a0, a1, a2, a3) => (dynCall_jij = Module['dynCall_jij'] = wasmExports['dynCall_jij'])(a0, a1, a2, a3);
+var dynCall_jii = Module['dynCall_jii'] = (a0, a1, a2) => (dynCall_jii = Module['dynCall_jii'] = wasmExports['dynCall_jii'])(a0, a1, a2);
+var dynCall_iiiiiiii = Module['dynCall_iiiiiiii'] = (a0, a1, a2, a3, a4, a5, a6, a7) => (dynCall_iiiiiiii = Module['dynCall_iiiiiiii'] = wasmExports['dynCall_iiiiiiii'])(a0, a1, a2, a3, a4, a5, a6, a7);
+var dynCall_vij = Module['dynCall_vij'] = (a0, a1, a2, a3) => (dynCall_vij = Module['dynCall_vij'] = wasmExports['dynCall_vij'])(a0, a1, a2, a3);
+var dynCall_iiij = Module['dynCall_iiij'] = (a0, a1, a2, a3, a4) => (dynCall_iiij = Module['dynCall_iiij'] = wasmExports['dynCall_iiij'])(a0, a1, a2, a3, a4);
+var dynCall_viji = Module['dynCall_viji'] = (a0, a1, a2, a3, a4) => (dynCall_viji = Module['dynCall_viji'] = wasmExports['dynCall_viji'])(a0, a1, a2, a3, a4);
+var dynCall_iiiiiiiiii = Module['dynCall_iiiiiiiiii'] = (a0, a1, a2, a3, a4, a5, a6, a7, a8, a9) => (dynCall_iiiiiiiiii = Module['dynCall_iiiiiiiiii'] = wasmExports['dynCall_iiiiiiiiii'])(a0, a1, a2, a3, a4, a5, a6, a7, a8, a9);
+var dynCall_iiifii = Module['dynCall_iiifii'] = (a0, a1, a2, a3, a4, a5) => (dynCall_iiifii = Module['dynCall_iiifii'] = wasmExports['dynCall_iiifii'])(a0, a1, a2, a3, a4, a5);
+var dynCall_iidiiii = Module['dynCall_iidiiii'] = (a0, a1, a2, a3, a4, a5, a6) => (dynCall_iidiiii = Module['dynCall_iidiiii'] = wasmExports['dynCall_iidiiii'])(a0, a1, a2, a3, a4, a5, a6);
+var _asyncify_start_unwind = (a0) => (_asyncify_start_unwind = wasmExports['asyncify_start_unwind'])(a0);
+var _asyncify_stop_unwind = () => (_asyncify_stop_unwind = wasmExports['asyncify_stop_unwind'])();
+var _asyncify_start_rewind = (a0) => (_asyncify_start_rewind = wasmExports['asyncify_start_rewind'])(a0);
+var _asyncify_stop_rewind = () => (_asyncify_stop_rewind = wasmExports['asyncify_stop_rewind'])();
+var _ff_h264_cabac_tables = Module['_ff_h264_cabac_tables'] = 542780;
 
 
 // === Auto-generated postamble setup entry stuff ===
 
 Module['ccall'] = ccall;
 Module['cwrap'] = cwrap;
-var missingLibrarySymbols = [
-  'writeI53ToI64',
-  'writeI53ToI64Clamped',
-  'writeI53ToI64Signaling',
-  'writeI53ToU64Clamped',
-  'writeI53ToU64Signaling',
-  'readI53FromI64',
-  'readI53FromU64',
-  'convertI32PairToI53',
-  'convertU32PairToI53',
-  'getTempRet0',
-  'inetPton4',
-  'inetNtop4',
-  'inetPton6',
-  'inetNtop6',
-  'readSockaddr',
-  'writeSockaddr',
-  'emscriptenLog',
-  'runMainThreadEmAsm',
-  'jstoi_q',
-  'listenOnce',
-  'autoResumeAudioContext',
-  'dynCallLegacy',
-  'getDynCaller',
-  'dynCall',
-  'setWasmTableEntry',
-  'getWasmTableEntry',
-  'asmjsMangle',
-  'HandleAllocator',
-  'getNativeTypeSize',
-  'STACK_SIZE',
-  'STACK_ALIGN',
-  'POINTER_SIZE',
-  'ASSERTIONS',
-  'uleb128Encode',
-  'generateFuncType',
-  'convertJsFunctionToWasm',
-  'getEmptyTableSlot',
-  'updateTableMap',
-  'getFunctionAddress',
-  'addFunction',
-  'removeFunction',
-  'reallyNegative',
-  'unSign',
-  'strLen',
-  'reSign',
-  'formatString',
-  'intArrayToString',
-  'AsciiToString',
-  'UTF16ToString',
-  'stringToUTF16',
-  'lengthBytesUTF16',
-  'UTF32ToString',
-  'stringToUTF32',
-  'lengthBytesUTF32',
-  'stringToNewUTF8',
-  'registerKeyEventCallback',
-  'maybeCStringToJsString',
-  'findEventTarget',
-  'getBoundingClientRect',
-  'fillMouseEventData',
-  'registerMouseEventCallback',
-  'registerWheelEventCallback',
-  'registerUiEventCallback',
-  'registerFocusEventCallback',
-  'fillDeviceOrientationEventData',
-  'registerDeviceOrientationEventCallback',
-  'fillDeviceMotionEventData',
-  'registerDeviceMotionEventCallback',
-  'screenOrientation',
-  'fillOrientationChangeEventData',
-  'registerOrientationChangeEventCallback',
-  'fillFullscreenChangeEventData',
-  'registerFullscreenChangeEventCallback',
-  'JSEvents_requestFullscreen',
-  'JSEvents_resizeCanvasForFullscreen',
-  'registerRestoreOldStyle',
-  'hideEverythingExceptGivenElement',
-  'restoreHiddenElements',
-  'setLetterbox',
-  'softFullscreenResizeWebGLRenderTarget',
-  'doRequestFullscreen',
-  'fillPointerlockChangeEventData',
-  'registerPointerlockChangeEventCallback',
-  'registerPointerlockErrorEventCallback',
-  'requestPointerLock',
-  'fillVisibilityChangeEventData',
-  'registerVisibilityChangeEventCallback',
-  'registerTouchEventCallback',
-  'fillGamepadEventData',
-  'registerGamepadEventCallback',
-  'registerBeforeUnloadEventCallback',
-  'fillBatteryEventData',
-  'battery',
-  'registerBatteryEventCallback',
-  'setCanvasElementSize',
-  'getCanvasElementSize',
-  'jsStackTrace',
-  'getCallstack',
-  'convertPCtoSourceLocation',
-  'wasiRightsToMuslOFlags',
-  'wasiOFlagsToMuslOFlags',
-  'safeSetTimeout',
-  'setImmediateWrapped',
-  'safeRequestAnimationFrame',
-  'clearImmediateWrapped',
-  'polyfillSetImmediate',
-  'registerPostMainLoop',
-  'registerPreMainLoop',
-  'getPromise',
-  'makePromise',
-  'idsToPromises',
-  'makePromiseCallback',
-  'ExceptionInfo',
-  'findMatchingCatch',
-  'Browser_asyncPrepareDataCounter',
-  'arraySum',
-  'addDays',
-  'getSocketFromFD',
-  'getSocketAddress',
-  'FS_unlink',
-  'FS_mkdirTree',
-  '_setNetworkCallback',
-  'heapObjectForWebGLType',
-  'toTypedArrayIndex',
-  'webgl_enable_ANGLE_instanced_arrays',
-  'webgl_enable_OES_vertex_array_object',
-  'webgl_enable_WEBGL_draw_buffers',
-  'webgl_enable_WEBGL_multi_draw',
-  'webgl_enable_EXT_polygon_offset_clamp',
-  'webgl_enable_EXT_clip_control',
-  'webgl_enable_WEBGL_polygon_mode',
-  'emscriptenWebGLGet',
-  'computeUnpackAlignedImageSize',
-  'colorChannelsInGlTextureFormat',
-  'emscriptenWebGLGetTexPixelData',
-  'emscriptenWebGLGetUniform',
-  'webglGetUniformLocation',
-  'webglPrepareUniformLocationsBeforeFirstUse',
-  'webglGetLeftBracePos',
-  'emscriptenWebGLGetVertexAttrib',
-  '__glGetActiveAttribOrUniform',
-  'writeGLArray',
-  'registerWebGlEventCallback',
-  'ALLOC_NORMAL',
-  'ALLOC_STACK',
-  'allocate',
-  'writeStringToMemory',
-  'writeAsciiToMemory',
-  'setErrNo',
-  'demangle',
-  'stackTrace',
-];
-missingLibrarySymbols.forEach(missingLibrarySymbol)
-
-var unexportedSymbols = [
-  'run',
-  'addOnPreRun',
-  'addOnInit',
-  'addOnPreMain',
-  'addOnExit',
-  'addOnPostRun',
-  'addRunDependency',
-  'removeRunDependency',
-  'out',
-  'err',
-  'callMain',
-  'abort',
-  'wasmMemory',
-  'wasmExports',
-  'writeStackCookie',
-  'checkStackCookie',
-  'convertI32PairToI53Checked',
-  'stackSave',
-  'stackRestore',
-  'stackAlloc',
-  'setTempRet0',
-  'ptrToString',
-  'zeroMemory',
-  'exitJS',
-  'getHeapMax',
-  'growMemory',
-  'ENV',
-  'ERRNO_CODES',
-  'strError',
-  'DNS',
-  'Protocols',
-  'Sockets',
-  'timers',
-  'warnOnce',
-  'readEmAsmArgsArray',
-  'readEmAsmArgs',
-  'runEmAsmFunction',
-  'jstoi_s',
-  'getExecutableName',
-  'handleException',
-  'keepRuntimeAlive',
-  'runtimeKeepalivePush',
-  'runtimeKeepalivePop',
-  'callUserCallback',
-  'maybeExit',
-  'asyncLoad',
-  'alignMemory',
-  'mmapAlloc',
-  'wasmTable',
-  'noExitRuntime',
-  'getCFunc',
-  'sigToWasmTypes',
-  'freeTableIndexes',
-  'functionsInTableMap',
-  'setValue',
-  'getValue',
-  'PATH',
-  'PATH_FS',
-  'UTF8Decoder',
-  'UTF8ArrayToString',
-  'UTF8ToString',
-  'stringToUTF8Array',
-  'stringToUTF8',
-  'lengthBytesUTF8',
-  'intArrayFromString',
-  'stringToAscii',
-  'UTF16Decoder',
-  'stringToUTF8OnStack',
-  'writeArrayToMemory',
-  'JSEvents',
-  'specialHTMLTargets',
-  'findCanvasEventTarget',
-  'currentFullscreenStrategy',
-  'restoreOldWindowedStyle',
-  'UNWIND_CACHE',
-  'ExitStatus',
-  'getEnvStrings',
-  'checkWasiClock',
-  'doReadv',
-  'doWritev',
-  'initRandomFill',
-  'randomFill',
-  'promiseMap',
-  'uncaughtExceptionCount',
-  'exceptionLast',
-  'exceptionCaught',
-  'Browser',
-  'getPreloadedImageData__data',
-  'wget',
-  'MONTH_DAYS_REGULAR',
-  'MONTH_DAYS_LEAP',
-  'MONTH_DAYS_REGULAR_CUMULATIVE',
-  'MONTH_DAYS_LEAP_CUMULATIVE',
-  'isLeapYear',
-  'ydayFromDate',
-  'SYSCALLS',
-  'preloadPlugins',
-  'FS_createPreloadedFile',
-  'FS_modeStringToFlags',
-  'FS_getMode',
-  'FS_stdin_getChar_buffer',
-  'FS_stdin_getChar',
-  'FS_createPath',
-  'FS_createDevice',
-  'FS_readFile',
-  'FS',
-  'FS_createDataFile',
-  'FS_createLazyFile',
-  'MEMFS',
-  'TTY',
-  'PIPEFS',
-  'SOCKFS',
-  'tempFixedLengthArray',
-  'miniTempWebGLFloatBuffers',
-  'miniTempWebGLIntBuffers',
-  'GL',
-  'AL',
-  'GLUT',
-  'EGL',
-  'GLEW',
-  'IDBStore',
-  'runAndAbortIfError',
-  'Asyncify',
-  'Fibers',
-  'SDL',
-  'SDL_gfx',
-  'allocateUTF8',
-  'allocateUTF8OnStack',
-  'print',
-  'printErr',
-  'WORKERFS',
-];
-unexportedSymbols.forEach(unexportedRuntimeSymbol);
-
+Module['FS'] = FS;
 
 
 var calledRun;
@@ -6920,22 +6044,11 @@ dependenciesFulfilled = function runCaller() {
   if (!calledRun) dependenciesFulfilled = runCaller; // try this again later, after new deps are fulfilled
 };
 
-function stackCheckInit() {
-  // This is normally called automatically during __wasm_call_ctors but need to
-  // get these values before even running any of the ctors so we call it redundantly
-  // here.
-  _emscripten_stack_init();
-  // TODO(sbc): Move writeStackCookie to native to to avoid this.
-  writeStackCookie();
-}
-
 function run() {
 
   if (runDependencies > 0) {
     return;
   }
-
-  stackCheckInit();
 
   preRun();
 
@@ -6958,8 +6071,6 @@ function run() {
     readyPromiseResolve(Module);
     Module['onRuntimeInitialized']?.();
 
-    assert(!Module['_main'], 'compiled without a main, but one is present. if you added it from JS, use Module["onRuntimeInitialized"]');
-
     postRun();
   }
 
@@ -6972,46 +6083,6 @@ function run() {
   } else
   {
     doRun();
-  }
-  checkStackCookie();
-}
-
-function checkUnflushedContent() {
-  // Compiler settings do not allow exiting the runtime, so flushing
-  // the streams is not possible. but in ASSERTIONS mode we check
-  // if there was something to flush, and if so tell the user they
-  // should request that the runtime be exitable.
-  // Normally we would not even include flush() at all, but in ASSERTIONS
-  // builds we do so just for this check, and here we see if there is any
-  // content to flush, that is, we check if there would have been
-  // something a non-ASSERTIONS build would have not seen.
-  // How we flush the streams depends on whether we are in SYSCALLS_REQUIRE_FILESYSTEM=0
-  // mode (which has its own special function for this; otherwise, all
-  // the code is inside libc)
-  var oldOut = out;
-  var oldErr = err;
-  var has = false;
-  out = err = (x) => {
-    has = true;
-  }
-  try { // it doesn't matter if it fails
-    _fflush(0);
-    // also flush in the JS FS layer
-    ['stdout', 'stderr'].forEach((name) => {
-      var info = FS.analyzePath('/dev/' + name);
-      if (!info) return;
-      var stream = info.object;
-      var rdev = stream.rdev;
-      var tty = TTY.ttys[rdev];
-      if (tty?.output?.length) {
-        has = true;
-      }
-    });
-  } catch(e) {}
-  out = oldOut;
-  err = oldErr;
-  if (has) {
-    warnOnce('stdio streams had content in them that was not flushed. you should set EXIT_RUNTIME to 1 (see the Emscripten FAQ), or make sure to emit a newline when you printf etc.');
   }
 }
 
@@ -7430,9 +6501,9 @@ Module.ffmpeg_main = function() { var args = arguments; return serially(function
 var ffprobe_main = Module.ffprobe_main = CAccessors.ffprobe_main = Module.cwrap("ffprobe_main", "number", ["number","number"], {async:true});
 Module.ffprobe_main = function() { var args = arguments; return serially(function() { return ffprobe_main.apply(void 0, args); }); };
 var ff_slice_audio = Module.ff_slice_audio = CAccessors.ff_slice_audio = Module.cwrap("ff_slice_audio", "number", ["string","string","number","number"], {async:true});
-var ff_slice_audio__raw = ff_slice_audio; ff_slice_audio = Module.ff_slice_audio = function() { var args = arguments; var ret = ff_slice_audio__raw.apply(void 0, args); if (ret === -11) throw Module.fsThrownError; else if (ret && ret.then) { return ret.then(function(ret) { if (ret === -11) throw Module.fsThrownError; return ret; }); } return ret; }; Module.ff_slice_audio = function() { var args = arguments; return serially(function() { return ff_slice_audio.apply(void 0, args); }); };
+Module.ff_slice_audio = function() { var args = arguments; return serially(function() { return ff_slice_audio.apply(void 0, args); }); };
 var ff_extract_audio = Module.ff_extract_audio = CAccessors.ff_extract_audio = Module.cwrap("ff_extract_audio", "number", ["string","string"], {async:true});
-var ff_extract_audio__raw = ff_extract_audio; ff_extract_audio = Module.ff_extract_audio = function() { var args = arguments; var ret = ff_extract_audio__raw.apply(void 0, args); if (ret === -11) throw Module.fsThrownError; else if (ret && ret.then) { return ret.then(function(ret) { if (ret === -11) throw Module.fsThrownError; return ret; }); } return ret; }; Module.ff_extract_audio = function() { var args = arguments; return serially(function() { return ff_extract_audio.apply(void 0, args); }); };
+Module.ff_extract_audio = function() { var args = arguments; return serially(function() { return ff_extract_audio.apply(void 0, args); }); };
 var AVFrame_channel_layout = Module.AVFrame_channel_layout = CAccessors.AVFrame_channel_layout = Module.cwrap("AVFrame_channel_layout", "number", ["number"]);
 var AVFrame_channel_layout_s = Module.AVFrame_channel_layout_s = CAccessors.AVFrame_channel_layout_s = Module.cwrap("AVFrame_channel_layout_s", null, ["number", "number"]);
 var AVFrame_channel_layouthi = Module.AVFrame_channel_layouthi = CAccessors.AVFrame_channel_layouthi = Module.cwrap("AVFrame_channel_layouthi", "number", ["number"]);
@@ -10298,21 +9369,6 @@ var ffprobe = Module.ffprobe = function() {
 
 moduleRtn = readyPromise;
 
-// Assertion for attempting to access module properties on the incoming
-// moduleArg.  In the past we used this object as the prototype of the module
-// and assigned properties to it, but now we return a distinct object.  This
-// keeps the instance private until it is ready (i.e the promise has been
-// resolved).
-for (const prop of Object.keys(Module)) {
-  if (!(prop in moduleArg)) {
-    Object.defineProperty(moduleArg, prop, {
-      configurable: true,
-      get() {
-        abort(`Access to module property ('${prop}') is no longer possible via the module constructor argument; Instead, use the result of the module constructor.`)
-      }
-    });
-  }
-}
 
 
 
@@ -10429,14 +9485,6 @@ if (/* We're in a worker */
 
         libav.onblockread = function(name, pos, len) {
             postMessage(["onblockread", "onblockread", true, [name, pos, len]]);
-        };
-
-        libav.print = function(str) {
-            console.log(str);
-        };
-
-        libav.printErr = function(str) {
-            console.error(str);
         };
 
         postMessage(["onready", "onready", true, null]);

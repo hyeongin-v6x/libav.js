@@ -717,47 +717,10 @@ int ff_extract_audio(const char *in_filename, const char *out_filename) {
     AVFormatContext *in_fmt = NULL, *out_fmt = NULL;
     AVPacket pkt;
 
-    struct timespec *ts;
-    double start_time = 0, end_time = 0;
-    double read_time_total = 0, write_time_total = 0;
-    long read_count = 0, write_count = 0;
-    double max_read_time = 0, max_write_time = 0;
-    int CUSTOM_BUFFER_SIZE = 1024 * 1024 * 4;
-
     int audio_stream_index = -1;
     int ret = 0;
 
-    FILE *file = NULL;
-    AVIOContext *io_ctx = NULL;
-    uint8_t *buffer = NULL;
-
-    file = fopen(in_filename, "rb");
-    if (!file) {
-        fprintf(stderr, "ff_extract_audio: failed to open file: %s\n", in_filename);
-        ret = AVERROR_EXTERNAL;
-        goto fail;
-    }
-
-    buffer = av_malloc(CUSTOM_BUFFER_SIZE);
-    if (!buffer) {
-        ret = AVERROR(ENOMEM);
-        goto fail;
-    }
-
-    io_ctx = avio_alloc_context(buffer, CUSTOM_BUFFER_SIZE, 0, file, read_callback, NULL, seek_callback);
-    if (!io_ctx) {
-        ret = AVERROR(ENOMEM);
-        goto fail;
-    }
-    in_fmt = avformat_alloc_context();
-    if (!in_fmt) {
-        ret = AVERROR(ENOMEM);
-        goto fail;
-    }
-    in_fmt->pb = io_ctx;
-
-
-    if ((ret = avformat_open_input(&in_fmt, NULL, NULL, NULL)) < 0) goto fail;
+    if ((ret = avformat_open_input(&in_fmt, in_filename, NULL, NULL)) < 0) goto fail;
     if ((ret = avformat_find_stream_info(in_fmt, NULL)) < 0) goto fail;
 
     for (unsigned i = 0; i < in_fmt->nb_streams; i++) {
@@ -805,50 +768,43 @@ int ff_extract_audio(const char *in_filename, const char *out_filename) {
         goto fail;
     }
 
+    int64_t read_count = 0;
+    int64_t write_count = 0;
+    double read_time_total = 0;
+    double write_time_total = 0;
+    double max_read_time = 0;
+    double max_write_time = 0;
+
     while (1) {
         double start = emscripten_get_now();
-        start_time = start;
-        ret = av_read_frame(in_fmt, &pkt);
+        int read_ret = av_read_frame(in_fmt, &pkt);
         double end = emscripten_get_now();
-        end_time = end;
-
-        if (ret >= 0) {
-            read_count++;
-            read_time_total += (end_time - start_time);
-            if (end_time - start_time > max_read_time) {
-                max_read_time = end_time - start_time;
-            }
-        } else {
-            break;
+        read_count++;
+        read_time_total += (end - start);
+        if (end - start > max_read_time) {
+            max_read_time = end - start;
         }
+        if (read_ret < 0) break;
         if (pkt.stream_index == audio_stream_index) {
-            double start = emscripten_get_now();
-            start_time = start;
             pkt.stream_index = out_stream->index;
+            double start_write = emscripten_get_now();
             av_interleaved_write_frame(out_fmt, &pkt);
-            double end = emscripten_get_now();
-            end_time = end;
+            double end_write = emscripten_get_now();
             write_count++;
-            write_time_total += (end_time - start_time);
-            if (end_time - start_time > max_write_time) {
-                max_write_time = end_time - start_time;
+            write_time_total += (end_write - start_write);
+            if (end_write - start_write > max_write_time) {
+                max_write_time = end_write - start_write;
             }
         }
         av_packet_unref(&pkt);
     }
 
     av_write_trailer(out_fmt);
-    fprintf(stderr, "--------------------------------\n");
-    fprintf(stderr, "read_count: %ld\n", read_count);
-    fprintf(stderr, "write_count: %ld\n", write_count);
-    if (read_count > 0) {
-        fprintf(stderr, "read_time_total: %f, read_count: %ld, read_time_avg: %f, max_read_time: %f\n", read_time_total, read_count, (read_time_total / read_count), max_read_time);
-    }
-    if (write_count > 0) {
-        fprintf(stderr, "write_time_total: %f, write_count: %ld, write_time_avg: %f, max_write_time: %f\n", write_time_total, write_count, (write_time_total / write_count), max_write_time);
-    }
-    fflush(stderr);
     cleanup(in_fmt, out_fmt);
+    fprintf(stderr, "--------------------------------\n");
+    fprintf(stderr, "read_time_total: %f, read_count: %ld, read_time_avg: %f, max_read_time: %f\n", read_time_total, read_count, (read_time_total / read_count), max_read_time);
+    fprintf(stderr, "write_time_total: %f, write_count: %ld, write_time_avg: %f, max_write_time: %f\n", write_time_total, write_count, (write_time_total / write_count), max_write_time);
+    fprintf(stderr, "--------------------------------\n");
     return ret;
 
 fail:
