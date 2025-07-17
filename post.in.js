@@ -605,6 +605,77 @@ Module.mkfsfhfile = function(name, fsfh) {
     return h.promise;
 };
 
+Module.fsfhReadHandles = {};
+
+const fsfhReaderCallbacks = {
+    read: (stream, buffer, offset, length, position) => {
+        const handleData = Module.fsfhReadHandles[stream.node.name];
+        if (!handleData || !handleData.syncHandle) {
+            throw new FS.ErrnoError(ERRNO_CODES.EIO);
+        }
+        
+        const wasmBufferView = new Uint8Array(buffer.buffer, buffer.byteOffset + offset, length);
+
+        const bytesRead = handleData.syncHandle.read(wasmBufferView, { at: position });
+        
+        return bytesRead;
+    },
+    llseek: (stream, offset, whence) => {
+        const handleData = Module.fsfhReadHandles[stream.node.name];
+        let newPos = offset;
+        if (whence === 1) {
+            newPos = stream.position + offset;
+        } else if (whence === 2) {
+            newPos = handleData.size + offset;
+        }
+        
+        if (newPos < 0) {
+            throw new FS.ErrnoError(22);
+        }
+        
+        return newPos;
+    }
+};
+
+const fsfhReaderDev = FS.makedev(44, 4);
+FS.registerDevice(fsfhReaderDev, fsfhReaderCallbacks);
+
+/// @types mkfsfhreadahead(name: string, fsfh: FileSystemFileHandle): Promise<void>
+Module.mkfsfhreadahead = async function(name, fsfh) {
+    const [syncHandle, file] = await Promise.all([
+        fsfh.createSyncAccessHandle(),
+        fsfh.getFile()
+    ]);
+    const size = file.size;
+
+    Module.fsfhReadHandles[name] = {
+        syncHandle: syncHandle,
+        size: size
+    };
+
+    FS.mkdev(name, 0o666, fsfhReaderDev);
+
+    const f = FS.open(name, 0);
+    const super_node_ops = f.node.node_ops;
+    const node_ops = f.node.node_ops = Object.create(super_node_ops);
+    node_ops.getattr = function(node) {
+        const ret = super_node_ops.getattr(node);
+        ret.size = size;
+        return ret;
+    };
+    FS.close(f);
+};
+
+/// @types unlinkfsfhreadahead(name: string): Promise<void>
+Module.unlinkfsfhreadahead = function(name) {
+    const { syncHandle } = Module.fsfhReadHandles[name];
+    if (syncHandle) {
+        syncHandle.close();
+    }
+    delete Module.fsfhReadHandles[name];
+    FS.unlink(name);
+};
+
 /**
  * Unlink a FileSystemFileHandle file. Also closes the file handle.
  * @param name  Filename to unlink.

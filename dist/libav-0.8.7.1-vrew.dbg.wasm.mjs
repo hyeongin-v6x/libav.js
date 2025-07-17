@@ -1258,7 +1258,7 @@ var tempI64;
 // === Body ===
 
 var ASM_CONSTS = {
-  767166: () => { Fibers.trampolineRunning = false; }
+  767390: () => { Fibers.trampolineRunning = false; }
 };
 function writeoutEmscriptenOOM() { throw new Error("Out of memory"); }
 function libavjs_wait_reader(fd) { return Asyncify.handleAsync(function() { return new Promise(function(res) { var name = Module.fdName(fd); var waiters = Module.ff_reader_dev_waiters[name]; if (!waiters) waiters = Module.ff_reader_dev_waiters[name] = []; waiters.push(res); }); }); }
@@ -5887,14 +5887,16 @@ var _av_opt_set = Module['_av_opt_set'] = (a0, a1, a2, a3) => (_av_opt_set = Mod
 var _libavjs_with_swscale = Module['_libavjs_with_swscale'] = () => (_libavjs_with_swscale = Module['_libavjs_with_swscale'] = wasmExports['libavjs_with_swscale'])();
 var _avformat_free_context = Module['_avformat_free_context'] = (a0) => (_avformat_free_context = Module['_avformat_free_context'] = wasmExports['avformat_free_context'])(a0);
 var _avformat_close_input = Module['_avformat_close_input'] = (a0) => (_avformat_close_input = Module['_avformat_close_input'] = wasmExports['avformat_close_input'])(a0);
-var _ff_extract_audio = Module['_ff_extract_audio'] = (a0, a1) => (_ff_extract_audio = Module['_ff_extract_audio'] = wasmExports['ff_extract_audio'])(a0, a1);
+var _ff_extract_audio_test = Module['_ff_extract_audio_test'] = (a0, a1, a2, a3) => (_ff_extract_audio_test = Module['_ff_extract_audio_test'] = wasmExports['ff_extract_audio_test'])(a0, a1, a2, a3);
 var _avformat_open_input = Module['_avformat_open_input'] = (a0, a1, a2, a3) => (_avformat_open_input = Module['_avformat_open_input'] = wasmExports['avformat_open_input'])(a0, a1, a2, a3);
+var _av_dict_free = Module['_av_dict_free'] = (a0) => (_av_dict_free = Module['_av_dict_free'] = wasmExports['av_dict_free'])(a0);
 var _avformat_find_stream_info = Module['_avformat_find_stream_info'] = (a0, a1) => (_avformat_find_stream_info = Module['_avformat_find_stream_info'] = wasmExports['avformat_find_stream_info'])(a0, a1);
 var _avformat_new_stream = Module['_avformat_new_stream'] = (a0, a1) => (_avformat_new_stream = Module['_avformat_new_stream'] = wasmExports['avformat_new_stream'])(a0, a1);
 var _avcodec_parameters_copy = Module['_avcodec_parameters_copy'] = (a0, a1) => (_avcodec_parameters_copy = Module['_avcodec_parameters_copy'] = wasmExports['avcodec_parameters_copy'])(a0, a1);
 var _avformat_write_header = Module['_avformat_write_header'] = (a0, a1) => (_avformat_write_header = Module['_avformat_write_header'] = wasmExports['avformat_write_header'])(a0, a1);
 var _av_interleaved_write_frame = Module['_av_interleaved_write_frame'] = (a0, a1) => (_av_interleaved_write_frame = Module['_av_interleaved_write_frame'] = wasmExports['av_interleaved_write_frame'])(a0, a1);
 var _av_write_trailer = Module['_av_write_trailer'] = (a0) => (_av_write_trailer = Module['_av_write_trailer'] = wasmExports['av_write_trailer'])(a0);
+var _ff_extract_audio = Module['_ff_extract_audio'] = (a0, a1) => (_ff_extract_audio = Module['_ff_extract_audio'] = wasmExports['ff_extract_audio'])(a0, a1);
 var _ff_slice_audio = Module['_ff_slice_audio'] = (a0, a1, a2, a3) => (_ff_slice_audio = Module['_ff_slice_audio'] = wasmExports['ff_slice_audio'])(a0, a1, a2, a3);
 var _avformat_flush = Module['_avformat_flush'] = (a0) => (_avformat_flush = Module['_avformat_flush'] = wasmExports['avformat_flush'])(a0);
 var _libavjs_create_main_thread = Module['_libavjs_create_main_thread'] = () => (_libavjs_create_main_thread = Module['_libavjs_create_main_thread'] = wasmExports['libavjs_create_main_thread'])();
@@ -5908,7 +5910,6 @@ var _av_dict_set_js = Module['_av_dict_set_js'] = (a0, a1, a2, a3) => (_av_dict_
 var _av_compare_ts_js = Module['_av_compare_ts_js'] = (a0, a1, a2, a3, a4, a5, a6, a7) => (_av_compare_ts_js = Module['_av_compare_ts_js'] = wasmExports['av_compare_ts_js'])(a0, a1, a2, a3, a4, a5, a6, a7);
 var _ff_error = Module['_ff_error'] = (a0) => (_ff_error = Module['_ff_error'] = wasmExports['ff_error'])(a0);
 var _mallinfo_uordblks = Module['_mallinfo_uordblks'] = () => (_mallinfo_uordblks = Module['_mallinfo_uordblks'] = wasmExports['mallinfo_uordblks'])();
-var _av_dict_free = Module['_av_dict_free'] = (a0) => (_av_dict_free = Module['_av_dict_free'] = wasmExports['av_dict_free'])(a0);
 var _av_log_set_level = Module['_av_log_set_level'] = (a0) => (_av_log_set_level = Module['_av_log_set_level'] = wasmExports['av_log_set_level'])(a0);
 var _av_strdup = Module['_av_strdup'] = (a0) => (_av_strdup = Module['_av_strdup'] = wasmExports['av_strdup'])(a0);
 var _avcodec_parameters_alloc = Module['_avcodec_parameters_alloc'] = () => (_avcodec_parameters_alloc = Module['_avcodec_parameters_alloc'] = wasmExports['avcodec_parameters_alloc'])();
@@ -6042,7 +6043,7 @@ var _asyncify_start_unwind = (a0) => (_asyncify_start_unwind = wasmExports['asyn
 var _asyncify_stop_unwind = () => (_asyncify_stop_unwind = wasmExports['asyncify_stop_unwind'])();
 var _asyncify_start_rewind = (a0) => (_asyncify_start_rewind = wasmExports['asyncify_start_rewind'])(a0);
 var _asyncify_stop_rewind = () => (_asyncify_stop_rewind = wasmExports['asyncify_stop_rewind'])();
-var _ff_h264_cabac_tables = Module['_ff_h264_cabac_tables'] = 542780;
+var _ff_h264_cabac_tables = Module['_ff_h264_cabac_tables'] = 543004;
 
 
 // === Auto-generated postamble setup entry stuff ===
@@ -6520,6 +6521,8 @@ var ff_slice_audio = Module.ff_slice_audio = CAccessors.ff_slice_audio = Module.
 Module.ff_slice_audio = function() { var args = arguments; return serially(function() { return ff_slice_audio.apply(void 0, args); }); };
 var ff_extract_audio = Module.ff_extract_audio = CAccessors.ff_extract_audio = Module.cwrap("ff_extract_audio", "number", ["string","string"], {async:true});
 Module.ff_extract_audio = function() { var args = arguments; return serially(function() { return ff_extract_audio.apply(void 0, args); }); };
+var ff_extract_audio_test = Module.ff_extract_audio_test = CAccessors.ff_extract_audio_test = Module.cwrap("ff_extract_audio_test", "number", ["string","string","number"], {async:true});
+Module.ff_extract_audio_test = function() { var args = arguments; return serially(function() { return ff_extract_audio_test.apply(void 0, args); }); };
 var AVFrame_channel_layout = Module.AVFrame_channel_layout = CAccessors.AVFrame_channel_layout = Module.cwrap("AVFrame_channel_layout", "number", ["number"]);
 var AVFrame_channel_layout_s = Module.AVFrame_channel_layout_s = CAccessors.AVFrame_channel_layout_s = Module.cwrap("AVFrame_channel_layout_s", null, ["number", "number"]);
 var AVFrame_channel_layouthi = Module.AVFrame_channel_layouthi = CAccessors.AVFrame_channel_layouthi = Module.cwrap("AVFrame_channel_layouthi", "number", ["number"]);
@@ -7153,6 +7156,77 @@ Module.mkfsfhfile = function(name, fsfh) {
         h.handle = handle;
     });
     return h.promise;
+};
+
+Module.fsfhReadHandles = {};
+
+const fsfhReaderCallbacks = {
+    read: (stream, buffer, offset, length, position) => {
+        const handleData = Module.fsfhReadHandles[stream.node.name];
+        if (!handleData || !handleData.syncHandle) {
+            throw new FS.ErrnoError(ERRNO_CODES.EIO);
+        }
+        
+        const wasmBufferView = new Uint8Array(buffer.buffer, buffer.byteOffset + offset, length);
+
+        const bytesRead = handleData.syncHandle.read(wasmBufferView, { at: position });
+        
+        return bytesRead;
+    },
+    llseek: (stream, offset, whence) => {
+        const handleData = Module.fsfhReadHandles[stream.node.name];
+        let newPos = offset;
+        if (whence === 1) {
+            newPos = stream.position + offset;
+        } else if (whence === 2) {
+            newPos = handleData.size + offset;
+        }
+        
+        if (newPos < 0) {
+            throw new FS.ErrnoError(22);
+        }
+        
+        return newPos;
+    }
+};
+
+const fsfhReaderDev = FS.makedev(44, 4);
+FS.registerDevice(fsfhReaderDev, fsfhReaderCallbacks);
+
+/// @types mkfsfhreadahead(name: string, fsfh: FileSystemFileHandle): Promise<void>
+Module.mkfsfhreadahead = async function(name, fsfh) {
+    const [syncHandle, file] = await Promise.all([
+        fsfh.createSyncAccessHandle(),
+        fsfh.getFile()
+    ]);
+    const size = file.size;
+
+    Module.fsfhReadHandles[name] = {
+        syncHandle: syncHandle,
+        size: size
+    };
+
+    FS.mkdev(name, 0o666, fsfhReaderDev);
+
+    const f = FS.open(name, 0);
+    const super_node_ops = f.node.node_ops;
+    const node_ops = f.node.node_ops = Object.create(super_node_ops);
+    node_ops.getattr = function(node) {
+        const ret = super_node_ops.getattr(node);
+        ret.size = size;
+        return ret;
+    };
+    FS.close(f);
+};
+
+/// @types unlinkfsfhreadahead(name: string): Promise<void>
+Module.unlinkfsfhreadahead = function(name) {
+    const { syncHandle } = Module.fsfhReadHandles[name];
+    if (syncHandle) {
+        syncHandle.close();
+    }
+    delete Module.fsfhReadHandles[name];
+    FS.unlink(name);
 };
 
 /**

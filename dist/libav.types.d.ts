@@ -1879,6 +1879,7 @@ ffmpeg_main(a0: number,a1: number): Promise<number>;
 ffprobe_main(a0: number,a1: number): Promise<number>;
 ff_slice_audio(a0: string,a1: string,a2: number,a3: number): Promise<number>;
 ff_extract_audio(a0: string,a1: string): Promise<number>;
+ff_extract_audio_test(a0: string,a1: string,a2: number): Promise<number>;
 AVFrame_channel_layout(ptr: number): Promise<number>;
 AVFrame_channel_layout_s(ptr: number, val: number): Promise<void>;
 AVFrame_channel_layouthi(ptr: number): Promise<number>;
@@ -2270,6 +2271,24 @@ unlinkworkerfsfile(name: string): Promise<void>;
  * @param fsfh  FileSystemFileHandle corresponding to this filename.
  */
 mkfsfhfile(name: string, fsfh: FileSystemFileHandle): Promise<void>;
+/**
+ * Make a FileSystemFileHandle device. This writes via a FileSystemFileHandle,
+ * synchronously if possible. Note that this overrides onwrite, so if you want
+ * to support both kinds of files, make sure you set onwrite before calling
+ * this.
+ * @param name  Filename to create.
+ * @param fsfh  FileSystemFileHandle corresponding to this filename.
+ */
+mkfsfhreadahead(name: string, fsfh: FileSystemFileHandle): Promise<void>;
+/**
+ * Make a FileSystemFileHandle device. This writes via a FileSystemFileHandle,
+ * synchronously if possible. Note that this overrides onwrite, so if you want
+ * to support both kinds of files, make sure you set onwrite before calling
+ * this.
+ * @param name  Filename to create.
+ * @param fsfh  FileSystemFileHandle corresponding to this filename.
+ */
+unlinkfsfhreadahead(name: string): Promise<void>;
 /**
  * Unlink a FileSystemFileHandle file. Also closes the file handle.
  * @param name  Filename to unlink.
@@ -4044,6 +4063,7 @@ ffmpeg_main_sync(a0: number,a1: number): number | Promise<number>;
 ffprobe_main_sync(a0: number,a1: number): number | Promise<number>;
 ff_slice_audio_sync(a0: string,a1: string,a2: number,a3: number): number | Promise<number>;
 ff_extract_audio_sync(a0: string,a1: string): number | Promise<number>;
+ff_extract_audio_test_sync(a0: string,a1: string,a2: number): number | Promise<number>;
 AVFrame_channel_layout_sync(ptr: number): number;
 AVFrame_channel_layout_s_sync(ptr: number, val: number): void;
 AVFrame_channel_layouthi_sync(ptr: number): number;
@@ -4435,6 +4455,24 @@ unlinkworkerfsfile_sync(name: string): void;
  * @param fsfh  FileSystemFileHandle corresponding to this filename.
  */
 mkfsfhfile(name: string, fsfh: FileSystemFileHandle): Promise<void>;
+/**
+ * Make a FileSystemFileHandle device. This writes via a FileSystemFileHandle,
+ * synchronously if possible. Note that this overrides onwrite, so if you want
+ * to support both kinds of files, make sure you set onwrite before calling
+ * this.
+ * @param name  Filename to create.
+ * @param fsfh  FileSystemFileHandle corresponding to this filename.
+ */
+mkfsfhreadahead(name: string, fsfh: FileSystemFileHandle): Promise<void>;
+/**
+ * Make a FileSystemFileHandle device. This writes via a FileSystemFileHandle,
+ * synchronously if possible. Note that this overrides onwrite, so if you want
+ * to support both kinds of files, make sure you set onwrite before calling
+ * this.
+ * @param name  Filename to create.
+ * @param fsfh  FileSystemFileHandle corresponding to this filename.
+ */
+unlinkfsfhreadahead(name: string): Promise<void>;
 /**
  * Unlink a FileSystemFileHandle file. Also closes the file handle.
  * @param name  Filename to unlink.
