@@ -1442,7 +1442,7 @@ var tempI64;
 
 // === Body ===
 var ASM_CONSTS = {
-  771353: () => {
+  771737: () => {
     Fibers.trampolineRunning = false;
   }
 };
@@ -7031,6 +7031,8 @@ var _ff_slice_audio = Module["_ff_slice_audio"] = (a0, a1, a2, a3) => (_ff_slice
 
 var _avformat_flush = Module["_avformat_flush"] = a0 => (_avformat_flush = Module["_avformat_flush"] = wasmExports["avformat_flush"])(a0);
 
+var _ff_slice_media_audio = Module["_ff_slice_media_audio"] = (a0, a1, a2, a3) => (_ff_slice_media_audio = Module["_ff_slice_media_audio"] = wasmExports["ff_slice_media_audio"])(a0, a1, a2, a3);
+
 var _libavjs_create_main_thread = Module["_libavjs_create_main_thread"] = () => (_libavjs_create_main_thread = Module["_libavjs_create_main_thread"] = wasmExports["libavjs_create_main_thread"])();
 
 var _avformat_alloc_output_context2_js = Module["_avformat_alloc_output_context2_js"] = (a0, a1, a2) => (_avformat_alloc_output_context2_js = Module["_avformat_alloc_output_context2_js"] = wasmExports["avformat_alloc_output_context2_js"])(a0, a1, a2);
@@ -7335,7 +7337,7 @@ var _asyncify_start_rewind = a0 => (_asyncify_start_rewind = wasmExports["asynci
 
 var _asyncify_stop_rewind = () => (_asyncify_stop_rewind = wasmExports["asyncify_stop_rewind"])();
 
-var _ff_h264_cabac_tables = Module["_ff_h264_cabac_tables"] = 545164;
+var _ff_h264_cabac_tables = Module["_ff_h264_cabac_tables"] = 545548;
 
 
 // === Auto-generated postamble setup entry stuff ===
@@ -8216,6 +8218,17 @@ Module.ffprobe_main = function() {
   });
 };
 
+var ff_slice_media_audio = Module.ff_slice_media_audio = CAccessors.ff_slice_media_audio = Module.cwrap("ff_slice_media_audio", "number", [ "string", "string", "number", "number" ], {
+  async: true
+});
+
+Module.ff_slice_media_audio = function() {
+  var args = arguments;
+  return serially(function() {
+    return ff_slice_media_audio.apply(void 0, args);
+  });
+};
+
 var ff_slice_audio = Module.ff_slice_audio = CAccessors.ff_slice_audio = Module.cwrap("ff_slice_audio", "number", [ "string", "string", "number", "number" ], {
   async: true
 });
@@ -9032,6 +9045,30 @@ var readaheads = {};
 // Original onblockread
 var preReadaheadOnBlockRead = null;
 
+let totalBlobReadTime = 0;
+
+let blobReadCount = 0;
+
+Module.clearBlobReadTime = () => {
+  totalBlobReadTime = 0;
+  blobReadCount = 0;
+};
+
+/**
+ * 측정이 끝난 후 이 함수를 호출하여 결과를 콘솔에 출력합니다.
+ */ function logAverageBlobReadTime() {
+  if (blobReadCount === 0) {
+    console.log("측정된 Blob 읽기 작업이 없습니다.");
+    return;
+  }
+  const averageTime = totalBlobReadTime / blobReadCount;
+  console.log(`[측정 결과] Blob 읽기 ~ Wasm 복사 평균 시간: ${averageTime.toFixed(4)} ms ` + `(총 ${blobReadCount}회)`);
+  totalBlobReadTime = 0;
+  blobReadCount = 0;
+}
+
+Module.logAverageBlobReadTime = logAverageBlobReadTime;
+
 // Passthru for readahead.
 function readaheadOnBlockRead(name, position, length) {
   if (!(name in readaheads)) {
@@ -9041,6 +9078,7 @@ function readaheadOnBlockRead(name, position, length) {
   var ra = readaheads[name];
   function then() {
     if (ra.position !== position) {
+      ra.readStartTime = performance.now();
       ra.position = position;
       ra.buf = null;
       ra.bufPromise = ra.file.slice(position, position + length).arrayBuffer().then(function(ret) {
@@ -9052,6 +9090,12 @@ function readaheadOnBlockRead(name, position, length) {
       return;
     }
     ff_block_reader_dev_send(name, position, new Uint8Array(ra.buf));
+    if (ra.readStartTime) {
+      const readTime = performance.now() - ra.readStartTime;
+      totalBlobReadTime += readTime;
+      blobReadCount++;
+      ra.readStartTime = null;
+    }
     // Attempt to predict the next read
     position += length;
     ra.position = position;
@@ -9221,6 +9265,30 @@ Module.mkfsfhfile = function(name, fsfh) {
   return h.promise;
 };
 
+Module.fsStreamReadHandles = {};
+
+const fsStreamReadCallbacks = {
+  read: (stream, buffer, offset, length, position) => {
+    const handleData = Module.fsStreamReadHandles[stream.node.name];
+    const reader = handleData.getReader();
+  }
+};
+
+let totalHandleReadTime = 0;
+
+let handleReadCount = 0;
+
+Module.logAvgHandleReadTime = () => {
+  if (handleReadCount === 0) {
+    console.log("측정된 Handle 읽기 작업이 없습니다.");
+    return;
+  }
+  const averageTime = totalHandleReadTime / handleReadCount;
+  console.log(`[측정 결과] Handle 읽기 ~ Wasm 복사 평균 시간: ${averageTime.toFixed(4)} ms ` + `(총 ${handleReadCount}회)`);
+  totalHandleReadTime = 0;
+  handleReadCount = 0;
+};
+
 Module.fsfhReadHandles = {};
 
 const fsfhReaderCallbacks = {
@@ -9229,10 +9297,14 @@ const fsfhReaderCallbacks = {
     if (!handleData || !handleData.syncHandle) {
       throw new FS.ErrnoError(ERRNO_CODES.EIO);
     }
+    const readStartTime = performance.now();
     const wasmBufferView = new Uint8Array(buffer.buffer, buffer.byteOffset + offset, length);
     const bytesRead = handleData.syncHandle.read(wasmBufferView, {
       at: position
     });
+    const readTime = performance.now() - readStartTime;
+    totalHandleReadTime += readTime;
+    handleReadCount++;
     return bytesRead;
   },
   llseek: (stream, offset, whence) => {

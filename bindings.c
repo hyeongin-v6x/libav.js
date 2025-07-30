@@ -1029,6 +1029,122 @@ fail:
     return ret;
 }
 
+ int ff_slice_media_audio(const char *in_filename, const char *out_filename, double start_time, double duration) {
+    AVFormatContext *in_fmt = NULL, *out_fmt = NULL;
+    AVPacket pkt;
+    int audio_stream_index = -1;
+    int ret = 0;
+
+    if ((ret = avformat_open_input(&in_fmt, in_filename, NULL, NULL)) < 0) {
+        fprintf(stderr, "Could not open input file '%s'\n", in_filename);
+        goto fail;
+    }
+    if ((ret = avformat_find_stream_info(in_fmt, NULL)) < 0) {
+        fprintf(stderr, "Failed to find stream information\n");
+        goto fail;
+    }
+
+    for (unsigned i = 0; i < in_fmt->nb_streams; i++) {
+        if (in_fmt->streams[i]->codecpar->codec_type == AVMEDIA_TYPE_AUDIO) {
+            audio_stream_index = i;
+        } else {
+            in_fmt->streams[i]->discard = AVDISCARD_ALL;
+        }
+    }
+    if (audio_stream_index < 0) {
+        ret = AVERROR_STREAM_NOT_FOUND;
+        fprintf(stderr, "No audio stream found in the input file\n");
+        goto fail;
+    }
+
+    // 3. Seek to the start time
+    AVStream *in_stream = in_fmt->streams[audio_stream_index];
+    int64_t start_pts = av_rescale_q(
+        (int64_t)(start_time * AV_TIME_BASE),
+        (AVRational){1, AV_TIME_BASE},
+        in_stream->time_base
+    );
+    ret = av_seek_frame(in_fmt, audio_stream_index, start_pts, AVSEEK_FLAG_BACKWARD);
+    if (ret < 0) {
+        fprintf(stderr, "Could not seek to position %f\n", start_time);
+        goto fail;
+    }
+
+    // 4. Set up output format context
+    if ((ret = avformat_alloc_output_context2(&out_fmt, NULL, NULL, out_filename)) < 0) {
+        fprintf(stderr, "Could not create output context\n");
+        goto fail;
+    }
+
+    // 5. Create new audio stream in output and copy codec parameters
+    AVStream *out_stream = avformat_new_stream(out_fmt, NULL);
+    if (!out_stream) {
+        ret = AVERROR_UNKNOWN;
+        fprintf(stderr, "Failed to allocate output stream\n");
+        goto fail;
+    }
+    if ((ret = avcodec_parameters_copy(out_stream->codecpar, in_stream->codecpar)) < 0) {
+        fprintf(stderr, "Failed to copy codec parameters\n");
+        goto fail;
+    }
+    out_stream->codecpar->codec_tag = 0;
+    out_stream->time_base = in_stream->time_base;
+
+
+    // 6. Open output file and write header
+    if (!(out_fmt->oformat->flags & AVFMT_NOFILE)) {
+        if ((ret = avio_open(&out_fmt->pb, out_filename, AVIO_FLAG_WRITE)) < 0) {
+            fprintf(stderr, "Could not open output file '%s'\n", out_filename);
+            goto fail;
+        }
+    }
+    if ((ret = avformat_write_header(out_fmt, NULL)) < 0) {
+        fprintf(stderr, "Error while writing output header\n");
+        goto fail;
+    }
+
+    // 7. Read packets, filter by time, and write to output
+    double end_time = start_time + duration;
+    while (av_read_frame(in_fmt, &pkt) >= 0) {
+        if (pkt.stream_index == audio_stream_index) {
+            double current_pts_time = pkt.pts * av_q2d(in_stream->time_base);
+            
+            // Break the loop if we have passed the desired duration
+            if (current_pts_time >= end_time) {
+                av_packet_unref(&pkt);
+                break;
+            }
+
+            // Write the packet if it's within the slice time range
+            if (current_pts_time >= start_time) {
+                pkt.stream_index = out_stream->index;
+                // Rescale PTS/DTS to ensure they start from 0 in the new file
+                av_packet_rescale_ts(&pkt, in_stream->time_base, out_stream->time_base);
+                pkt.pos = -1;
+
+                if ((ret = av_interleaved_write_frame(out_fmt, &pkt)) < 0) {
+                    fprintf(stderr, "Error during writing frame\n");
+                    av_packet_unref(&pkt);
+                    break;
+                }
+            }
+        }
+        av_packet_unref(&pkt);
+    }
+
+    // 8. Write trailer and clean up
+    av_write_trailer(out_fmt);
+
+fail:
+    if (ret < 0 && ret != AVERROR_EOF) {
+        char errbuf[AV_ERROR_MAX_STRING_SIZE];
+        av_strerror(ret, errbuf, sizeof(errbuf));
+        fprintf(stderr, "ff_slice_media_audio: error %d (%s)\n", ret, errbuf);
+    }
+
+    cleanup(in_fmt, out_fmt); // Use existing cleanup function
+    return ret;
+}
 /****************************************************************
  * Threading
  ***************************************************************/
