@@ -236,9 +236,10 @@
     ["ffmpeg_main", "number", ["number", "number"], { "async": true }],
     ["ffprobe_main", "number", ["number", "number"], { "async": true }],
 
+    ["ff_slice_media_audio", "number", ["string", "string", "number", "number"], { "async": true }],
     ["ff_slice_audio", "number", ["string", "string", "number", "number"], { "async": true }],
     ["ff_extract_audio", "number", ["string", "string"], { "async": true }],
-    ["ff_extract_audio_test", "number", ["string", "string", "number"], { "async": true }]
+    ["ff_extract_audio_test", "number", ["string", "string"], { "async": true }]
   ],
 
   "fs": [
@@ -298,7 +299,8 @@
     "ff_malloc_int32_list",
     "ff_malloc_int64_list",
     "ffmpeg",
-    "ffprobe"
+    "ffprobe",
+    "logAverageBlobReadTime"
   ],
 
   "accessors": [

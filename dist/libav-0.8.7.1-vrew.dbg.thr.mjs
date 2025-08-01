@@ -1442,7 +1442,7 @@ var tempI64;
 
 // === Body ===
 var ASM_CONSTS = {
-  771737: () => {
+  771545: () => {
     Fibers.trampolineRunning = false;
   }
 };
@@ -7007,11 +7007,9 @@ var _avformat_free_context = Module["_avformat_free_context"] = a0 => (_avformat
 
 var _avformat_close_input = Module["_avformat_close_input"] = a0 => (_avformat_close_input = Module["_avformat_close_input"] = wasmExports["avformat_close_input"])(a0);
 
-var _ff_extract_audio_test = Module["_ff_extract_audio_test"] = (a0, a1, a2, a3) => (_ff_extract_audio_test = Module["_ff_extract_audio_test"] = wasmExports["ff_extract_audio_test"])(a0, a1, a2, a3);
+var _ff_extract_audio_test = Module["_ff_extract_audio_test"] = (a0, a1) => (_ff_extract_audio_test = Module["_ff_extract_audio_test"] = wasmExports["ff_extract_audio_test"])(a0, a1);
 
 var _avformat_open_input = Module["_avformat_open_input"] = (a0, a1, a2, a3) => (_avformat_open_input = Module["_avformat_open_input"] = wasmExports["avformat_open_input"])(a0, a1, a2, a3);
-
-var _av_dict_free = Module["_av_dict_free"] = a0 => (_av_dict_free = Module["_av_dict_free"] = wasmExports["av_dict_free"])(a0);
 
 var _avformat_find_stream_info = Module["_avformat_find_stream_info"] = (a0, a1) => (_avformat_find_stream_info = Module["_avformat_find_stream_info"] = wasmExports["avformat_find_stream_info"])(a0, a1);
 
@@ -7054,6 +7052,8 @@ var _av_compare_ts_js = Module["_av_compare_ts_js"] = (a0, a1, a2, a3, a4, a5, a
 var _ff_error = Module["_ff_error"] = a0 => (_ff_error = Module["_ff_error"] = wasmExports["ff_error"])(a0);
 
 var _mallinfo_uordblks = Module["_mallinfo_uordblks"] = () => (_mallinfo_uordblks = Module["_mallinfo_uordblks"] = wasmExports["mallinfo_uordblks"])();
+
+var _av_dict_free = Module["_av_dict_free"] = a0 => (_av_dict_free = Module["_av_dict_free"] = wasmExports["av_dict_free"])(a0);
 
 var _av_log_set_level = Module["_av_log_set_level"] = a0 => (_av_log_set_level = Module["_av_log_set_level"] = wasmExports["av_log_set_level"])(a0);
 
@@ -7337,7 +7337,7 @@ var _asyncify_start_rewind = a0 => (_asyncify_start_rewind = wasmExports["asynci
 
 var _asyncify_stop_rewind = () => (_asyncify_stop_rewind = wasmExports["asyncify_stop_rewind"])();
 
-var _ff_h264_cabac_tables = Module["_ff_h264_cabac_tables"] = 545548;
+var _ff_h264_cabac_tables = Module["_ff_h264_cabac_tables"] = 545356;
 
 
 // === Auto-generated postamble setup entry stuff ===
@@ -8251,7 +8251,7 @@ Module.ff_extract_audio = function() {
   });
 };
 
-var ff_extract_audio_test = Module.ff_extract_audio_test = CAccessors.ff_extract_audio_test = Module.cwrap("ff_extract_audio_test", "number", [ "string", "string", "number" ], {
+var ff_extract_audio_test = Module.ff_extract_audio_test = CAccessors.ff_extract_audio_test = Module.cwrap("ff_extract_audio_test", "number", [ "string", "string" ], {
   async: true
 });
 
@@ -9328,22 +9328,27 @@ FS.registerDevice(fsfhReaderDev, fsfhReaderCallbacks);
 
 /// @types mkfsfhreadahead(name: string, fsfh: FileSystemFileHandle): Promise<void>
 Module.mkfsfhreadahead = async function(name, fsfh) {
-  const [syncHandle, file] = await Promise.all([ fsfh.createSyncAccessHandle(), fsfh.getFile() ]);
-  const size = file.size;
-  Module.fsfhReadHandles[name] = {
-    syncHandle,
-    size
-  };
-  FS.mkdev(name, 438, fsfhReaderDev);
-  const f = FS.open(name, 0);
-  const super_node_ops = f.node.node_ops;
-  const node_ops = f.node.node_ops = Object.create(super_node_ops);
-  node_ops.getattr = function(node) {
-    const ret = super_node_ops.getattr(node);
-    ret.size = size;
-    return ret;
-  };
-  FS.close(f);
+  try {
+    const [syncHandle, file] = await Promise.all([ fsfh.createSyncAccessHandle(), fsfh.getFile() ]);
+    const size = file.size;
+    Module.fsfhReadHandles[name] = {
+      syncHandle,
+      size
+    };
+    FS.mkdev(name, 438, fsfhReaderDev);
+    const f = FS.open(name, 0);
+    const super_node_ops = f.node.node_ops;
+    const node_ops = f.node.node_ops = Object.create(super_node_ops);
+    node_ops.getattr = function(node) {
+      const ret = super_node_ops.getattr(node);
+      ret.size = size;
+      return ret;
+    };
+    FS.close(f);
+  } catch (e) {
+    console.error(e);
+    return;
+  }
 };
 
 /// @types unlinkfsfhreadahead(name: string): Promise<void>

@@ -711,28 +711,33 @@ FS.registerDevice(fsfhReaderDev, fsfhReaderCallbacks);
 
 /// @types mkfsfhreadahead(name: string, fsfh: FileSystemFileHandle): Promise<void>
 Module.mkfsfhreadahead = async function(name, fsfh) {
-    const [syncHandle, file] = await Promise.all([
-        fsfh.createSyncAccessHandle(),
-        fsfh.getFile()
-    ]);
-    const size = file.size;
+    try {
+        const [syncHandle, file] = await Promise.all([
+            fsfh.createSyncAccessHandle(),
+            fsfh.getFile()
+        ]);
+        const size = file.size;
 
-    Module.fsfhReadHandles[name] = {
-        syncHandle: syncHandle,
-        size: size
-    };
+        Module.fsfhReadHandles[name] = {
+            syncHandle: syncHandle,
+            size: size
+        };
 
-    FS.mkdev(name, 0o666, fsfhReaderDev);
+        FS.mkdev(name, 0o666, fsfhReaderDev);
 
-    const f = FS.open(name, 0);
-    const super_node_ops = f.node.node_ops;
-    const node_ops = f.node.node_ops = Object.create(super_node_ops);
-    node_ops.getattr = function(node) {
-        const ret = super_node_ops.getattr(node);
-        ret.size = size;
-        return ret;
-    };
-    FS.close(f);
+        const f = FS.open(name, 0);
+        const super_node_ops = f.node.node_ops;
+        const node_ops = f.node.node_ops = Object.create(super_node_ops);
+        node_ops.getattr = function(node) {
+            const ret = super_node_ops.getattr(node);
+            ret.size = size;
+            return ret;
+        };
+        FS.close(f);
+    } catch (e) {
+        console.error(e);
+        return;
+    }
 };
 
 /// @types unlinkfsfhreadahead(name: string): Promise<void>
