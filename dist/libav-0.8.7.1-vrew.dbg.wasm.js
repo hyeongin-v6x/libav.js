@@ -1242,7 +1242,7 @@ var tempI64;
 // === Body ===
 
 var ASM_CONSTS = {
-  767614: () => { Fibers.trampolineRunning = false; }
+  767582: () => { Fibers.trampolineRunning = false; }
 };
 function writeoutEmscriptenOOM() { throw new Error("Out of memory"); }
 function libavjs_wait_reader(fd) { return Asyncify.handleAsync(function() { return new Promise(function(res) { var name = Module.fdName(fd); var waiters = Module.ff_reader_dev_waiters[name]; if (!waiters) waiters = Module.ff_reader_dev_waiters[name] = []; waiters.push(res); }); }); }
@@ -6028,7 +6028,7 @@ var _asyncify_start_unwind = (a0) => (_asyncify_start_unwind = wasmExports['asyn
 var _asyncify_stop_unwind = () => (_asyncify_stop_unwind = wasmExports['asyncify_stop_unwind'])();
 var _asyncify_start_rewind = (a0) => (_asyncify_start_rewind = wasmExports['asyncify_start_rewind'])(a0);
 var _asyncify_stop_rewind = () => (_asyncify_stop_rewind = wasmExports['asyncify_stop_rewind'])();
-var _ff_h264_cabac_tables = Module['_ff_h264_cabac_tables'] = 543228;
+var _ff_h264_cabac_tables = Module['_ff_h264_cabac_tables'] = 543196;
 
 
 // === Auto-generated postamble setup entry stuff ===

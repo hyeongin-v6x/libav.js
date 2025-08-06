@@ -928,6 +928,12 @@ int ff_slice_audio(const char *in_filename, const char *out_filename, double sta
         goto fail;
     }
 
+    for (unsigned i = 0; i < in_fmt->nb_streams; i++) {
+        if (i != audio_stream_index) {
+            in_fmt->streams[i]->discard = AVDISCARD_ALL;
+        }
+    }
+
     AVStream *in_stream = in_fmt->streams[audio_stream_index];
     int64_t seek_pts = (int64_t)(start_time * (double)in_stream->time_base.den / in_stream->time_base.num);
     ret = av_seek_frame(in_fmt, audio_stream_index, seek_pts, AVSEEK_FLAG_BACKWARD);
